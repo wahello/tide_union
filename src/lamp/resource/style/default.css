@@ -1,0 +1,61 @@
+
+.switch{
+	&, &.on {
+		background: url($img-dir/bulb_control_icon_on_off_n.png) center no-repeat;
+		background-size: calc(9.46rem * $zoom);
+	}
+	&.off, &.disabled{
+		background: url($img-dir/bulb_control_icon_on_off_pre.png) center no-repeat;
+		background-size: calc(9.46rem * $zoom);
+	}
+}
+
+.switch2{
+	&, &.on {
+		background: url($img-dir/bulb_control_icon_on_off_n.png) center no-repeat;
+		background-size: calc(9.46rem * 0.35);
+	}
+	&.off, &.disabled{
+		background: url($img-dir/bulb_control_icon_on_off_pre.png) center no-repeat;
+		background-size: calc(9.46rem * 0.35);
+	}
+}
+
+.lamp-dim{
+	/** 预加载图片 **/
+	background: url("$img-dir/color_disk_dim_off.png") center no-repeat;
+	&.bg{
+		background: url("$img-dir/color_disk_dim_on.png") center no-repeat;
+		background-size: 100% 100%;
+		&.disabled{
+			background: url("$img-dir/color_disk_dim_off.png") center no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+}
+
+.lamp-rgbw{
+	/** 预加载图片 **/
+	background: url("$img-dir/color_disk_rgb_off.png") center no-repeat;
+	&.bg{
+		background: url("$img-dir/color_disk_rgb_on.png") center no-repeat;
+		background-size: 100% 100%;
+		&.disabled{
+			background: url("$img-dir/color_disk_rgb_off.png") center no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+}
+
+.lamp-cct{
+	/** 预加载图片 **/
+	background: url("$img-dir/color_temperature_off.png") center no-repeat;
+	&.bg{
+		background: url("$img-dir/color_temperature_on.png") center no-repeat;
+		background-size: 100% 100%;
+		&.disabled{
+			background: url("$img-dir/color_temperature_off.png") center no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+}

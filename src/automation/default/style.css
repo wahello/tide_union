@@ -1,0 +1,1067 @@
+
+
+/** 情景公共样式开始 **/
+div.content {
+	padding: 1.2rem;
+}
+
+.scene_bg{
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+    background-repeat: no-repeat;
+	background-image: url($img-dir/bg.png);
+}
+
+
+/** 添加情景样式开始 **/
+
+.automation.add {
+	height:100%;
+	background:$bg-major-color;
+	div.content {
+		h3 {
+			color: #a6A7AF;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0 auto;
+			overflow: hidden;
+			padding-left: 0;
+			li.item {
+				background: white;
+				border-radius: 0.5rem;
+				margin-top: 1rem;
+				/*width: 26rem;*/
+				height: 5rem;
+				padding: 1.5rem;
+				position:relative;
+				div {
+					display: inline-block;
+				}
+				div.txt {
+					width: 18rem;
+					margin-left: 0.75rem;
+					position: absolute;
+				}
+				div.timeofdayImg {
+					width: 5rem;
+					height: 5rem;
+					background: url($img-dir/automation_icon_time_on.png) no-repeat;
+					background-size: 100% 100%;
+					margin-top:-0.5rem;
+					margin-left:-0.5rem;
+				}
+				div.sensorImg {
+					width: 5rem;
+					height: 5rem;
+					background: url($img-dir/automation_icon_robot_on.png) no-repeat;
+					background-size: 100% 100%;
+					margin-top:-0.5rem;
+					margin-left:-0.5rem;
+				}
+				span.title {
+					font-size: large;
+					color: $text-major-color;;
+					font-weight: 700;
+				}
+				span.hint {
+					font-size: small;
+					color: #a6A7AF;
+					margin-top: 1rem;
+					display: block;
+					word-break: break-all;
+				}
+				div.arrowRight {
+					position:absolute;
+					top: 50%;
+    				right: 4.3%;
+					width: 2rem;
+					height: 2rem;
+					transform: translateY(-50%);
+					background: url($img-dir/automation_icon_right_arrow.png) no-repeat center;
+					background-size: 100% 100%;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+
+/** 添加情景样式结束 **/
+
+
+/** 创建情景样式开始 **/
+
+.automation.create {
+	height: 92vh;
+	overflow: auto;
+	background: $bg-major-color;
+	.auto-group {
+		padding: 0 calc(3.33rem * $zoom);
+		label {
+			display: block;
+			height: calc((6.67rem - 2rem) * $zoom);
+			padding-top: calc(2rem * $zoom);
+			font-size: calc(34px * $zoom);
+			font-weight: 700;
+			color: $text-color;
+		}
+		.bar-normal {
+			margin-bottom: calc(2.5rem * $zoom);
+		}
+	}
+}
+
+
+/** 创建情景样式结束 **/
+
+.dayandtime {
+	font-weight: normal;
+	color: white;
+	/* input.name, */
+	/* height: 100vh; */
+	background: $bg-major-color;
+	div.content{
+		height:calc(100vh - 2.4rem);
+	}
+	div.item {
+		$itemHeight: 4.67rem;
+		$arrowSize:2rem;
+		position:relative;
+		border: none;
+		color: white;
+		width: 100%;
+		margin:1rem 0;
+		background-color: $color-line;
+		line-height: $itemHeight;
+		border-radius: 0.5rem;
+		margin:1rem 0;
+		.titleSpan {
+			margin-left: 1.34rem;
+			/*width: 8.71rem;*/
+			display: inline-block;
+		}
+		.txtSpan {
+			text-align: right;
+			color: $text-assist-color;
+			float:right;
+			display: inline-block;
+			margin-right:calc($arrowSize + 0.5rem);
+		}
+		.arrowRight {
+			position:absolute;
+			top:50%;
+			right:1.5rem;
+			width: $arrowSize;
+			height: $arrowSize;
+			transform: translateY(-50%);
+			background: url($img-dir/automation_icon_right_arrow.png) no-repeat center;
+			background-size: 100% 100%;
+			display: inline-block;
+		}
+	}
+	input.name {
+		text-indent:1rem;
+	}
+	.devItem{
+		margin:1.2rem 0;
+		height:4.7rem;
+		$itemHeight: 4.7rem;
+		/*.arrowRight{
+			margin-top: calc(($itemHeight - 2rem)/2);
+		}*/
+		.txtDiv{
+			/*width:6rem;*/
+			float:right;
+			/*line-height:5rem;*/
+			display:table;
+			height:100%;
+   			text-align: right;
+   			margin-right:calc(2rem + 0.5rem);
+   			&.first{
+   				height:$itemHeight;
+   				line-height:$itemHeight;
+   			}
+			>p{
+				display:table-cell;
+				padding:0;
+				margin:0;
+				vertical-align: middle;
+				color:$text-assist-color;
+				> span{
+					line-height:normal;
+					display:block;
+				}
+			}
+		}
+		>section {
+			display:inline-block;
+			margin-left: calc(3.67rem + 1.34rem + 1rem);
+			font-family: PingFangSC-Semibold;
+			padding-top:1rem;
+			/*width:10rem;*/
+			>h1{
+				font-family: PingFangSC-Semibold;
+				font-size: 17px;
+				color: $text-color;
+				line-height: 2.5rem;
+				padding: 0;
+				margin:0;
+				width:15rem;
+			}
+			>h2 {
+				font-family: PingFangSC-Semibold;
+				font-size: 17px;
+				color: $text-color;
+				line-height: 2rem;
+				padding: 0;
+				margin:0;
+				width:11rem;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+				word-break:keep-all;
+			}
+			>h3 {
+				font-family: PingFangSC-Regular;
+				font-size: 13px;
+				color: $text-second-color;
+				line-height: 2.83rem;
+				padding: 0;
+				margin: -1rem 0;
+				width:11rem;
+			}
+		}
+		&.alltimeIcon{
+			background: url("$img-dir/automation_product_or_sensor_icon_time_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 0rem 0.5rem;
+			background-color:$color-line;
+		}
+		
+		&.motion{
+			background: url("$img-dir/devices_icon_motion_white.png") no-repeat center;
+			background-color:$color-line;
+			background-size: 3.67rem 3.67rem;
+			background-position: 0rem 0.5rem;
+		}
+		&.door_lock{
+			background: url("$img-dir/devices_icon_door_lock_white.png") no-repeat center;
+			background-color:$color-line;
+			background-size: 3.67rem 3.67rem;
+			background-position: 0rem 0.5rem;
+		}
+		&.magnet{
+			background: url("$img-dir/devices_icon_door_lock_white.png") no-repeat center;
+			background-color:$color-line;
+			background-size: 3.67rem 3.67rem;
+			background-position: 0rem 0.5rem;
+		}
+		
+		&.siren{
+			background: url("$img-dir/devices_icon_siren_white.png") no-repeat center;
+			background-color:$color-line;
+			background-size: 3.67rem 3.67rem;
+			background-position: 0rem 0.5rem;
+		}
+		/*&.plug{
+			background: url("$img-dir/devices_icon_plug_white.png") no-repeat center;
+			background-color:$color-line;
+			background-size: 3.67rem 3.67rem;
+			background-position: 0rem 0.5rem;
+		}
+		&.lighting{
+			background: url("$img-dir/devices_icon_lighting_white.png") no-repeat center;
+			background-color:$color-line;
+			background-size: 3.67rem 3.67rem;
+			background-position: 0rem 0.5rem;
+		}
+		&.gateway{
+			background: url("$img-dir/devices_icon_gateway_white.png") no-repeat center;
+			background-color:$color-line;
+			background-size: 3.67rem 3.67rem;
+			background-position: 0rem 0.5rem;
+		}*/
+		&.plug4-false {
+			background: url("$img-dir/devices_icon_plug4_n.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.plug4-true {
+			background: url("$img-dir/devices_icon_plug4_s.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.plug-false {
+			background: url("$img-dir/devices_icon_plug_n.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.plug-true {
+			background: url("$img-dir/devices_icon_plug_s.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		
+		
+		&.lighting-false {
+			background: url("$img-dir/devices_icon_lighting_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.lighting-true {
+			background: url("$img-dir/devices_icon_lighting_s.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.light-false {
+			background: url("$img-dir/devices_icon_lighting_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.light-true {
+			background: url("$img-dir/devices_icon_lighting_s.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.switch-false {
+			background: url("$img-dir/devices_icon_switch_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.remote-false {
+			background: url("$img-dir/devices_icon_remote_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.camera-false {
+			background: url("$img-dir/devices_icon_camera_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.gateway-false {
+			background: url("$img-dir/devices_icon_gateway_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.sensor-false {
+			background: url("$img-dir/automation_product_or_sensor_icon_time_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.multi-false{
+			background: url("$img-dir/devices_icon_gateway_white.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.plug-true {
+			background: url("$img-dir/devices_icon_plug_s.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.plug-false{
+			background: url("$img-dir/devices_icon_plug_n.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.wifi_plug-false {
+			background: url("$img-dir/devices_icon_plug_n.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		&.wifi_plug-true {
+			background: url("$img-dir/devices_icon_plug_s.png") no-repeat center;
+			background-size: 3.67rem;
+			background-position: 1.34rem 0.5rem;
+			background-color:$color-line;
+		}
+		
+	}
+}
+.NoDevieInfo{
+	color:#999;
+	text-align:center;
+	height: 100vh;
+	background: $bg-major-color;
+	.NoDevieInfo_tips{
+		height:8rem;
+		width:100vw;
+		position:absolute;
+		top:15rem;
+		left:0;
+		font-family: PingFangSC-Regular;
+		font-size: $fontsize16;
+		color: $text-weaken-color;
+		line-height:2.5rem;
+	}
+}
+.triggerList{
+	$liHeight: 6rem;
+	$labelSize: 2rem;
+	position: relative;
+	margin-top: 1.25rem;
+	/* border:1px solid $bg-major-color */
+	/* height: $liHeight; */
+	/* height: 100vh; */
+	background: $bg-major-color;
+	>label {
+		position: absolute;
+		width: $labelSize;
+		height: $labelSize;
+		top: calc(($liHeight - $labelSize) / 2);	
+		background: url("$img-dir/common_icon_checkbox_off.png") no-repeat center;
+		background-size: 80%;
+		margin-left:1.5rem;
+	}
+	>label.act {
+		background: url("$img-dir/common_icon_checkbox_on.png") no-repeat center;
+		background-size: 80%;
+	}
+}
+
+
+.triggerdevice-cell {
+	$boxHeight: 6rem;
+	$contentHeight: 3.67rem;
+	margin-top: 1rem;
+	margin-right: 2rem;
+	background-color: white;
+	border-radius: 0.2rem;
+	height: 6rem;
+	margin-left: 5rem;
+    /*width: 25rem;*/
+	.triggerdevice-icon {
+		float: left;
+		margin-top: calc(($boxHeight - 3.67rem)/2);
+		margin-left: 1rem;
+		width: 3.67rem;
+		height: 3.67rem;
+		background-size: contain;
+		&.motion-icon {
+			background-image: url($img-dir/devices_icon_motion_s.png);
+		}
+		&.door_lock-icon {
+			background-image: url($img-dir/devices_icon_door_lock_s.png);
+		}
+		&.siren-icon{
+			background-image: url($img-dir/devices_icon_siren_s.png);
+		}
+		&.gateway-icon{
+			background-image: url($img-dir/devices_icon_gateway_s.png);
+		}
+		&.magnet-icon{
+			background-image: url($img-dir/devices_icon_door_lock_s.png);
+		}
+	}
+	.triggerdevice-text {
+		float: left;
+		margin-left: 0.5rem;
+		height: $contentHeight;
+		margin-top: calc(($boxHeight - $contentHeight)/2);
+		color: $text-second-color;
+		font-size: $fontsize13;
+		/*width: 66%;*/
+		.spanLine {
+			display: inline-block;
+			height: calc($contentHeight/2);
+			line-height: calc($contentHeight/2);
+			width:15rem;
+			.txt-bold {
+				display: inline-block;
+				font-weight: bold;
+				color: $text-major-color;
+				font-size: $fontsize17;
+				width:100%;
+			}
+		}
+	}
+	.arrowRight {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/automation_icon_right_arrow.png) center no-repeat;
+	}
+}
+
+.selectdevice ul {
+	list-style-type: none;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-left: 0;
+	li {
+		$boxHeight: 6rem;
+		$contentHeight: 3.67rem;
+		margin-top: 1rem;
+		margin-right: 2rem;
+		background-color: white;
+		border-radius: 0.2rem;
+		height: 6rem;
+		margin-left: 2rem;
+		.triggerdevice-icon {
+			float: left;
+			margin-top: calc(($boxHeight - 3.67rem)/2);
+			margin-left: 1rem;
+			width: 3.67rem;
+			height: 3.67rem;
+			background-size: contain;
+			&.motion-icon {
+				background-image: url($img-dir/devices_icon_motion_s.png);
+			}
+			&.door-icon {
+				background-image: url($img-dir/devices_icon_door_lock_s.png);
+			}
+		}
+		.triggerdevice-text {
+			float: left;
+			margin-left: 0.5rem;
+			height: $contentHeight;
+			margin-top: calc(($boxHeight - $contentHeight)/2);
+			color: $text-second-color ;
+			font-size: $fontsize13;
+			width: 66%;
+			.spanLine {
+				display: inline-block;
+				height: calc($contentHeight/2);
+				line-height: calc($contentHeight/2);
+				.txt-bold {
+					font-weight: bold;
+					color: $text-major-color;
+					font-size: $fontsize17;
+				}
+			}
+		}
+	}
+}
+
+.select-device-list{
+	h2{
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		word-break:keep-all;
+	}
+	li{
+		.auto-device-box{
+			margin-right:0rem !important;
+		}
+	}
+}
+
+/*trigger设备详情选择页面*/
+
+.triggerdetail {
+	background-color: #3B4054;
+	height: 100vh;
+}
+
+.triggerdetail-cell {
+	$boxHeight: 4.67rem;
+	$contentHeight: 3.67rem;
+	margin-top: 1rem;
+	margin-right: 2rem;
+	background-color: $color-line;
+	border-radius: 0.2rem;
+	height: 4.67rem;
+	margin-left: 2rem;
+	font-size: $fontsize17;
+	.triggerdetail-text {
+		color: white;
+		float: left;
+		margin-top: calc(($boxHeight - 4.67rem)/2);
+		margin-left: 1.34rem;
+		width: 15.71rem;
+		height: 4.67rem;
+		line-height: 4.67rem;
+	}
+	.triggerdetail-ChooseState {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/common_icon_checkbox_on.png) center no-repeat;
+	}
+	.triggerdetail-unchoose {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/common_icon_checkbox_off.png) center no-repeat;
+	}
+}
+
+.repeat_html {
+	font-weight: normal;
+	height: 100vh;
+	background: $bg-major-color;
+	ul {
+		list-style-type: none;
+		margin: 0 auto;
+		overflow: hidden;
+		padding-left: 0;
+		background: $bg-nav-top-color;
+		border-radius: 0.5rem;
+		li {
+			font-size: 1.45rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			height: 4rem;
+			line-height: 4rem;
+			color: white;
+			input[type=checkbox] {
+				position: absolute;
+		    clip: rect(0,0,0,0);
+		    pointer-events: none;
+			}
+		}
+		li:first-child {
+			background-color: $color-line;
+		}
+		.ck {
+			display: inline-block;
+			width: 22px;
+			height: 22px;
+			line-height: 22px;
+			background-size: 100% !important;
+			background: url($img-dir/common_icon_checkbox_off.png) center no-repeat;
+			&.on{
+				background: url($img-dir/common_icon_checkbox_on.png) center no-repeat;
+			}
+		}
+		.time {
+			width: 90%;
+			height: 20px;
+			display: inline-block;
+		}
+	}
+	.checkboxGroup2 {
+		margin-top: 2rem;
+	}
+	/*	input {
+		width: 5rem;
+		height: 5rem;
+		background: url($img-dir/common_icon_checkbox_off.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	input[type=checkbox] {
+		background: url($img-dir/common_icon_checkbox_on.png) no-repeat;
+	}*/
+}
+
+.timeset {
+	font-weight: normal;
+	height: 100vh;
+	background: $bg-major-color;
+	ul {
+		list-style-type: none;
+		margin: 0 auto;
+		overflow: hidden;
+		padding-left: 0;
+		position:relative;
+		background: $bg-nav-top-color;
+		border-radius: 0.5rem;
+		li {
+			font-size: 1.45rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			height: 4.66rem;
+			line-height: 4.66rem;
+			color: white;
+			input[type=checkbox] {
+				position: absolute;
+		   		clip: rect(0,0,0,0);
+		    	pointer-events: none;
+			}
+			
+			&.like_first{
+				background-color: $color-line;
+			}
+		}
+		li:first-child {
+			background-color: $color-line;
+		}
+		.time_info{
+			height: 20rem;
+			margin: 0 auto;
+			
+			.am-picker{
+				margin-top: 1.25rem;
+			}
+			
+			.am-picker-col-indicator{
+				border-top:1px solid $color-line;
+				border-bottom: 1px solid $color-line;
+			}
+			.am-picker-col-mask{
+				background-image: linear-gradient(to bottom, rgba(48, 53, 75, 0.95), rgba(48, 53, 75, 0.6)), 
+				linear-gradient(to top, rgba(48, 53, 75, 0.95), rgba(48, 53, 75, 0.6))
+			}
+			.am-picker-col-item{
+				color:#FFFFFF;
+				font-size: 20px;
+			}
+			.am-picker-col-item-selected{
+				color:#FFFFFF;
+				font-size: 30px;
+			}
+			/*.am-picker{
+				margin-top: 1.25rem;
+			}
+			.am-picker-col-indicator{
+				border-top:1px solid $color-line;
+				border-bottom: 1px solid $color-line;
+			}
+			.am-picker-col-mask{
+				background-image:none;
+			}
+			.am-picker-col-item{
+				color:rgba(255,255,255,0.5);
+				font-size: 20px;
+			}
+			.am-picker-col-item-selected{
+				color:#FFFFFF;
+				font-size: 30px;
+			}*/
+		}
+		.ck {
+			display: inline-block;
+			width: 2rem;
+			height: 2rem;
+			position:absolute;
+			margin-top: calc((4.66rem - 2rem) / 2);
+			background-size: 100% !important;
+			background: url($img-dir/common_icon_checkbox_off.png) center no-repeat;
+			&.on{
+				background: url($img-dir/common_icon_checkbox_on.png) center no-repeat;
+			}
+		}
+		.time {
+			width: 90%;
+			height: 100%;
+			display: inline-block;
+		}
+		
+		.sun_time {
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+		}
+		.sun_value {
+			width: 40%;
+			height: 100%;
+			display: inline-block;
+			align-content: flex-end;
+			font-size:$fontsize14;
+			color: $text-weaken-color;
+			text-align: right;
+		}
+	}
+	.checkboxGroup2 {
+		margin-top: 1.25rem;
+	}
+	
+	.location{
+		margin-top: 2.25rem;
+		.location_title{
+			color: $text-color;
+			font-size: $fontsize17;
+		}
+	}
+	
+	.arrowRight {
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		position:absolute;
+		line-height: 4.66rem;
+		margin-top: calc((4.66rem - 2rem) / 2);
+		background: url($img-dir/automation_icon_right_arrow.png) no-repeat center;
+		background-size: 100% 100%;
+	}
+	
+}
+
+/** 情景公共样式结束 **/
+
+
+/*情景首页样式开始*/
+
+.automation {
+	.icon {
+		display: inline-block;
+		width: calc(4.5rem * $zoom);
+		height: calc(4.5rem * $zoom);
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		&.menu {
+			position: absolute;
+			background-image: url("$img-dir/common_nav_btn_leftbar_n.png");
+			left: calc((2.67rem - 22px) * $zoom);
+		}
+	}
+	&.main {
+		position:relative;
+		background-repeat:no-repeat; 
+		background-size:100% 100%;
+		-moz-background-size:100% 100%;
+		height: 100vh;
+	    width: 100vw;
+		background-image: url($img-dir/bg.png);
+	    background-size: cover;
+		>h1 {
+/*			position:fixed;
+*/		left:0;
+			height:2.25rem;
+			line-height: 2.25rem;
+			z-index:1;
+			/* font-family: SFProDisplay-Medium; */
+			font-size: $fontsize27;
+			color: $text-color;
+			margin: 0;
+			padding: 1.04rem 1.34rem;
+		}
+		>h2 {
+			font-family: PingFangSC-Medium;
+			font-weight: 700;
+			font-size: $fontsize20;
+			color: $text-color;
+			line-height: 2.38rem;
+			padding: 0;
+			margin: 13.21rem 0 0 2rem;
+			width: 19.79rem;
+		}
+		>p {
+			width: 27.25rem;
+			margin: 0.75rem 2rem;
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize15;
+			color: $text-weaken-color;
+			line-height: 1.58rem;
+		}
+		.tit{
+			margin-left:1.33rem;
+			width:25rem;
+			font-size: calc(54px * $zoom);
+			color: $text-color;
+			font-family: PingFangSC-Medium;
+		}
+		.emptyInfo{
+			margin-top :13rem;
+			.title{
+				margin-left:2rem;
+				width:25rem;
+				font-size: calc(40px * $zoom);
+				color: $text-color;
+				font-family: PingFangSC-Medium;
+			}
+			.hint{
+				margin:2rem;
+				color:#999;
+				font-family: PingFangSC-Regular;
+				font-size: calc(30px * $zoom);
+			}
+		}
+		.pull_refresh{
+			.automation-list {
+				padding: 0;
+				min-height:calc((100vh - 4.33rem) - (78px + 64px));
+				/* min-height:100vh; */
+				/* max-height:auto; */
+				background-color: transparent  !important;
+				overflow: hidden;
+				.list-li {
+					$liHeight: 6rem;
+					$iconSize: 3.67rem;
+					$switchWidth: 4.25rem;
+					$switchHeight: 2rem;
+					height: $liHeight;
+					/* margin: 1.25rem 1.34rem; */
+					background-color:  $text-color;
+					border-radius: 0.34rem;
+					position: relative;
+					-webkit-transform: translateX(0px);
+					>i {
+						display: inline-block;
+						width: $iconSize;
+						height: $iconSize;
+						overflow: hidden;
+						position: absolute;
+						top: calc(($liHeight - $iconSize) / 2);
+						left: 1.34rem;
+						&.icon-1 {
+							background: url("$img-dir/automation_icon_robot_off.png") no-repeat center;
+							background-size: 100%;
+						}
+						&.icon-1.act {
+							background: url("$img-dir/automation_icon_robot_on.png") no-repeat center;
+							background-size: 100%;
+						}
+						&.icon-2 {
+							background: url("$img-dir/automation_icon_time_off.png") no-repeat center;
+							background-size: 100%;
+						}
+						&.icon-2.act {
+							background: url("$img-dir/automation_icon_time_on.png") no-repeat center;
+							background-size: 100%;
+						}
+					}
+					>p {
+						font-family: PingFangSC-Regular;
+						font-size: $fontsize17;
+						color: $text-major-color;
+						text-align: left;
+						height: $liHeight;
+						float: left;
+						line-height: $liHeight;
+						margin: 0 calc($switchWidth + 1.34rem *2) 0 calc($iconSize + 1.34rem * 2);
+					}
+					>a {
+						position: absolute;
+						top: calc(($liHeight - $switchHeight) / 2);
+						right: 1.34rem;
+						float :right;
+					}
+					>span {
+						display: inline-block;
+						position: absolute;
+						right: -7.5rem;
+						top: 0;
+						width: $liHeight;
+						height: $liHeight;
+						text-align: center;
+						line-height: $liHeight;
+						background-color: $color-assist-2;
+						border-radius: 0.34rem;
+						color: $text-color;
+					}
+				}
+				>li:first-child {
+					margin-top: 2rem;
+				}
+				>li:last-child {
+					margin-bottom:5.5rem;
+				}
+			}
+		}
+	}
+
+	.am-pull-to-refresh-down{ 
+		/* $Hheight:calc(100vh- 64px - (1.58 +4.45)*12 ); */
+		$Hheight:calc(100vh - (90px + 64px));
+		height: $Hheight !important;
+	} 
+	
+	.am-list-body {
+		background: transparent;
+		border: none;
+		&::before {
+			display: none;
+		}
+		&::after {
+			display: none;
+		}
+	}
+	.am-list-item{
+		/* background-color:#303548  !important; */
+		background: rgba(0,0,0,0) !important;
+		border: none;
+			.am-list-line{
+			border: none !important;
+		}
+	}
+	.am-swipe-content{
+
+		background-color:transparent  !important;
+	}
+
+	.am-list-line::after{
+		background-color: #303548  !important;
+	}
+
+	.am-list-body::before{
+		background-color: #303548  !important;
+	}
+	.am-list-body::after{
+		background-color: #303548  !important;
+	}
+
+	.am-list-body{
+		background-color: transparent  !important;
+	}
+	.am-list-body>div{
+		background: rgba(0,0,0,0) !important;
+	}
+	.am-swipe-content{
+		background-color: transparent  !important;
+	}
+
+	.devSwitch{
+		.content{
+			.Item{
+				border: none;
+				color: white;
+				width: 100%;
+				background-color: $color-line;
+				$itemHeight: 4.67rem;
+				height:4.67rem;
+				line-height: 4.67rem;
+				border-radius: 0.5rem;
+				margin:1rem 0;
+				>span {
+					display: inline-block;
+					margin-left:1rem ;
+				}
+				>div{
+					display:inline-block;
+					float:right;
+					margin-right:1rem;
+					margin-top:calc(($itemHeight - 4rem)/2);
+					width:4rem;
+					height:4rem;
+					&.turnOn{
+						background: url("$img-dir/common_icon_checkbox_on.png") no-repeat center;
+						background-size:2rem 2rem;
+					}
+					&.turnOff{
+						background: url("$img-dir/common_icon_checkbox_off.png") no-repeat center/contain;
+						background-size:2rem 2rem;
+					}
+				}
+				
+			}	
+		}
+	}
+
+}
+
+
+/*情景首页样式结束*/

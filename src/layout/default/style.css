@@ -1,0 +1,251 @@
+
+
+/** 公共布局样式 begin **/
+.layout{
+	.panel{
+	  width: 100vw;
+	  height: 100vh;
+	  &.with-bg-3A4056{
+	  	background-color: $bg-major-color;
+	  }
+	}
+}
+/** 公共布局样式 end **/
+
+/** 导航布局样式 begin **/
+.layout.navigation{
+	.bar-title{
+		background: transparent;
+	}
+	.tab-nav{
+		position: fixed;
+		width: 100%;
+		height: calc(8.25rem * $zoom);
+		left: 0;
+		bottom: 0;
+		text-align: center;
+		padding-left: 0;
+		background: rgba(0,0,0,0.88);
+		
+		> a{
+			display: inline-block;
+			.icon{
+				display: block;
+				width: 100%;
+				height: calc(4.55rem * $zoom);
+				margin-top: calc(0.84rem * $zoom);
+				background-size: calc(4.5rem / 2) calc(4.55rem * $zoom);
+				background-position: center;
+				background-repeat: no-repeat;
+				&.home{
+					background-image: url("$img-dir/common_tab_home_n.png");
+				}
+				&.scene{
+					background-image: url("$img-dir/common_tab_sence_n.png");
+				}
+				&.security{
+					background-image: url("$img-dir/common_tab_security_n.png");
+				}
+				&.automation{
+					background-image: url("$img-dir/common_tab_automation_n.png");
+				}
+			}
+			.title{
+				font-size: calc(24px * $zoom);
+				margin-top: calc(0.68rem * $zoom);
+				color: $text-assist-color;
+			}
+			/** 选中样式 begin **/
+			&.active{
+				.icon{
+					&.home{
+						background-image: url("$img-dir/common_tab_home_s.png");
+					}
+					&.scene{
+						background-image: url("$img-dir/common_tab_sence_s.png");
+					}
+					&.security{
+						background-image: url("$img-dir/common_tab_security_s.png");
+					}
+					&.automation{
+						background-image: url("$img-dir/common_tab_automation_s.png");
+					}
+				}
+				.title{
+					color: $color-major;
+				}
+			}
+			/** 选中样式 end **/
+		}
+	}
+}
+/** 导航布局样式 end **/
+
+/** 多层布局样式 begin **/
+.layout.multilayer {
+	$duration: .3s;
+	.panel{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 201;
+		overflow-x: hidden;
+		background: $bg-major-color;
+	}
+	.hidden{
+		display: none;
+	}
+	.left{
+		.multilayer-enter {
+			transform: translate3d(100%, 0, 0);
+			&.multilayer-enter-active {
+				transition: transform $duration ease;
+				transform: translate3d(0, 0, 0);
+				opacity: 1;
+			}
+		}
+		.multilayer-leave {
+				transform: translate3d(0, 0, 0);
+				&.multilayer-leave-active {
+				  	transition: transform $duration ease;
+					transform: translate3d(-100%, 0, 0);
+				}
+		}
+	}
+	
+	.right{
+		.multilayer-enter {
+			display: block;
+			transform: translate3d(-100%, 0, 0);
+			&.multilayer-enter-active {
+			 	transition: transform $duration ease;
+				transform: translate3d(0, 0, 0);
+			}
+		}
+		.multilayer-leave {
+				transform: translateX(0);
+				&.multilayer-leave-active {
+				  	transition: transform $duration ease;
+					transform: translate3d(100%, 0, 0);
+				}
+		}
+	}
+}
+/** 多层布局样式 end **/
+
+/** 侧栏布局样式 begin **/
+.layout.pushlayer {
+	$duration: .3s;
+	.panel{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 301;
+		overflow-x: hidden;
+		background: rgba(0,0,0,.4);
+	}
+	.hidden{
+		display: none;
+	}
+	.left{
+		.pushlayer-enter {
+			transform: translate3d(-100%, 0, 0);
+			&.pushlayer-enter-active {
+				transition: transform $duration ease;
+				transform: translate3d(0, 0, 0);
+				opacity: 1;
+			}
+		}
+		.pushlayer-leave {
+				transform: translate3d(0, 0, 0);
+				&.pushlayer-leave-active {
+				  transition: transform $duration ease;
+					transform: translate3d(-100%, 0, 0);
+				}
+		}
+	}
+	
+	.right{
+		.pushlayer-enter {
+			transform: translate3d(-100%, 0, 0);
+			&.pushlayer-enter-active {
+			 	transition: transform $duration ease;
+				transform: translate3d(-12rem, 0, 0);
+			}
+		}
+		.pushlayer-leave {
+				transform: translateX(0);
+				&.pushlayer-leave-active {
+				  transition: transform $duration ease;
+					transform: translate3d(100%, 0, 0);
+				}
+		}
+	}
+}
+/** 侧栏布局样式 end **/
+/*下栅栏弹出布局样式 start*/
+.layout.pushlayerbottom {
+	overflow-x: hidden;
+	$duration: .3s;
+	.hidden{
+		display: none;
+	}
+	.bottom{
+		.pushlayer-enter {
+			transform: translate3d(0, -100%, 0);
+			&.pushlayer-enter-active {
+				transition: transform $duration ease;
+				transform: translate3d(0, 0, 0);
+				opacity: 1;
+			}
+		}
+		.pushlayer-leave {
+				transform: translate3d(0, 0, 0);
+				&.pushlayer-leave-active {
+				  transition: transform $duration ease;
+					transform: translate3d(0, -100%, 0);
+				}
+		}
+	}
+	
+	.top{
+		.pushlayer-enter {
+			transform: translate3d(0, -100%, 0);
+			&.pushlayer-enter-active {
+			 	transition: transform $duration ease;
+				transform: translate3d(-12rem, 0, 0);
+			}
+		}
+		.pushlayer-leave {
+				transform: translateX(0);
+				&.pushlayer-leave-active {
+				  transition: transform $duration ease;
+					transform: translate3d(0, 100%, 0);
+				}
+		}
+	}
+}
+/*下栅栏弹出布局样式 end*/
+
+.network-alert {
+	height: 44px;
+	line-height: 44px;
+	background: rgba(246, 248, 250, 0.5);
+	text-align: center;
+	z-index: 19;
+	p {
+		display: flex;
+		align-items: center;
+		padding-left: 1.335rem;
+		&:before {
+			content: '';
+			position: relative;
+			display: inline-block;
+			width: 2.665rem;
+			height: 2.665rem;
+			margin-right: 1.335rem;
+			background: url($img-dir/home_icon_alert_no_network.png) no-repeat;
+			background-size: contain;
+		}
+	}
+}

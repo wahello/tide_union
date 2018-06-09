@@ -1,0 +1,561 @@
+
+
+/** 组件公共样式开始 **/
+.component{
+	.icon{
+		display: inline-block;
+		width: calc(4.5rem * $zoom);
+		height: calc(4.5rem * $zoom);
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		&.add{
+			background-image: url($img-dir/common_nav_btn_add_n.png);
+		}
+		&.edit{
+			background-image: url($img-dir/common_nav_btn_edit_n.png);
+		}
+		&.back{
+			background-image: url($img-dir/common_nav_btn_back_n.png);
+		}
+		&.delete{
+			background-image: url($img-dir/common_nav_btn_delete.png);
+		}
+		&.menu{
+			background-image: url($img-dir/common_nav_btn_leftbar_n.png);
+		}
+		&.record{
+			background-image: url($img-dir/common_nav_btn_record_n.png);
+		}
+		&.setting{
+			 background: url($img-dir/common_nav_btn_setting_n.png) center no-repeat;
+		}
+		&.next{
+			background-image: url($img-dir/automation_icon_right_arrow.png);
+		}
+		&.checkbox{
+			background-image: url($img-dir/common_icon_checkbox_off.png);
+			&.on{
+				background-image: url($img-dir/common_icon_checkbox_on.png);
+			}
+		}
+	}
+}
+/** 组件公共样式结束 **/
+
+/** 标题栏样式开始 **/
+.component.bar-title{
+	$top: 20px;
+	$height: 44px;
+	overflow: hidden;
+	height: calc($height + $top);
+	text-align: center;
+	background: $bg-nav-top-color;
+	.bar-content{
+		position: absolute;
+		top: $top;
+		width: 100vw;
+	}
+	.title{
+		font-size: calc(34px * $zoom);
+		width:calc(100% - 44px - 4rem - 1.34rem * 2);
+		/* font-weight: 700; */
+		color: $text-color;
+	    display: inline-block;
+	    box-sizing: border-box;
+	    margin: calc(27px * $zoom) auto;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+	.icon{
+		$size: 54px;
+		position: absolute;
+		width: $height;
+		height: $height;
+		background-size: calc($size * $zoom) calc($size * $zoom);
+		&.add{
+			right: calc(1.33rem - 1rem);
+		}
+		&.edit{
+			right: calc(1.33rem + 3rem);
+		}
+		&.back{
+			left: calc(1.33rem - 1rem);
+		}
+		&.delete{
+			right: calc(1.33rem - 1rem);
+		}
+		&.setting{
+			width: calc($height * 0.7);
+			height: calc($height * 0.7);
+			top: 0.5rem;
+			right: calc(1.33rem + 0.5rem);
+		}
+		&.done{
+			right: calc(1.33rem - 0.4rem);
+			color: $color-major;
+			font-weight: lighter;
+			background-size: $size $size;
+			font-size: $fontsize17;
+		}
+		&.menu{
+			left: calc(1.33rem - 1rem);
+		}
+		&.record{
+			width: calc($height * 0.7);
+			height: calc($height * 0.7);
+			top: 0.5rem;
+			right: calc(2.66rem + 2rem);
+		}
+	}
+	.txt{
+		position: absolute;
+		right: calc(1.33rem * $zoom);
+		padding: calc(25px * $zoom) calc(2.04rem * $zoom) calc(29px * $zoom);
+		font-size: calc(34px * $zoom);
+		line-height: calc(34px * $zoom);
+		color: $color-major;
+	}
+	.set-btn{
+		$btnSize: 2.25rem;
+		position: absolute;
+		right: calc(1.5rem - 1.42rem);
+		width: $btnSize;
+		height: $btnSize;
+		margin:0.71rem 1.34rem;
+		background-image: url("$img-dir/common_nav_btn_setting_n.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+}
+/** 标题栏样式结束 **/
+
+/** 通用栏样式开始 **/
+.component.bar-normal{
+	position: relative;
+	overflow: hidden;
+	width: calc(100% - 2.67rem);
+	min-height: calc(9.33rem * $zoom);
+	padding: 0 calc(2.67rem * $zoom);
+	border: 0;
+	border-radius: calc(0.67rem * $zoom);
+	color: $text-color;
+	background: rgba(255, 255, 255, 0.1);
+	.icon{
+		position: absolute;
+		top: 50%;
+		right: calc(2.67rem * $zoom);
+		margin-top: calc(-4.5rem * $zoom * $zoom);
+	}
+	input {
+		width: 100%;
+		height: calc(9.33rem * $zoom);
+		font-size: calc(34px * $zoom);
+		color: $text-color;
+		border: 0;
+		border-radius: calc(0.67rem * $zoom);
+		background: transparent;
+	}
+	.title{
+		position: absolute;
+		top: 50%;
+		margin-top: calc(-34px * $zoom * $zoom);
+		font-size: calc(34px * $zoom);
+		color: $text-color;
+	}
+}
+/** 通用栏样式结束 **/
+
+.component.ipc-bottom{
+	$h:6rem;
+	position:fixed;
+	z-index:99;
+	width:100%;
+	height:$h;
+	left:0px;
+	bottom:0px;
+	background: #303548;
+	.menu-item{
+		width:calc(100vw / 3);
+		display:inline-block;
+		height:$h;
+		text-align:center;
+		> a{
+			$iconSize:2.25rem;
+			width:$iconSize;
+			height:$iconSize;
+			display:inline-block;
+			margin:1.34rem auto 0.34rem auto;
+		}
+		> a.screenshot{
+			background:url("$img-dir/ipc_icon_screen_n.png") no-repeat;
+			background-size:contain;
+			&.disable{
+				background:url("$img-dir/ipc_icon_screen_d.png") no-repeat;
+				background-size:contain;
+			}
+		}
+		> a.talk{
+			background:url("$img-dir/ipc_icon_talk_n.png") no-repeat;
+			background-size:contain;	
+			&.disable{
+				background:url("$img-dir/ipc_icon_talk_d.png") no-repeat;
+				background-size:contain;
+			}
+		}
+		> a.record{
+			background:url("$img-dir/ipc_icon_record_n.png") no-repeat;
+			background-size:contain;
+			&.action{
+				background:url("$img-dir/ipc_icon_record_s.png") no-repeat;
+				background-size:contain;
+			}	
+			&.disable{
+				background:url("$img-dir/ipc_icon_record_d.png") no-repeat;
+				background-size:contain;
+			}
+		}
+		>a.back{
+			background:url("$img-dir/ipc_icon_back_n.png") no-repeat;
+			background-size:contain;	
+			&.disable{
+				background:url("$img-dir/ipc_icon_back_d.png") no-repeat;
+				background-size:contain;
+			}
+		}
+		>a.reconnect{
+			background:url("$img-dir/ipc_icon_reconnect_n.png") no-repeat;
+			background-size:contain;
+			&.disable{
+				background:url("$img-dir/ipc_icon_reconnect_p.png") no-repeat;
+				background-size:contain;
+			}
+		}
+		> p{
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize11;
+			color: rgba(255,255,255,0.5);
+			&.disable{
+				color:rgba(255,255,255,0.3);
+			}
+		}
+	}
+}
+
+
+/*弹出菜单样式*/
+.drop-menu{
+	display:inline-block;
+	position:relative;
+	.sub-menu{
+		position:absolute;
+		display:none;
+		> span{
+			display:inline-block;
+			text-align:center;
+			width:100%;
+			background-color:rgba(0,0,0,0.48);
+			&.selected{
+				color:#F59C24 !important;
+				background: rgba(255,255,255,0.24);
+			}
+		}
+		&.show{
+			display:block;
+		}
+	}
+	.drop-txt{
+		display:inline-block;
+		width:100%;
+		text-align:center;
+	}
+	.drop-txt.disable{
+		color:#888888 !important;
+	}
+}
+			
+.am-tabs .nav-bar{
+	box-sizing: content-box;
+}
+
+.switch{
+	display: inline-block;
+	width: 4.25rem;
+	height: 2rem;
+	/*background: $text-color center no-repeat;*/
+	background: center no-repeat;;
+	background-size: 100%;
+	outline: none;
+
+	&.switch-on{
+		background-image: url($img-dir/switch_on.png);
+	}
+
+	&.switch-off{
+		background-image: url($img-dir/switch_off.png);
+	}
+	&:hover, &:focus, &:active, &:visited{
+		background-color: rgba(0 ,0 ,0 ,0);
+	};
+}
+.set-value{
+	$h:1.25rem;
+	height:$h;
+	line-height:$h;
+	text-align:center;
+	margin:1.79rem 0 5.17rem;
+	font-family: PingFangSC-Medium;
+	font-weight: 700;
+	font-size: $fontsize15;
+	color: $text-color;
+	letter-spacing: 0;
+}
+
+.slider-brightness{
+	margin: 0 3.33rem;
+	
+	.weak{
+		background: url("$img-dir/device_icon_brightness_weak.png");
+		background-size: 100% 100%;
+	}
+	.strong{
+		background: url("$img-dir/device_icon_brightness_strong.png");
+		background-size: 100% 100%;
+	}
+	.tip-wrap{
+		position: absolute;
+		top: 0;
+		left: calc((2rem + .58rem) * 2);
+		width: calc(100% - (2rem + .58rem + 0.66rem) * 2);
+		margin: 0 auto;
+	}
+	.tip{
+		text-align: center;
+		font-size: 13px;
+		font-weight: 700;
+		background: url("$img-dir/light_control_air_bubbles.png");
+		background-size: 100% 100%;
+	}
+	
+	&.close{
+		.weak{
+			/*background: url("$img-dir/equipment_icon_low_disable.png");*/
+			/*background-size: 100% 100%;*/
+			opacity:0.3;
+		}
+		.strong{
+			/*background: url("$img-dir/equipment_icon_high_disable.png");*/
+			/*background-size: 100% 100%;*/
+			opacity:0.3;
+		}
+		.rc-slider{
+			opacity:0.3;
+		}
+	}
+}
+
+
+/*滚动view*/
+.scroll-view{
+	height: calc(100vh - 64px);
+	overflow-x: hidden;
+	overflow-y: auto;
+	
+}
+
+.am-tab-bar{
+	border-top: 0;
+	.am-tabs-pane-wrap{
+		overflow: hidden;
+	}
+
+	.am-tab-bar-bar{
+		/*height: 4.08rem;*/
+		border-top: 0;
+		font-size: $fontsize11;
+		
+		&::before{
+			visibility: hidden;
+		}
+	}
+
+}
+
+/*.circular-progress{
+	.progress-bar{
+    transition: all 500ms ease-out;
+  }
+}*/
+
+/** 设备列表组件样式开始 **/
+.device-list-item {
+	position: relative;
+	height: 6rem;
+	margin: 0 calc(2.67rem * $zoom) 1.25rem;
+	background-color: $text-color;
+	border-radius: 4px;
+	.item-content {
+		position: relative;
+		padding-left: 6rem;
+		overflow: hidden;
+		background-size: calc(7.33rem * $zoom) calc(7.33rem * $zoom); 
+		background-position: left 1.335rem top 1.165rem;
+		background-repeat: no-repeat;
+		&.motion {
+			background-image: url("$img-dir/devices_icon_motion_s.png");
+		}
+		&.curtain {
+			background-image: url("$img-dir/devices_icon_curtain_s.png");
+		}
+		&.camera {
+			background-image: url("$img-dir/devices_icon_camera_s.png");
+		}
+		&.magnet {
+			background-image: url("$img-dir/devices_icon_door_lock_s.png");
+		}
+		&.gateway {
+			background-image: url("$img-dir/devices_icon_gateway_s.png");
+		}
+		&.keypad {
+			background-image: url("$img-dir/devices_icon_keypad_s.png");
+		}
+		&.default {
+			background-image: url("$img-dir/devices_icon_default.png");
+		}
+		&.lighting {
+			background-image: url("$img-dir/devices_icon_lighting_s.png");
+		}
+		&.plug {
+			background-image: url("$img-dir/devices_icon_plug_s.png");
+		}
+		&.plug4 {
+			background-image: url("$img-dir/devices_icon_plug4_s.png");
+		}
+		&.remote {
+			background-image: url("$img-dir/devices_icon_remote_s.png");
+		}
+		&.siren {
+			background-image: url("$img-dir/devices_icon_siren_s.png");
+		}
+		&.smoke {
+			background-image: url("$img-dir/devices_icon_smoke_s.png");
+		}
+		&.switch {
+			background-image: url("$img-dir/devices_icon_switch_s.png");
+		}
+		&.water_leak {
+			background-image: url("$img-dir/devices_icon_water_leak_s.png");
+		}
+		.item-name {
+			margin: 1.335rem 4.33rem 0.414rem 0;
+			color: $text-major-color;
+			font-size: 17px;
+			font-weight: 700;
+			text-align: left;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+		}
+		.item-belong {
+			color: $text-second-color;
+			font-size: 13px;
+			margin-bottom: 1.5rem;
+		}
+		.item-status {
+			position: absolute;
+			right: 1.33rem;
+			top: 2.375rem;
+			float: right;
+			font-size: 15px;
+			color: #F59C24;
+			line-height: 15px;
+		}
+	}
+	>.switch {
+		position: absolute;
+		right: 1.335rem;
+		top: 2rem;
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		&.switch-off {
+			background: url("$img-dir/common_icon_checkbox_off.png")no-repeat;
+			background-size: 100% 100%;
+		}		
+		&.switch-on {
+			background: url("$img-dir/common_icon_checkbox_on.png")no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+	/*.offline{
+		width: 1.66rem;
+		height: 1.66rem;
+		position: absolute;
+		left: 3.9rem;
+		top: 3.5rem;
+		background-size: contain;
+		background-repeat: no-repeat;		
+		background-image: url($img-dir/edit_scene_icon_offline.png);
+	  }*/
+
+	
+}
+/** 设备列表组件样式结束 **/
+
+.selectApWiFi {
+	font-family: PingFangSC-Regular;
+	.tipImg {
+		margin: 0 auto;
+		margin-top: 1rem;
+		height: 26.6rem;
+		width: 87.2%;
+		opacity: 1.0;
+		background: url($img-dir/connection_device_wifi_step_diagram.png) no-repeat center bottom;
+		background-size: contain;
+	}
+	.tip {
+		margin: 0 auto;
+		margin-top: 1.66rem;
+		width: 27.91rem;
+		color: $text-weaken-color;
+		text-align: left;
+		font-size: $fontsize15;
+	}
+	.currentwifi {
+		margin: 0 auto;
+		margin-top: 2.5rem;
+		width: 87.2%;
+		height: 3rem;
+		color: $text-weaken-color;
+		text-align: center;
+		font-size: $fontsize13;
+	}
+	.wifi-setting {
+		margin: 0 auto;
+		width: 89.3%;
+		height: 4.1rem;
+		border: 1px solid $color-major;
+		text-align: center;
+		color: $text-color;
+		background: $color-major;
+		border-radius: 0.3rem;
+		display: block;
+		font-size: 17px;
+		left: calc((100% - 89.3%) /2);
+	}
+	.step-next {
+		margin: 0 auto;
+		margin-top: 2.65rem;
+		width: 89.3%;
+		height: 4.1rem;
+		border: 2px solid #FFFFFF;
+		text-align: center;
+		color: $text-color;
+		background: $bg-major-color;
+		display: block;
+		border-radius: 0.3rem;
+		left: calc((100% - 89.3%) /2);
+		font-size: 17px;
+		margin-bottom: 0.85rem;
+	}
+}

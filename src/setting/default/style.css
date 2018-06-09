@@ -1,0 +1,589 @@
+
+
+/* 设置模块样式开始 */
+.setting.default{
+  background-color: $bg-major-color;
+  height: 100vh;
+
+	/* 主页面样式开始 */
+	.main{
+		
+		ul{
+			$space: 1.33rem;
+			padding: 0;
+			li{
+				$height: 4.66rem;
+				height: $height;
+				line-height: $height;
+				/* border-bottom: solid 1.08rem $bg-major-color; */
+				color: $text-major-color;
+				cursor: pointer;
+        font-size: $fontsize17;
+        
+				background: none;
+        background-size: 0.58rem 0.83rem;
+        margin-left: 1.66rem;  
+        margin-right: 1.66rem;
+        margin-top: 1.25rem;
+        border-radius: 5px;
+        padding-left: $space;
+        color: $text-color;
+        background: $color-line;
+
+				&:last-child{ 
+					border-bottom: none;
+				}
+				a{
+					/* display: block; */
+					/* padding-left: $space; */
+					/* width: 100%;
+          height: 100%; */
+          color: $text-color;
+				}
+      }
+      
+      
+		}
+
+		.btn-logout{
+			display: block;
+			margin: 2.5rem 1.33rem;
+			line-height: 3.5rem;
+			border-radius: 4px;
+			font-size: $fontsize15;
+			background-color: #FD3A26;
+			text-align: center;
+			color: $text-color;
+    }
+
+    .version{
+      display: block;
+      margin: 18rem 1.33rem;
+      line-height: 3.5rem;
+      font-family: PingFangSC-Regular;
+      letter-spacing: 0;
+      font-size: $fontsize15;
+      text-align: center;
+      color: #C8C8C8;
+      }
+    
+	.version{
+		display: block;
+		margin: 18rem 1.33rem;
+		line-height: 3.5rem;
+		font-family: PingFangSC-Regular;
+		letter-spacing: 0;
+		font-size: $fontsize15;
+		text-align: center;
+		color: #C8C8C8;
+    }
+    
+    .Receive-notifications{
+        float: left;
+      
+        $height: 4.66rem;
+        height: $height;
+        color: $text-color;
+        font-size: $fontsize17;
+        width: 100%;
+        background: $color-line;
+        border-radius: 5px;
+        /* padding-left: 1.33rem; */
+        /* &:last-child{ 
+          border-bottom: none;
+        }       */
+      
+    }
+    .switch{
+      float: right;
+      margin-right: 20px;
+      margin-top: 1.4rem;
+     
+    }
+
+    .devRight {
+      height: 4.66rem;
+      width: 2rem;
+      right:2rem;
+
+      position: absolute;
+      margin-right: 1.33rem;
+      margin-top: -3.3rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url($img-dir/automation_icon_right_arrow.png);
+    }
+    
+    .newVersionTip{
+      position: absolute;
+      margin-right: 2.33rem;
+      margin-top: -4.58rem;
+      right:2.5rem;
+      color:$color-major;
+      font-size: $fontsize15;
+    }
+
+	}
+  
+ 
+  
+
+	/* 固件升级页面样式开始 */
+	.update{
+	    
+		.bodyer{
+			overflow: hidden;
+			.logo{
+				$size: 8.83rem;
+				width: $size;
+				height: $size;
+				background: none;
+				background-size: $size $size;
+				margin: 11.67rem auto 0;
+			}
+			.ask{
+				text-align: center;
+				font-size: $fontsize15;
+				margin: 2.67rem 0 .67rem;
+				color: $text-second-color;
+			}
+			.desc{
+				text-align: center;
+				font-size: $fontsize13;
+				margin: 0;
+				color: $text-assist-color;
+			}
+			.operate{
+				text-align: center;
+				a{
+					display:block;
+					width: 17.5rem;
+					height: 3.67rem;
+					line-height: 3.67rem;
+					background-color: #419CF9;
+					border-radius: 0.33rem;
+					font-size: $fontsize15;
+					color: $text-color;
+					margin: 4.67rem auto 0;
+				}
+			}
+		}
+	}
+	/* 固件升级页面样式结束 */
+	
+	/* 关于页面样式开始 */
+	.about{
+	    
+		.bodyer{
+			overflow: hidden;
+			.logo{
+				$size: 6.67rem;
+				width: $size;
+				height: $size;
+				background: none;
+				background-size: $size $size;
+				margin: 2.67rem auto 0;
+			}
+			.name{
+				text-align: center;
+				font-size: $fontsize17;
+			}
+			ul{
+				$space: 1.33rem;
+				padding-left: 0;
+				li{
+					$height: 3.67rem;
+					position: relative;
+					height: $height;
+					line-height: $height;
+					color: $text-major-color;
+					background-color: $text-color;
+					cursor: pointer;
+					font-size: $fontsize15;
+					background: none;
+					background-size: 0.58rem 0.83rem;
+					padding-left: $space;
+					span{
+						position: absolute;
+						color: $text-assist-color;
+						right: calc($space + $space + 0.58rem);
+					}
+				}
+			}
+		}
+  }
+  
+
+	/* Feedback页面样式开始 */
+	.Feedback{
+    
+    .textareaContainer{
+      padding:1rem 1rem 1rem 1rem;
+      margin: 1.33rem 1.33rem;
+      background: $color-line;
+      border-radius: 5px;
+    }
+    .inputName {
+      
+      height: 15rem;
+      width: 100%;
+      background: $color-line;
+      color: $text-color;
+      font-size: $fontsize14; 
+      border-radius: 5px;
+      border: 0;
+      vertical-align:left;
+    }
+
+    .btn-Submit{
+			display: block;
+			margin: 2.5rem 1.33rem;
+			line-height: 3.5rem;
+			border-radius: 4px;
+			font-size: $fontsize15;
+			background-color: $color-major;
+			text-align: center;
+			color: $text-color;
+    }
+	}
+
+	
+	
+	.list-style{
+		width: 30px;
+		height: 30px;
+		margin-left: 10px;
+		float: left;
+		/*background: url("$img-dir/devices_icon_camera_white_44.png")  center no-repeat;*/
+		background-size: 2rem 2rem;
+		
+	}
+.div1{
+	width: 300px;
+	height: 80px;
+	float: left;
+}
+.div2{
+	width: 300px;
+	height: 80px;
+	float: left;
+}
+.div3{
+	width: 300px;
+	height: 80px;
+	float: left;
+}
+	
+	.record{
+   	  line-height: 30px;
+	  max-width: 30px;
+	  height: 30px;
+	  float: right;
+	}
+
+	.record-date{
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 17px;
+	margin-bottom: 0;
+	margin-left: 10px;
+	color: $text-color
+	}
+	/* 关于页面样式结束 */
+	
+	/* 用户协议页面样式开始 */
+	.agreement{
+	    
+		p{
+			margin: 2.5rem 1.33rem;
+			font-size: $fontsize15;
+		}
+	}
+		
+#cd-timeline {
+  position: relative;
+}
+
+#last-timeline {
+position: relative;
+}
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 19px;
+  height: 100%;
+  width: 1px;
+  background: #d7e4ed;
+}
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+.aabb{
+	position: absolute;
+	top: -23px;
+	left: 100px;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+#cd-timeline {
+  position: relative;
+  
+}
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #d7e4ed;
+}
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cd-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.cd-timeline-img img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+.cd-timeline-img.cd-picture {
+  background: #75ce66;
+}
+.cd-timeline-img.cd-movie {
+  background: #c03b44;
+}
+.cd-timeline-img.cd-location {
+  background: #f0ca45;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .cssanimations .cd-timeline-img.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations .cd-timeline-img.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-1 0.6s;
+    -moz-animation: cd-bounce-1 0.6s;
+    animation: cd-bounce-1 0.6s;
+  }
+}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background: white;
+  border-radius: 0.25em;
+  padding: 1em;
+  box-shadow: 0 3px 0 #d7e4ed;
+}
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-content h2 {
+  color: #303e49;
+}
+.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  display: inline-block;
+}
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+.cd-timeline-content .cd-read-more {
+  float: right;
+  padding: .8em 1em;
+  background: #acb7c0;
+  color: white;
+  border-radius: 0.25em;
+}
+.no-touch .cd-timeline-content .cd-read-more:hover {
+  background-color: #bac4cb;  
+}
+a.cd-read-more:hover{text-decoration:none; background-color: #424242;  }
+.cd-timeline-content .cd-date {
+  float: left;
+  padding: .8em 0;
+  opacity: .7;
+}
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid white;
+}
+@media only screen and (min-width: 768px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+  }
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: white;
+  }
+  .cd-timeline-content .cd-read-more {
+    float: left;
+  }
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: white;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+  .cssanimations .cd-timeline-content.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations .cd-timeline-content.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-2 0.6s;
+    -moz-animation: cd-bounce-2 0.6s;
+    animation: cd-bounce-2 0.6s;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  /* inverse bounce effect on even content blocks */
+  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+    -webkit-animation: cd-bounce-2-inverse 0.6s;
+    -moz-animation: cd-bounce-2-inverse 0.6s;
+    animation: cd-bounce-2-inverse 0.6s;
+  }
+}
+
+}
+/* 设置模块样式结束 */
+
+

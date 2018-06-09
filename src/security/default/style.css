@@ -1,0 +1,687 @@
+.security-main {
+  $spiner_r: 10rem;
+  $progress_r: 8rem;
+  $top: 36px;
+  $spinerItemHeight: 15px;
+  $navbarHeight: 64px;
+
+  .circular-progress {
+  	position: absolute;
+/*  	top: calc($navbarHeight + $top + $spiner_r - $progress_r - 5px);
+    left: calc(50vw - $progress_r - 5px);*/
+  }
+
+  .lds_spinner {
+      position: fixed;
+/*      top: calc($navbarHeight + $top);
+      left: calc(50vw - $spiner_r);*/
+  }
+
+  .lds_spinner div {
+/*    transform-origin: $spiner_r $spiner_r;
+*/    
+
+  }
+
+  
+
+  .lds_spinner_animation div {
+    /* animation: lds_spinner 6s linear infinite; */
+  }
+
+  .lds_spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: calc($spiner_r + 10px);
+    width: 2px;
+    height: $spinerItemHeight;
+    border-radius: 20%;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .lds_spinner_animation div:after{
+    background-color: #00FFB0;
+  }
+
+  @for $i from 1 to 60 {
+    .lds_spinner div:nth-child($i) {
+      transform: rotate(calc(calc(360 / 60 * calc($i - 1)) * 1deg));
+      animation-delay: calc(calc(60 - $i) * -0.1s);
+    }
+  }
+
+  @for $i from 1 to 60 by 5 {
+    .lds_spinner div:nth-child($i):after {
+      top: -15px;
+      height:30px;
+    }
+  }
+
+  .status_desc{
+    position: absolute;
+    top: calc($navbarHeight + $top + $spiner_r + 37px);
+    left: calc(50vw - 90px);
+    width: 180px;
+    text-align: center;
+    color: $text-color;
+    font-size: $fontsize13;
+  }
+
+  .status_icon{
+    position: absolute;
+    width: 67px;
+    height: 74px;
+    left: calc(50vw - 33px);
+    top: calc($navbarHeight + $top + $spiner_r - 37px);
+    background: transparent center no-repeat;
+    background-size: contain;
+  }
+
+  .status_icon_none{
+    background-image: url($img-dir/Security_icon_no_protection.png);
+  }
+
+  .status_icon_success{
+    background-image: url($img-dir/Security_icon_their_success.png);
+
+  }
+
+  .status_icon_off{
+    background-image: url($img-dir/Security_icon_removal.png);
+
+  }
+
+  .status_desc p{
+    margin: 5px 0;
+  }
+
+  .mode_icon{
+    display: inline-block;
+    width: 5.67rem;
+    height: 5.67rem;
+    border: 1px solid $color-line;
+    border-radius: 50%;
+    background: transparent center no-repeat;
+    background-size: 3.67rem;
+  }
+
+  .mode_icon{
+    background-image: url($img-dir/security_icon_stay_44.png)
+  }
+
+  .mode_icon_away{
+    background-image: url($img-dir/security_icon_away_44.png)
+  }
+
+  .mode_icon_off{
+    background-image: url($img-dir/security_icon_off_44.png)
+  }
+
+  .mode_icon_sos{
+    background-image: url($img-dir/security_icon_panic_44.png);
+  }
+
+  .mode_icon_on, .mode_icon:active{
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mode_btn{
+    display: inline-block;
+  }
+  .mode_btn-text{
+    display: block;
+    color: $text-color;
+    font-size: $fontsize15;
+  }
+
+  footer{
+    position: absolute;
+    width: 100%;
+    bottom: calc(4.13rem + 5.42rem);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1.8rem;
+    box-sizing: border-box;
+  }
+
+}
+@keyframes lds_spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.setttings {
+    margin-top: 1rem;
+    margin-left: 1.67rem;
+    margin-right: 1.67rem;
+    color: $text-color;
+    font-size: 16px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      background: $color-line;
+      padding: 1.33rem;
+      border-radius: 0.2rem;
+      margin-bottom: 1.25rem;
+      color: $text-color;
+      a {
+        position: relative;
+        display: block;
+        color: $text-color;
+        width: 100%;
+        background: url($img-dir/automation_icon_right_arrow.png) no-repeat 100%;
+        background-size: 2rem 2.25rem;
+      }
+    }
+
+    .volume-content{
+      float: right;
+      margin-right:25px;
+      margin-top: -20px;
+    }
+    .time-content{
+      float: right;
+      margin-right:0px;
+      margin-top: -17px;
+    }
+    
+    .time-arrow{
+        float: right;
+        width: 2rem;
+        height: 2.25rem;
+        margin-top: -20px;
+        
+        background: url($img-dir/automation_icon_right_arrow.png) no-repeat 100%;
+        background-size: 2rem 2.25rem;
+      
+     
+    }
+
+    .volume-checkbox-on{
+      margin-top: -5px;
+      float: right;
+      width: 2.0rem;
+      height: 2.0rem;
+      background: url($img-dir/common_icon_the_radio.png) ;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+     
+    }
+    .volume-checkbox-off{
+      margin-top: -5px;
+      float: right;
+      width: 2.0rem;
+      height: 2.0rem;
+      background: url($img-dir/common_icon_checkbox_off.png) ;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+     
+    }
+	
+}
+
+
+/* record */
+
+.security-record{
+
+
+  .row-backg{
+
+    padding: 0px 15px;
+    background: $bg-major-color;
+
+    .row-content{
+
+      padding: 15px 15px;
+      height: 1.84rem;
+      background: $bg-major-color;
+    
+    }
+
+    .row-image{
+
+      height: 2.57rem;
+      width: 2.57rem;
+      margin-right: 15px;
+      float: left;
+    }
+    .row-des{
+
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: $text-color;
+      float: left;
+      line-height: 1.84rem;
+    }
+    .row-time{
+
+      float: right;
+      line-height: 1.84rem;
+      margin-right: 15px;
+      color: $text-color;
+      font-size: 14px;
+    }
+
+    .record_icon_stay{
+      height: 2.57rem;
+      width:2.57rem;
+      background-repeat: no-repeat;
+      background-image: url("$img-dir/scene_icon_go_away_white_44.png");
+      background-size: 80% 80%;
+      
+    }
+    .record_icon_away{
+      height: 2.57rem;
+      width:2.57rem;
+      background-repeat: no-repeat;
+      background-image: url("$img-dir/scene_icon_go_away_white_44.png");
+      background-size: 80% 80%;
+    }
+    .record_icon_off{
+      height: 2.57rem;
+      width:2.57rem;
+      background-repeat: no-repeat;
+      background-image: url("$img-dir/scene_icon_go_away_white_44.png");
+      background-size: 80% 80%;
+    }
+   
+  }
+
+  .row-head{
+    padding-left: 0px;
+    background-color: $bg-major-color; 
+    color: $text-color;
+    
+  }
+
+  .am-list{
+
+    .am-list-body::before, .am-list-body::after{
+      display: none;
+    }
+
+    .am-list-body{
+      border: none !important;
+      .am-list-item{
+        .am-list-line::after{
+          display: none;
+        }
+        background-color:$bg-major-color !important;
+      }
+      background-color:$bg-major-color !important;
+    }
+  }
+
+}
+
+
+/** 安全模式样式开始 **/
+.security-mode {
+	/* .bar-content {
+		background-color: $bg-nav-top-color;
+	} */
+	h2 {
+		margin: 1.125rem calc(3.33rem * $zoom) calc(3.25rem * $zoom);
+		color: $text-color;
+		font-size: calc(34px * $zoom);
+		line-height: calc(42px * $zoom);
+	}
+	.security-set-time {
+		position: relative;
+		background-color: rgba(255,255,255,0.10);
+		line-height: calc(9.33rem * $zoom);
+		font-size: 17px;
+		margin: 0 calc(3.33rem * $zoom) calc(4.75rem * $zoom);
+		border-radius: 4px;
+		background-position: right 1.335rem top 1.25rem;
+		background-repeat: no-repeat;
+	  background-image: url("$img-dir/automation_icon_right_arrow.png");
+	  background-size: 2rem 2rem;
+		span:first-child {
+			color: $text-color;
+			padding-left: 1.35rem;
+		}
+		span:last-child {
+			position: absolute;
+			right: 2.835rem;
+			color: rgba(255,255,255,0.50);
+			font-size: 14px;
+		}
+	}
+	ul {
+		padding: 0;
+  }
+
+}
+/** 安全模式样式结束  **/
+
+/** 设置延时样式开始 **/
+.security-delay {
+	/* .bar-content {
+		background-color: $bg-nav-top-color;
+	} */
+	height: calc(100vh - 64px);
+	overflow: scroll;
+	ul {
+		padding: 0 calc(3.33rem * $zoom);
+		margin-top: calc(3.33rem * $zoom);
+		li {
+			position: relative;
+			margin-bottom: 1.25rem;
+			background-color: rgba(255,255,255,0.10);
+			color: $text-color;
+			font-size: 17px;
+			border-radius: 4px;
+			padding-left: 1.335rem;
+			line-height: calc(9.33rem * $zoom);
+			>i {
+				display: block;
+				position: absolute;
+				top: 1.335rem;
+				right: 1.335rem;
+				width: 2rem;
+				height: 2rem;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				&.on {
+					background-image: url("$img-dir/common_icon_the_radio.png");
+				}
+				&.off {
+					background-image: url("$img-dir/common_icon_checkbox_off.png")
+				}
+			}
+		}
+	}
+}
+/** 设置延时样式结束 **/
+/** 安全模式样式结束  **/
+@keyframes securityAlarmAnimation {  
+   0% {  
+        transform: scale(0);  
+        opacity: 0.0;  
+    }  
+   	 20% {  
+        transform: scale(0.3);  
+        opacity: 1;  
+    }  
+    100%{
+    	transform: scale(1);  
+        opacity: 0;  
+    }
+
+}  
+@-webkit-keyframes "securityAlarmAnimation" {   
+     0% {  
+        -webkit-transform: scale(0);  
+        opacity: 0.0;  
+    }  
+   	 20% {  
+        -webkit-transform: scale(0.3);  
+        opacity: 1;  
+    }  
+    100%{
+    	-webkit-transform: scale(1);  
+        opacity: 0;  
+    }
+
+}  
+
+.security-alarm {
+  height: 100vh;
+  background: linear-gradient(-227deg, #FF8457 0%, $color-assist-2 100%) center no-repeat;
+  overflow: hidden;
+
+  .bell-bg-wrap{
+    position: relative;
+    top: calc(64px + 1.33rem);
+  }
+
+  .bell-bg{
+    position: absolute;
+  }
+
+  .bell-bg1 {
+    width: 10.66rem;
+    height: 10.66rem;
+    top: calc( calc(20rem - 10.66rem) / 2);
+    left: calc( calc(100vw - 10.66rem) / 2);
+    border-radius: 50%;
+    opacity: 0;
+    z-index:3;
+    background-image: radial-gradient(50% 100%, rgba(255,120,74,0.78) 0, #fffafa 100%);
+    animation: securityAlarmAnimation 1s ease-out infinite;   
+  }
+
+  .bell-bg2 {
+    width: 15.33rem;
+    height: 15.33rem;
+    top: calc( calc(20rem - 15.33rem) / 2);
+    left: calc( calc(100vw - 15.33rem) / 2);
+    border-radius: 50%;
+    opacity: 0;
+    z-index:2;
+    background: radial-gradient(50% 100%, rgba(255,120,74,0.78) 0, #fffafa 100%) center no-repeat;
+    animation: securityAlarmAnimation 1s ease-out infinite;  
+  }
+
+  .bell-bg3 {
+    width: 20rem;
+    height: 20rem;
+    left: calc( 50vw - 10rem);
+    border-radius: 50%;
+    opacity: 0;
+    z-index:1;
+    background: radial-gradient(50% 100%, rgba(255,120,74,0.78) 0, #fffafa 100%) ; 
+    animation: securityAlarmAnimation 1s ease-out infinite; 
+  }
+
+  .bell{
+    position: absolute;
+    left: calc( 50vw - 1.63rem);
+    top: calc( 10rem - 2.13rem - 7px );
+    width: 3.25rem;
+    padding-top: 4.25rem;
+    background: url($img-dir/Security_icon_alarm.png) center top no-repeat;
+    background-size: contain;
+    font-style: normal;
+    color: $text-color;
+    font-size: $fontsize13;
+    z-index: 4;
+  }
+
+  .notif-panel{
+    position: absolute;
+    left: 1.33rem;
+    right: 1.33rem;
+    bottom: 1.33rem;
+    padding: 1.33rem;
+    border-radius: 8px;
+    background-color: $text-color;
+  }
+
+  .notif-list{
+    max-height: 400px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+  }
+
+  .notif-item{
+    padding: 1.67rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .notif-item_content{
+    display: inline-block;
+    margin-left: 1.75rem;
+    width: 80%;
+    white-space: nowrap;
+    
+    p{
+      margin: 0 0 0.5rem;
+      color: $text-major-color;
+      font-size: $fontsize16;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    span{
+      color: $text-assist-color;
+      font-size: 14px;
+    }
+
+    span:nth-child(3){
+      padding-left: 2.13rem;
+    }
+
+  }
+
+  .trigger-icon{
+    display: inline-block;
+    width: 3.12rem;
+    height: 3.12rem;
+    background: transparent center no-repeat;
+    background-size: contain;
+
+    &.sensor_doorlock{
+      background-image: url($img-dir/security_alarm_icon_door_lock_gray_76.png);
+    }
+    &.sensor_motion,&.sensor_pir{
+      background-image: url($img-dir/security_alarm_icon_motion_gray_76.png);
+    }
+  }
+
+  .view-more{
+    color: $text-second-color;
+    padding: 1.17rem 0;
+    font-size: $fontsize14;
+  }
+
+  .vew-more-link {
+    float: right;
+    font-size: $fontsize16;
+    color: $color-major;
+    border: 0;
+    background: transparent;
+  }
+
+  .disarm-btn {
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    line-height: 4.21rem;
+    font-size: $fontsize17;
+    text-align: center;
+    color: $text-color;
+    background-color: $color-assist-2;
+  }
+
+  .disarm-btn_os {
+    position: absolute;
+    bottom: 45px;
+    width: 80%;
+    left: 10%;
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,0.80);
+  }
+}
+
+.security-changepw {
+
+  .PasswordInputing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: calc(100vh);
+    background-color: rgba(0, 0, 0, .16);
+  }
+
+  .PasswordInputing-title {
+    margin: 8.67rem 0 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: SFProDisplay-Regular;
+  }
+
+  .PasswordInputing_row {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin-right: 3.67rem;
+  	margin-left: 3.67rem;
+  	margin-top: 1rem;
+  	margin-bottom: 1rem;
+  }
+
+  .PasswordInputing_row-dots {
+  	margin-right: 7.02rem;
+  	margin-left: 7.02rem;
+  	margin-top: 1.67rem;
+  	margin-bottom: 2.67rem;
+  }
+
+  .PasswordInputing_dot {
+    width: 1.07rem;
+    height: 1.07rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
+  .PasswordInputing_dot-on {
+    background-color: #fff;
+  }
+
+  .PasswordInputing_number {
+    width: 5.67rem;
+    height: 5.67rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .1);
+    text-align: center;
+    line-height: 5.67rem;
+    font-size: 32px;
+  }
+
+  .PasswordInputing_number:active {
+    background-color: rgba(255, 255, 255, .32);
+  }
+
+  .PasswordInputing_number:focus {
+    background-color: rgba(255, 255, 255, .32);
+  }
+
+  .PasswordInputing_footer {
+    line-height: 9.75rem;
+  }
+
+  .PasswordInputing_cancel {
+    float: right;
+    margin-right: 2.67rem;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  .PasswordInputing_back {
+    float: left;
+    margin-left: 2.67rem;
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+.security-sensor-list{
+  ul {
+    margin-top: 1.67rem;
+  }
+}

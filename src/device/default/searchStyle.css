@@ -1,0 +1,88 @@
+.searchHub{
+	.searchHub_main{
+		width:100vw;
+		height:100vh;
+        background:$bg-major-color;
+	}
+	.chooseDevice-cell:last-child{
+		margin-bottom: 8.2rem;
+	}
+}
+
+.btnBack{
+	 width: 100%;
+    height: 8rem;
+    background:  $bg-major-color;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+.doneBtn {
+	display: block;
+	width: calc(85%);
+	height: 4.16rem;
+	position: fixed;
+	bottom: 20px;
+	left: 7.5%;
+	border: none;
+	outline: none;
+	background-color: $color-major;
+	color: $text-color;
+	font-size: $fontsize17;
+	border-radius: 5px;
+
+}
+
+.search{
+	width:91.5%;
+	height: 2rem;
+	margin:0 auto;
+	font-size: $fontsize15;
+	color: $text-color;
+	line-height:1.8rem;
+	display:flex;
+	align-items:center;
+	margin-top: 0.5rem;
+	span {
+		vertical-align: top;
+		margin-right: 0.2rem;
+	}
+    .animation_list{
+		width: 2rem;
+		height: 2rem;
+		display:inline-block;
+		background: url($img-dir/loading_the_drop_down.png) no-repeat center; 
+		background-size: contain;
+		/* margin-left:4.3%; */
+		visibility: visible;
+		animation: search_list 2s infinite linear;
+	}
+}
+
+.not_foud{
+	width: 100%;
+	height: 30rem;
+	line-height: 30rem;
+	text-align: center;
+	font-family: SFProDisplay-Regular;
+	font-size: $fontsize17;
+}
+.try_again{
+	width: 89.3%;
+	height: 4.1rem;
+	border: 2px solid $color-major;
+	text-align: center;
+	color:$text-color;
+	background:$color-major;
+	border-radius: 0.3rem;
+	margin:0 auto;
+	display:block;
+	font-family: SFProDisplay-Regular;
+	font-size: $fontsize17;
+}
+@keyframes search_list{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}

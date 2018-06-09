@@ -1,0 +1,262 @@
+/* 公共样式 */
+.devices-icon,
+.flow-icon {
+	display: block;
+	width: 3.665rem;
+	height: 3.665rem;
+	background-size: 100% 100%;
+	&.camera {
+		background-image: url($img-dir/devices_icon_camera_online.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_camera_s.png);
+		}
+		&.offline {
+			background-image: url($img-dir/devices_icon_camera_n.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_camera_white.png);
+		}
+	}
+  &.camera2 {
+		background-image: url($img-dir/devices_icon_camera2_online.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_camera2_s.png);
+		}
+		&.offline {
+			background-image: url($img-dir/devices_icon_camera2_n.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_camera2_white.png);
+		}
+	}
+  &.camera3 {
+		background-image: url($img-dir/devices_icon_camera3_online.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_camera3_s.png);
+		}
+		&.offline {
+			background-image: url($img-dir/devices_icon_camera3_n.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_camera3_white.png);
+		}
+	}
+	&.curtain {
+		background-image: url($img-dir/devices_icon_curtain_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_curtain_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_curtain_white.png);
+		}
+	}
+	&.door_lock,&.magnet {
+		background-image: url($img-dir/devices_icon_door_lock_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_door_lock_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_door_lock_white.png);
+		}
+	}
+	&.gateway {
+		background-image: url($img-dir/devices_icon_gateway_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_gateway_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_gateway_white.png);
+		}
+	}
+	&.humiture {
+		background-image: url($img-dir/devices_icon_humiture_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_humiture_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_humiture_white.png);
+		}
+	}
+	&.keypad {
+		background-image: url($img-dir/devices_icon_keypad2_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_keypad2_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_keypad2_white.png);
+		}
+	}
+	&.keyfob {
+		background-image: url($img-dir/devices_icon_keyfod_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_keyfod_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_keyfod_white.png);
+		}
+	}
+	&.gateway2, &.sirenhub {
+		background-image: url($img-dir/devices_icon_gateway2_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_gateway2_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_gateway2_white.png);
+		}
+	}
+	&.lighting {
+		background-image: url($img-dir/devices_icon_lighting_online.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_lighting_s.png);
+		}
+		&.offline {
+			background-image: url($img-dir/devices_icon_lighting_offline.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_lighting_white.png);
+		}
+	}
+	&.zigbee_lighting {
+		background-image: url($img-dir/devices_icon_lighting_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_lighting_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_zigbeelighting_white.png);
+		}
+	}
+	&.motion {
+		background-image: url($img-dir/devices_icon_motion_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_motion_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_motion_white.png);
+		}
+	}
+	&.motion1 {
+		background-image: url($img-dir/devices_icon_motion_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_motion_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_motion_white1.png);
+		}
+	}
+	&.plug {
+		background-image: url($img-dir/devices_icon_plug_online.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_plug_s.png);
+		}
+		&.offline {
+			background-image: url($img-dir/devices_icon_plug_offline.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_plug_white.png);
+		}
+	}
+	&.plug4 {
+		background-image: url($img-dir/devices_icon_plug4_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_plug4_s.png);
+		}
+		&.offline {
+			background-image: url($img-dir/devices_icon_plug_offline.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_plug4_white.png);
+		}
+	}
+	&.wifi_plug {
+		background-image: url($img-dir/devices_icon_plug_online.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_plug_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_wifiplug_white.png);
+		}
+	}
+	&.remote {
+		background-image: url($img-dir/devices_icon_remote_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_remote_s.png);
+		}
+		&.offline {
+			background-image: url($img-dir/devices_icon_remote_offline.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_remote_white.png);
+		}
+	}
+	&.remote1 {
+		background-image: url($img-dir/devices_icon_remote_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_remote_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_remote_white1.png);
+		}
+	}
+	&.siren {
+		background-image: url($img-dir/devices_icon_siren_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_siren_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_siren_white.png);
+		}
+	}
+	&.smoke {
+		background-image: url($img-dir/devices_icon_smoke_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_smoke_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_smoke_white.png);
+		}
+	}
+	&.security-kit {
+		background-image: url($img-dir/devices_icon_smoke_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_smoke_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_list_icon_security.png);
+		}
+	}
+	&.switch {
+		background-image: url($img-dir/devices_icon_switch_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_switch_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_switch_white.png);
+		}
+	}
+	&.water_leak {
+		background-image: url($img-dir/devices_icon_water_leak_n.png);
+		&.on {
+			background-image: url($img-dir/devices_icon_water_leak_s.png);
+		}
+		&.white {
+			background-image: url($img-dir/devices_icon_water_leak_white.png);
+		}
+	}
+	&.default {
+		background-image: url($img-dir/devices_icon_default.png);
+	}
+  /*&.offline {
+      &:after {
+          content: '';
+          position: relative;
+          top: 2rem;
+          left: 2.465rem;
+          display: inline-block;
+          width: 1.667rem;
+          height: 1.667rem;
+          margin-right: 1.335rem;
+          background: url($img-dir/edit_scene_icon_offline.png) no-repeat;
+          background-size: contain;
+      }
+  }*/
+}

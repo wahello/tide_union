@@ -1,0 +1,126 @@
+.camera_calendar{
+    position:absolute;
+    width: 100%;
+    z-index:100;
+    bottom:-6.2rem;
+    .rc-calendar{
+        width: 100%;
+        background-color: #FCFCFC;
+        border-radius: 0;
+        box-shadow: none;
+        height:25rem;
+        border: none;
+        .rc-calendar-panel{
+            .rc-calendar-input-wrap{
+                display:none;
+            }
+            .rc-calendar-date-panel{
+                .rc-calendar-header{
+                    height:4rem;
+                    padding: 0;
+                }
+                .rc-calendar-header div{
+                    height:4rem;
+                    width:60%;
+                    margin:0 auto;
+                    .rc-calendar-prev-year-btn{
+                        display:none;
+                    }
+                    .rc-calendar-next-year-btn{
+                        display:none;
+                    }
+                    .rc-calendar-my-select{
+                        .rc-calendar-month-select,.rc-calendar-year-select{
+                            line-height:4rem;
+                            font-family: PingFangSC-Regular;
+                            font-size: 16px;
+                            color: #333333;
+                        }
+                    }
+                    .rc-calendar-prev-month-btn{
+                        position: absolute;
+                        left: 15px;
+                        top:0.6rem;
+                    }
+                    .rc-calendar-next-month-btn{
+                        position: absolute;
+                        right: 15px;
+                        top:0.6rem;
+                    }
+                    .rc-calendar-prev-month-btn:after{
+                        display: inline-block;
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-top: 7px solid transparent;
+                        border-bottom: 7px solid transparent;
+                        border-right: 7px solid #666;
+                    }
+                    .rc-calendar-next-month-btn:after{
+                        display: inline-block;
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-top: 7px solid transparent;
+                        border-bottom: 7px solid transparent;
+                        border-left: 7px solid #666;
+                    }
+                }
+            }
+        }
+        .rc-calendar-body{
+            .rc-calendar-table{
+                .rc-calendar-column-header{
+                    font-family: PingFangSC-Medium;
+                    font-size: 13px;
+                    color: #C8C8C8;
+                }
+                .rc-calendar-tbody{
+                    .rc-calendar-cell{
+                        font-family: PingFangSC-Regular;
+                        font-size: 13px;
+                        color: #666666;
+                        .rc-calendar-date{
+                            border-radius:50%;
+                        }
+                    }
+                }
+            }
+            .rc-calendar-selected-day .rc-calendar-date {
+                background: #F59C24;
+            }
+            .rc-calendar-today .rc-calendar-date {
+                border: 1px solid #F59C24;
+            }
+        }
+        .rc-calendar-footer{
+            display:none;
+        }
+    }
+    .re_cancel,.re_done{
+        width:4.5rem;
+        height:4rem;
+        line-height:4rem;
+        color:#F59C24;
+        font-family: PingFangSC-Regular;
+        font-size: 17px;
+    }
+    .re_cancel{
+        position:absolute;
+        top:0;
+        left:4.3%;
+        text-align:left;
+    }
+    .re_done{
+        position:absolute;
+        top:0;
+        right:4.3%;
+        text-align:right;
+    }
+    .rc-calendar-month-panel{
+      display:none;
+    }
+    .rc-calendar-year-panel{
+      display:none;
+    }
+}

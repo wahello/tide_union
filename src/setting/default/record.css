@@ -1,0 +1,182 @@
+
+
+
+.setting{
+	.activity-record{ 
+	background-color: $bg-major-color;
+	height: 100vh;
+	margin-top: -0.5rem;
+	}
+	
+	.record-img-camera{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_camera_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}
+	.record-img-humiture{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_humiture_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+	.record-img-curtain{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_curtain_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+    .record-img-magnet{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_door_lock_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+	.record-img-gateway{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_gateway_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+	.record-img-keypad{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_keypad_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+	.record-img-light{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_lighting_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+	.record-img-motion{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_motion_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+	.record-img-plug{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_plug_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+	.record-img-Smartplug_Meter{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_plug_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}
+	.record-img-remote{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_remote_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}		
+	.record-img-siren{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_siren_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}		
+		.record-img-smoke{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_smoke_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}		
+		.record-img-switch{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_switch_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem ;
+		flex: 0 0 2rem;
+	}	
+	.record-img-waterleak{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/devices_icon_water_leak_white_44.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem  ;
+		flex: 0 0 2rem;
+	}		
+
+	.record-img-stay{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/security_icon_stay.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem  ;
+		flex: 0 0 2rem;
+	}	
+
+	.record-img-away{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/security_icon_away.png') center no-repeat;
+		background-size:3.67 rem 3.67 rem  ;
+		flex: 0 0 2rem;
+	}				
+  
+}
+
+.list_main{
+	height:100vh;
+	backgroundColor: $bg-major-color;
+    width: 89.3%;
+    margin: 0 auto;
+}
+.record-day{
+	float:left;
+	margin-left: 20px;
+	margin-top:30px;
+	font-family:PingFangSC-Semibold;
+	font-size:17px;
+	color: $text-color;
+	letter-spacing: 0;
+	line-height:2.83 rem;
+}	
+
+.activity-record-item{
+	height: 3.5rem;
+	width: calc(100vw-2.5rem);
+	margin-top: 1.25rem;
+	border-radius: 8px;
+	margin-right: 1.34rem;
+	margin-left: 1.34rem;
+}	
+
+.record-title{
+	margin-left: 20px;
+    margin-top: 22px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: rgb(200, 200, 200);
+    letter-spacing: 0px;
+    /* width: 250px; */
+    display: inline-block;
+	flex: 1
+}	
+
+
+.record-des{
+	margin-top:20px;
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: $text-weaken-color;
+	letter-spacing: 0;
+	line-height:2.33 rem;
+	flex: 0 0 4rem;
+}	

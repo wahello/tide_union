@@ -1,0 +1,98 @@
+body {
+  background-color: $bg-major-color !important;
+}
+
+/** 导航布局样式 begin **/
+.tab-nav{
+	background: rgba(0,0,0,0.88) !important;
+	padding: calc(0.84rem * $zoom) 0;
+	.icon{
+		display: block;
+		width: 100%;
+		height: calc(4.55rem * $zoom);
+		background-size: calc(4.5rem / 2) calc(4.55rem * $zoom);
+		background-position: center;
+		background-repeat: no-repeat;
+		&.home{
+			background-image: url("$img-dir/common_tab_home_n.png");
+		}
+		&.scene{
+			background-image: url("$img-dir/common_tab_sence_n.png");
+		}
+		&.security{
+			background-image: url("$img-dir/common_tab_security_n.png");
+		}
+		&.automation{
+			background-image: url("$img-dir/common_tab_automation_n.png");
+		}
+	}
+	.title{
+		font-size: calc(24px * $zoom);
+		margin-top: calc(0.68rem * $zoom);
+		color: $text-assist-color;
+	}
+	/** 选中样式 begin **/
+	.active{
+		.icon{
+			&.home{
+				background-image: url("$img-dir/common_tab_home_s.png");
+			}
+			&.scene{
+				background-image: url("$img-dir/common_tab_sence_s.png");
+			}
+			&.security{
+				background-image: url("$img-dir/common_tab_security_s.png");
+			}
+			&.automation{
+				background-image: url("$img-dir/common_tab_automation_s.png");
+			}
+		}
+		.title{
+			color: $color-major;
+		}
+	}
+	/** 选中样式 end **/
+}
+/** 导航布局样式 end **/
+
+/** 多层布局样式 begin **/
+$duration: .3s;
+.panel{
+	background: $bg-major-color;
+}
+.left{
+	.multilayer-enter {
+		transform: translate3d(100%, 0, 0);
+		&.multilayer-enter-active {
+			transition: transform $duration ease;
+			transform: translate3d(0, 0, 0);
+			opacity: 1;
+		}
+	}
+	.multilayer-leave {
+			transform: translate3d(0, 0, 0);
+			&.multilayer-leave-active {
+			  	transition: transform $duration ease;
+				transform: translate3d(-100%, 0, 0);
+			}
+	}
+}
+
+.right{
+	.multilayer-enter {
+		display: block;
+		transform: translate3d(-100%, 0, 0);
+		&.multilayer-enter-active {
+		 	transition: transform $duration ease;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	.multilayer-leave {
+			transform: translateX(0);
+			&.multilayer-leave-active {
+			  	transition: transform $duration ease;
+				transform: translate3d(100%, 0, 0);
+			}
+	}
+}
+/** 多层布局样式 end **/

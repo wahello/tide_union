@@ -1,0 +1,152 @@
+.device-info {
+    &-power {
+        float: right;
+		width: 3.85rem;
+		height: 2.2rem;
+		background: url($img-dir/home_icon_low_battery.png) center no-repeat;
+		background-size: contain;
+		margin-right: 1.67rem;
+		margin-top: 2.45rem;
+    }
+    &-logo {
+        height: 12.42rem;
+        $size: 6.67rem;
+        width: $size;
+        height: $size;
+        margin: 3.34rem auto;
+        margin-bottom: 0;
+        border-radius: 50%;
+        background-color: $color-line;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 55%;
+        &.Light_ColorTemperature, &.Light_ColourTemperature, &.Light_Dimmable, &.Light_RGBW {
+            background-image: url($img-dir/devices_icon_lighting_white_44.png);
+        }
+        &.Multi_Gateway {
+            background-image: url($img-dir/devices_icon_gateway_white_44.png);
+        }
+        &.Siren_Hub {
+        		background-image: url($img-dir/devices_icon_gateway2_white.png);
+        }
+        &.wifi_plug {
+            background-image: url($img-dir/devices_icon_plug_white_44.png);
+        }
+         &.Smartplug_Meter {
+            background-image: url($img-dir/devices_icon_plug_white_44.png);
+        }
+        &.remote {
+            background-image: url($img-dir/devices_icon_remote_white_44.png);
+        }
+        &.Sensor_Doorlock {
+            background-image: url($img-dir/devices_icon_door_lock_white_44.png);
+        }
+        &.Sensor_PIR {
+            background-image: url($img-dir/devices_icon_motion_white_44.png);
+        }
+        &.Alarm_Siren {
+            background-image: url($img-dir/devices_icon_siren_white_44.png);
+        }
+        &.Keypad {
+            background-image: url($img-dir/devices_icon_keypad_white_44.png);
+        }
+        &.Keyfob {
+            background-image: url($img-dir/devices_icon_keyfod_white_44.png);
+        }
+        &.IPC {}
+    }
+    &-status {
+        text-align: center;
+        margin: 1.33rem 0 3.25rem 0;
+        font-size: 17px;
+        .left {
+            display: inline-block;
+            margin-left: 0rem;
+            width: 8rem;
+            text-align: right;
+        }
+        .seperate {
+            display: inline-block;
+            width: 1rem;
+            height: 1.42rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            color: #D8D8D8;
+        }
+        .right {
+            display: inline-block;
+            margin-right: 0rem;
+            width: 8rem;
+            text-align: left;
+        }
+    }
+    &-row {
+        display: flex;
+        margin: 1.25rem 1.33rem 0 1.25rem;
+        padding: 0 1.33rem;
+        height: 4.67rem;
+        line-height: 4.67rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 0.3rem;
+        cursor: pointer;
+        .title {
+            display: inline-block;
+            width: 10rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 17px;
+            &.long {
+                width: 15rem;
+            }
+        }
+        input {
+            flex: 1;
+            height: 100%;
+            width: 100%;
+            color: #C8C8C8;
+            font-size: $fontsize14;
+            text-align: right;
+            background: rgba(255, 255, 255, 0);
+            border: 0;
+            /* Letter-spacing: 1.6px; */
+        }
+        .name {
+            flex: 1;
+            font-size: $fontsize14;
+            color: $text-weaken-color;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: right;
+        }
+        &.arrow {
+            &:after {
+                content: '';
+                position: relative;
+                display: inline-block;
+                width: 2rem;
+                height: 2rem;
+                margin: 1.335rem 0;
+                background: url($img-dir/automation_icon_right_arrow.png) no-repeat;
+                background-size: contain;
+            }
+        }
+        &.operate {
+            margin-top: 0;
+            padding: 0;
+            padding-top: 2.5rem;
+            background: transparent;
+            button {
+                height: 4.17rem;
+                width: 100%;
+                background: $color-assist-2;
+                font-size: $fontsize17;
+                line-height: 1.25rem;
+                color: $text-color;
+                border-radius: 0.34rem;
+                border: 0;
+            }
+        }        
+    }
+}

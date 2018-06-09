@@ -1,0 +1,3209 @@
+
+/* 设备模块样式开始 */
+
+.device {
+	.am-pull-to-refresh-content{
+		min-height: 82vh;
+	}
+	color: $text-major-color;
+	/* 公共样式开始 */
+	.device-switch {
+		position: absolute;
+		width: 4.17rem;
+		height: 2.5rem;
+		top: 1.75rem;
+		right: 1.33rem;
+		background: $text-color center no-repeat;
+		background-size: 4.17rem 2.5rem;
+		outline: none;
+	}
+	.device-switch-on {
+		background-image: url($img-dir/switch_on.png);
+	}
+	.device-switch-off {
+		background-image: url($img-dir/switch_off.png);
+	}
+	.battery-status {
+		background-image: url($img-dir/home_icon_low_battery.png);
+		width: 2rem;
+		height: 2rem;
+		display: inline-block;
+		background-size: contain;
+		margin-right: 1.33rem;
+		width: 2rem;
+    	display: block;
+	}
+	.del-btn {
+		position: absolute;
+		right: 0;
+		top: 1px;
+		width: 6rem;
+		height: 6rem;
+		background: none;
+		background-size: 2rem;
+	}
+	.del-btn-txt {
+		display: block;
+		margin-top: 3.75rem;
+		text-align: center;
+		color: $text-color;
+	}
+	.empty {
+		padding-top: 22rem;
+		background: none;
+		background-size: 8.33rem 8.33rem;
+		text-align: center;
+		background-color: $bg-color;
+	}
+	.empty-title {
+		color: $text-second-color;
+		font-size: $fontsize15;
+	}
+	.empty-desc {
+		font-size: $fontsize13;
+		color: $text-assist-color;
+	}
+	/* 公共样式结束 */
+	/* 主(列表)页面样式开始 */
+	.main {
+		position: relative;
+		.am-list-header {
+			padding: 0;
+		}
+		.am-list-body {
+			min-height: calc(100vh - 4.08rem - 64px - 2.33rem - 2.42rem);
+			background: transparent;
+
+			border: none;
+			&::before {
+				display: none;
+			}
+			&::after {
+				display: none;
+			}
+		}
+		.tip {
+			/*			display: none;
+*/
+			margin: 0;
+			font-size: $fontsize11;
+			line-height: 2.33rem;
+			color: #D6D6D6;
+			text-align: center;
+			background-color: $bg-color;
+		}
+		.sub-title {
+			/*			display: none;
+*/
+			margin: 0;
+			padding: 0 0 0 1.33rem;
+			line-height: 2.42rem;
+			box-shadow: 0 1px 0 0 #EEEEEE;
+			font-size: $fontsize13;
+			color: $text-second-color;
+			background-color: $text-color;
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+			background-color:
+		}
+		li {
+			position: relative;
+			height: 6rem;
+		}
+		.list-item {
+			position: absolute;
+			left: 0;
+			top: 1px;
+			bottom: 1px;
+			width: calc(100%);
+			height: 6rem;
+			padding-left: 6rem;
+			/*		background: url($img-dir/devices_icon_light8_off.png) 1.33rem center no-repeat;
+	*/
+			background-size: 3.33rem;
+			transition: left .5s;
+			z-index: 2;
+			background-color: $text-color;
+		}
+		.list-item:before {
+			display: block;
+			height: 1px;
+			margin-left: -4.67rem;
+			content: '';
+			box-shadow: 0 1px 0 0 #EEEEEE;
+		}
+		li:first-child .list-item:before {
+			display: none;
+		}
+		.list-item-on {
+			/*		background-image: url($img-dir/devices_icon_light8_on.png);
+	*/
+		}
+		.devices-icon {
+			position: absolute;
+			left: 0;
+			/*		display: inline-block;
+	*/
+			height: 6rem;
+			width: 6rem;
+			background-color: $text-color;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 3.33rem;
+		}
+		.device-name {
+			padding: 1.33rem 6rem 0.57rem 0;
+			margin: 0;
+			color: $text-major-color;
+			font-size: $fontsize15;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.device-desc {
+			margin: 0 0 1.67rem 0;
+			font-size: $fontsize13;
+			color: $text-assist-color;
+		}
+	}
+	#cd-timeline {
+		position: relative;
+	}
+	#last-timeline {
+		position: relative;
+	}
+	#cd-timeline::before {
+		/* this is the vertical line */
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 19px;
+		height: 100%;
+		width: 1px;
+		background: #d7e4ed;
+	}
+	/* 主(列表)页面样式结束 */
+
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+	.cd-container {
+		/* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+		width: 90%;
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+	.cd-container::after {
+		/* clearfix */
+		content: '';
+		display: table;
+		clear: both;
+	}
+	@media only screen and (min-width: 1170px) {
+		#cd-timeline {
+			margin-top: 3em;
+			margin-bottom: 3em;
+		}
+	}
+	.cd-timeline-block {
+		position: relative;
+		margin: 2em 0;
+	}
+	.cd-timeline-block:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.cd-timeline-block:first-child {
+		margin-top: 0;
+	}
+	.cd-timeline-block:last-child {
+		margin-bottom: 0;
+	}
+	@media only screen and (min-width: 1170px) {
+		.cd-timeline-block {
+			margin: 4em 0;
+		}
+		.cd-timeline-block:first-child {
+			margin-top: 0;
+		}
+		.cd-timeline-block:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.aabb {
+		position: absolute;
+		top: -23px;
+		left: 100px;
+	}
+	.cd-timeline-img img {
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: relative;
+		left: 50%;
+		top: 50%;
+		margin-left: -12px;
+		margin-top: -12px;
+	}
+	@media only screen and (min-width: 1170px) {
+		.cd-timeline-img {
+			width: 60px;
+			height: 60px;
+			left: 50%;
+			margin-left: -30px;
+			/* Force Hardware Acceleration in WebKit */
+			-webkit-transform: translateZ(0);
+			-webkit-backface-visibility: hidden;
+		}
+		.cssanimations .cd-timeline-img.is-hidden {
+			visibility: hidden;
+		}
+		.cssanimations .cd-timeline-img.bounce-in {
+			visibility: visible;
+			-webkit-animation: cd-bounce-1 0.6s;
+			-moz-animation: cd-bounce-1 0.6s;
+			animation: cd-bounce-1 0.6s;
+		}
+	}
+	.cd-timeline-content {
+		position: relative;
+		margin-left: 60px;
+		background: white;
+		border-radius: 0.25em;
+		padding: 1em;
+		box-shadow: 0 3px 0 #d7e4ed;
+	}
+	.cd-timeline-content:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.cd-timeline-content::before {
+		content: '';
+		position: absolute;
+		top: 16px;
+		right: 100%;
+		height: 0;
+		width: 0;
+		border: 7px solid transparent;
+		border-right: 7px solid white;
+	}
+	@media only screen and (min-width: 1170px) {
+		.cd-timeline-content {
+			margin-left: 0;
+			padding: 1.6em;
+			width: 45%;
+		}
+		.cd-timeline-content::before {
+			top: 24px;
+			left: 100%;
+			border-color: transparent;
+			border-left-color: white;
+		}
+		.cd-timeline-content .cd-read-more {
+			float: left;
+		}
+		.cd-timeline-content .cd-date {
+			position: absolute;
+			width: 100%;
+			left: 122%;
+			top: 6px;
+			font-size: 16px;
+			font-size: 1rem;
+		}
+		.cd-timeline-block:nth-child(even) .cd-timeline-content {
+			float: right;
+		}
+		.cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+			top: 24px;
+			left: auto;
+			right: 100%;
+			border-color: transparent;
+			border-right-color: white;
+		}
+		.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+			float: right;
+		}
+		.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+			left: auto;
+			right: 122%;
+			text-align: right;
+		}
+		.cssanimations .cd-timeline-content.is-hidden {
+			visibility: hidden;
+		}
+		.cssanimations .cd-timeline-content.bounce-in {
+			visibility: visible;
+			-webkit-animation: cd-bounce-2 0.6s;
+			-moz-animation: cd-bounce-2 0.6s;
+			animation: cd-bounce-2 0.6s;
+		}
+	}
+	@media only screen and (min-width: 1170px) {
+		/* inverse bounce effect on even content blocks */
+		.cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+			-webkit-animation: cd-bounce-2-inverse 0.6s;
+			-moz-animation: cd-bounce-2-inverse 0.6s;
+			animation: cd-bounce-2-inverse 0.6s;
+		}
+	}
+
+	/* 控制页面样式结束 */
+	/* 编辑页面样式开始 */
+	&.edit {
+		height: 100vh;
+		background-color: $bg-major-color;
+		.bodyer {padding:0;}
+		.text-btn {
+			position: absolute;
+			right: 1.5rem;
+			color: $color-major;
+			font-size: $fontsize15;
+			font-weight: 500;
+		}
+		.logo {
+			height: 12.42rem;
+			/*background: #419CF9;*/
+			overflow: hidden;
+			.devices-icon {
+				$size: 6.67rem;
+				width: $size;
+				height: $size;
+				margin: 3.34rem auto;
+				border-radius: 50%;
+				background-color: $color-line;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: calc($size - 2.5rem);
+
+				&.Light_ColorTemperature, &.Light_ColourTemperature, &.light, &.Light_Dimmable,&.Light_RGBW{
+					background-image: url($img-dir/devices_icon_lighting_white_44.png);
+					background-size: 55%;
+				}
+				&.Multi_Gateway, &.gateway{
+					background-image: url($img-dir/devices_icon_gateway_white_44.png);
+					background-size: 55%;
+				}
+				&.Smartplug_Meter, &.plug{
+					background-image: url($img-dir/devices_icon_plug_white_44.png);
+					background-size: 55%;
+				}
+			}
+			/*.gateway-icon{
+				width: 3.67rem;
+				height: 3.67rem;
+				background-image: url($img-dir/devices_icon_gateway_white.png);
+				background-size: contain;
+				position: absolute;
+				margin: auto;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}*/
+		}
+		.name,
+		.spaceName,
+		.room,
+		.record,
+		.reset {
+			$inputHeight: 4.67rem;
+			$iSize: 2rem;
+			position: relative;
+			height: $inputHeight;
+			line-height: $inputHeight;
+			padding: 0 1.33rem;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 0.34rem;
+			margin: 1.25rem 1.33rem 0 1.25rem;
+			label {
+				position: absolute;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize17;
+				color: $text-color;
+			}
+			input {
+				/*	position: absolute;
+			    right: 1.33rem;*/
+				box-sizing: border-box;
+				height: 100%;
+				width: 100%;
+				padding-left: 4rem;
+				color: $text-weaken-color;
+				font-size: $fontsize14;
+				border: 0;
+				text-align: right;
+				background: rgba(255, 255, 255, 0);
+				Letter-spacing:1.6px;
+			}
+			>span {
+				position: absolute;
+				right: calc(1.33rem + $iSize);
+				font-size: $fontsize14;
+				color: $text-weaken-color;
+				text-overflow:ellipsis;
+				overflow:hidden;
+				white-space:nowrap;
+				width:calc(100% - 1.25rem * 2 - 2rem - 1.33rem - 85px);
+				text-align:right;
+			}
+			>i {
+				display: inline-block;
+				position: absolute;
+				right: 1.33rem;
+				top: calc(($inputHeight - $iSize) / 2);
+				width: $iSize;
+				height: $iSize;
+				background-image: url("$img-dir/automation_icon_right_arrow.png");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+		.spaceName {
+			border-top: solid #eee 1px;
+			input {
+				background: none;
+				background-size: 0.58rem 0.83rem;
+				padding-right: calc(3.25rem - 1.33rem);
+			}
+		}
+		.name {
+			display: flex;
+			label {
+				width: 9.71rem;
+				display: block;
+				position: relative;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			input {
+				flex: 1;
+				padding-left: 0;
+			}
+		}
+		.operate {
+			padding-top: 2.5rem;
+			button {
+				width: calc(100% - 1.25rem * 2);
+				height: 4.17rem;
+				background: $color-assist-2;
+				margin: 0 1.33rem;
+				font-size: $fontsize17;
+				line-height: 1.25rem;
+				color: $text-color;
+				border-radius: 0.34rem;
+				border: 0;
+			}
+		}
+		.deviceState-text {
+			font-size: $fontsize17;
+			text-align: center;
+			width: 100%;
+			height: 1.42rem;
+			color: $text-color;
+			.deviceState-textStyle {}
+		}
+	}
+	/* 编辑页面样式结束 */
+	/* 添加设备样式开始 */
+	&.add {
+		background-color: $text-major-color;
+		.addWrap {
+			padding: 0 1rem;
+			.desc {
+				margin-top: 2rem;
+				font-size: $fontsize17;
+				color: $bg-nav-bottom-color;
+			}
+			.addDesc {
+				font-size: $fontsize13;
+				color: #4A4A4A;
+			}
+			.nextStep {
+				padding-top: 27rem;
+				text-align: center;
+				background: none;
+				background-size: 16.33rem 22.5rem;
+				button {
+					display: block;
+					width: calc(100% - 1rem*2);
+					height: 3.66rem;
+					border: none;
+					outline: none;
+					margin: 0 auto 1rem;
+					background-color: dodgerblue;
+					color: $text-color;
+					font-size: $fontsize15;
+					border-radius: 5px;
+				}
+				div {
+					display: inline-block;
+					line-height: 2rem;
+				}
+			}
+		}
+	}
+	/* 添加网关开始 */
+	&.addSiren {
+		background-color: #3B4054;
+		height: 100vh;
+		.addWrap {
+			padding: 0 2rem;
+			.desc {
+				margin-top: calc(3.33rem * $zoom);
+				font-size: $fontsize17;
+				color: $text-color;
+			}
+			.addDesc {
+				font-size: $fontsize15;
+				color: $text-weaken-color;
+				margin-top: calc(3.33rem * $zoom);
+			}
+			.nextStep {
+				padding-top: calc(3.33rem * $zoom);
+				height: calc(53.33rem * $zoom);
+				width: calc(54.5rem * $zoom);
+				margin: 0 auto;
+				text-align: center;				
+				&.backgroud-Siren1 {
+					background: url($img-dir/siren_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren2 {
+					background: url($img-dir/siren_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren3 {
+					background: url($img-dir/siren_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren4 {
+					background: url($img-dir/siren_installation_drawing_4.png) center no-repeat;
+					background-size: 100%;
+				}				
+				&.backgroud-Siren-Hub1 {
+					background: url($img-dir/gateway_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren-Hub2 {
+					background: url($img-dir/gateway_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren-Hub3 {
+					background: url($img-dir/gateway_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}				
+			}			
+			.help{
+				margin: 0 auto;
+				text-align: center;
+				color: $color-major;
+				font-size: $fontsize13;
+			}
+		}
+		.nextBtn {
+			display: block;
+			width: calc(100% - 3.33rem);
+			height: 4.16rem;
+			border: none;
+			outline: none;
+			margin: calc(20.67rem * $zoom) auto 0;
+			background-color: $color-major;
+			color: $text-color;
+			font-size: $fontsize17;
+			border-radius: 5px;
+			font-weight: 100;
+			&.addSiren2 {
+				margin: calc(17.5rem * $zoom) auto 0;
+			}
+			&.addSiren3 {
+				margin: calc(17.5rem * $zoom) auto 0;
+			}
+		}
+	}
+	/* 添加网关结束 */
+	/*灯的添加引导页开始*/
+	&.addLight {
+		background-color: #3B4054;
+		height: 100vh;
+		.addWrap {
+			padding: 0rem 2rem 0rem 2rem;
+			.desc {
+				margin-top: 2rem;
+				font-size: $fontsize17;
+				color: $text-color;
+			}
+			.addDesc {
+				font-size: $fontsize15;
+				color: $text-weaken-color;
+				margin-top: 1rem;
+				
+				.icon1 , .icon2 {
+					float: left;
+					height: 1.25rem;
+					width: 1.25rem;
+					&.backgroud-keyfob5 {
+						background: url($img-dir/keyfob_installation_icon_removal.png) center no-repeat;
+						background-size: 100%;
+					}
+					&.backgroud-keyfob6 {
+						background: url($img-dir/keyfob_installation_icon_stay_home.png) center no-repeat;
+						background-size: 100%;
+					}
+				}
+				
+				.txt1,.txt2,.txt3{
+					float: left;
+				}
+				.txt4{
+					float: left;
+				}
+			}
+			
+			.nextStep {
+				padding-top: 8.5rem;
+				height: 24.33rem;
+				width: 23.66rem;
+				margin: 0 auto;
+				text-align: center;
+				&.backgroud-Light {
+					background: url($img-dir/bulb_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Light2 {
+					background: url($img-dir/bulb_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Door1 {
+					background: url($img-dir/door_window_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Door2 {
+					background: url($img-dir/door_window_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Door3 {
+					background: url($img-dir/door_window_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Door4 {
+					background: url($img-dir/doorwindow_sensor_installation_drawing_help.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren1 {
+					background: url($img-dir/siren_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren2 {
+					background: url($img-dir/siren_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren3 {
+					background: url($img-dir/siren_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren4 {
+					background: url($img-dir/siren_installation_drawing_4.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Motion1 {
+					background: url($img-dir/motion_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Motion2 {
+					background: url($img-dir/motion_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Motion3 {
+					background: url($img-dir/motion_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Motion4 {
+					background: url($img-dir/motion_installation_drawing_help.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-Plug1 {
+					background: url($img-dir/plug_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-Plug2 {
+					background: url($img-dir/plug_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-Plug3 {
+					background: url($img-dir/plug_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-Plug4 {
+					background: url($img-dir/plug_installation_drawing_help.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-Remote1 {
+					background: url($img-dir/remote_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-Remote2 {
+					background: url($img-dir/remote_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-Remote3 {
+					background: url($img-dir/remote_installation_drawing_help.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-SL-Plug {
+					background: url($img-dir/plug_installation_drawing_smartlink_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-SL-Plug2 {
+					background: url($img-dir/plug_installation_drawing_smartlink_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-AP-Plug {
+					background: url($img-dir/plug_installation_drawing_AP_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.background-AP-Plug2 {
+					background: url($img-dir/plug_installation_drawing_AP_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren-Hub1 {
+					background: url($img-dir/gateway_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren-Hub2 {
+					background: url($img-dir/gateway_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-Siren-Hub3 {
+					background: url($img-dir/gateway_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keyfob1 {
+					background: url($img-dir/keyfob_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keyfob2 {
+					background: url($img-dir/keyfob_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keyfob3 {
+					background: url($img-dir/keyfob_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keyfob4 {
+					background: url($img-dir/keyfob_installation_drawing_help.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keyfob5 {
+					background: url($img-dir/keyfob_installation_icon_removal.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud--keyfob6 {
+					background: url($img-dir/keyfob_installation_icon_stay_home.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keypad1 {
+					background: url($img-dir/keypad_installation_drawing_1.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keypad2 {
+					background: url($img-dir/keypad_installation_drawing_2.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keypad3 {
+					background: url($img-dir/keypad_installation_drawing_3.png) center no-repeat;
+					background-size: 100%;
+				}
+				&.backgroud-keypad4 {
+					background: url($img-dir/keypad_installation_drawing_help.png) center no-repeat;
+					background-size: 100%;
+				}
+			}
+			.nextBtn {
+				display: block;
+				width: calc(100% - 4rem);
+				height: 4.16rem;
+				border: none;
+				outline: none;
+				background-color: $color-major;
+				color: $text-color;
+				font-size: $fontsize17;
+				border-radius: 5px;
+				font-weight: 100;
+				position: absolute;
+				bottom: 4rem;
+			}
+			.help{
+				width: calc(100% - 4rem);
+				text-align: center;
+				color: $color-major;
+				font-size: $fontsize13;
+				position: absolute;
+				bottom: 1.5rem;
+			}
+		}
+	}
+	/*灯的添加引导页结束*/
+	/*设置wifi页面开始*/
+	.setWifi {
+		.text-btn {
+			position: absolute;
+			right: 1.5rem;
+			color: #419CF9;
+			font-size: $fontsize15;
+			font-weight: 500;
+		}
+		.setWifiWrap {
+			text-align: center;
+			.header-pic {
+				width: 100%;
+				height: 20rem;
+				background: none;
+				background-color: rgba(65, 156, 249, 1);
+				background-size: contain;
+			}
+			.desc {
+				margin: 6rem auto 1rem;
+				font-size: $fontsize15;
+			}
+			.currentWifi {
+				margin-bottom: 4.5rem;
+				font-size: $fontsize15;
+			}
+			.toWifi {
+				button {
+					display: block;
+					width: calc(100% - 2rem*2);
+					height: 3.66rem;
+					border: none;
+					outline: none;
+					margin: auto;
+					background-color: #419CF9;
+					color: $text-color;
+					font-size: $fontsize15;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+	/*设置帮助页*/
+	.noAnswer {
+		.noAnswerWrap {
+			padding: 0 1rem;
+			.desc {
+				margin-top: 2rem;
+				font-size: $fontsize17;
+				color: $bg-nav-bottom-color;
+			}
+			.addDesc {
+				font-size: $fontsize13;
+				color: #4A4A4A;
+			}
+			.nextStep {
+				padding-top: 18rem;
+				text-align: center;
+				background: none;
+				background-size: 23.08rem 17.16rem;
+				button {
+					display: block;
+					width: calc(100% - 1rem*2);
+					height: 3.66rem;
+					border: none;
+					outline: none;
+					margin: 1.58rem auto 0;
+					background-color: #419CF9;
+					color: $text-color;
+					font-size: $fontsize15;
+					border-radius: 5px;
+				}
+				div:nth-child(1) {
+					font-size: $fontsize17;
+					font-weight: 600;
+					color: $text-second-color;
+					text-align: left;
+					margin-bottom: 1rem;
+				}
+				div {
+					font-size: $fontsize13;
+					line-height: 1.75rem;
+					color: $text-assist-color;
+					text-align: left;
+				}
+			}
+		}
+	}
+	.connectWifi {
+		.connectWifiWrap {
+			cursor: pointer;
+			.wifiInfo {
+				width: 100%;
+				margin-top: .83rem;
+				padding-left: 1.33rem;
+				background-color: $text-color;
+				.wifiname {
+					input {
+						width: 100%;
+						line-height: 3.67rem;
+						border-left: none;
+						border-right: none;
+						border-top: none;
+						border-bottom: 1px solid #EEEEEE;
+						font-size: $fontsize15;
+						background-color: $text-color;
+					}
+					input:disabled {}
+				}
+				.wifipwds {
+					line-height: 3.67rem;
+					position: relative;
+					input {
+						width: 100%;
+						height: 1.25rem;
+						border: none;
+						font-size: $fontsize15;
+						color: $text-major-color;
+						background-color: $text-color;
+					}
+					input::placeholder {
+						color: #D6D6D6;
+					}
+					a {
+						position: absolute;
+						display: block;
+						width: 2rem;
+						height: 2rem;
+						top: 0.83rem;
+						right: calc(0.67rem + 2.67rem);
+						background-size: 2rem 2rem;
+						&,
+						&.close {
+							background-image: none;
+						}
+						&.open {
+							background-image: none;
+						}
+					}
+				}
+			}
+			.nextStep {
+				padding-top: 26rem;
+				text-align: left;
+				button {
+					display: block;
+					text-align: center;
+					width: calc(100% - 1rem*2);
+					height: 3.66rem;
+					margin: auto;
+					border: none;
+					outline: none;
+					background-color: #419CF9;
+					color: $text-color;
+					font-size: $fontsize15;
+					border-radius: 4px;
+				}
+			}
+		}
+	}
+	.connectResult {
+		.connectResultWrap {
+			overflow: hidden;
+			.resultImg {
+				width: 8.33rem;
+				height: 8.33rem;
+				margin: 6rem auto 2rem;
+				background-size: 8.33rem 8.33rem;
+				&.happiness {
+					background-image: none;
+				}
+				&.sad {
+					background-image: none;
+				}
+			}
+			p {
+				margin: 0 auto 6rem;
+				text-align: center;
+				font-size: $fontsize15;
+			}
+			button {
+				display: block;
+				width: 17.5rem;
+				height: 3.66rem;
+				margin: 0 auto 2rem;
+				border: none;
+				outline: none;
+				background-color: #419CF9;
+				color: $text-color;
+				font-size: $fontsize15;
+				border-radius: 4px;
+			}
+			button:nth-child(2) {
+				border: 1px solid $text-major-color;
+				color: $text-major-color;
+				background-color: $text-color;
+			}
+			.help {
+				width: 6rem;
+				margin: 5rem auto 0;
+				text-align: center;
+				bottom: 4rem;
+				color: $text-assist-color;
+				font-size: $fontsize15;
+			}
+			.hidden {
+				display: none;
+			}
+		}
+	}
+	.device-icons {
+		.icon-list {
+			display: flex;
+			padding: 0;
+			margin: 0;
+			flex-wrap: wrap;
+		}
+		.icon-item {
+			padding: 0.5rem;
+			margin: 0.67rem 0 0 0.67rem;
+		}
+		.devices-icon {
+			left: 0;
+			/*		display: inline-block;
+	*/
+			height: 6rem;
+			width: 6rem;
+			border-radius: 5px;
+			background-color: $text-color;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 3.33rem;
+		}
+	}
+	
+	&.gatewayDetail{
+		.bodyer{padding:0;}
+		.box-1{
+			$iconSize:3.67rem;
+			position:relative;
+			height:6.63rem;
+			width:2rem;
+			margin-top:1.67rem;
+			margin-left:calc(1.67rem + $iconSize / 2);
+			border-left:1px solid $color-line;
+			> span{
+				position:absolute;
+				display:inline-block;
+				top:0;
+				left:calc(-$iconSize / 2);
+				width:10rem;
+				height:$iconSize;
+				line-height:$iconSize;
+				padding-left:calc($iconSize + 1rem);
+				text-align:left;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize17;
+				color: $text-color;
+				background:url("$img-dir/devices_icon_gateway_white_44.png") no-repeat left;
+				background-size:contain;
+			}
+		}
+		.box-2{
+			$iconSize:1.84rem;
+			$lineHeight:2rem;
+			position:relative;
+			width:2.92rem;
+			height:calc($iconSize * 5 + $lineHeight * 4 - $iconSize / 2);
+			margin-left:calc(1.67rem + 3.67rem / 2);
+			border-top:1px solid $color-line;
+			border-right:1px solid $color-line;
+			> ul{
+				padding:0;
+				margin:0;
+				position:absolute;
+				top:calc(-$iconSize / 2);
+				left:calc(2.92rem - $iconSize / 2 + 0.1rem);
+			}
+			> ul > li{
+				list-style: none;
+				width:calc(12.25rem + 1.84rem + 1.34rem);
+				height:$iconSize;
+				line-height:$iconSize;
+				text-align:left;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize14;
+				color: $text-weaken-color;
+				padding-left:calc($iconSize + 1.34rem);
+				&.bulb{
+					background:url("$img-dir/devices_icon_lighting_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+				&.motion{
+					margin-top:$lineHeight;
+					background:url("$img-dir/devices_icon_motion_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+				&.door{
+					margin-top:$lineHeight;
+					background:url("$img-dir/devices_icon_door_lock_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+				&.switch{
+					margin-top:$lineHeight;
+					background:url("$img-dir/devices_icon_switch_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+				&.keypad{
+					margin-top:$lineHeight;
+					background:url("$img-dir/devices_icon_keypad_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+			}
+		}
+		.add-btn{
+			width: calc(100% - 1.25rem * 2);
+			height: 4.17rem;
+			background: $color-major;
+			margin: 3.67rem 1.33rem;
+			font-size: $fontsize17;
+			line-height: 1.25rem;
+			color: $text-color;
+			border-radius: 0.34rem;
+			border: 0;
+		}
+	}
+	
+	&.sirenhubDetail{
+		overflow: scroll;
+		.container {
+			height: calc(100vh - 64px);
+			overflow: scroll;
+		}
+		.bodyer{
+			
+		}
+		.box-1{
+			$iconSize:3.67rem;
+			position:relative;
+			height:6.63rem;
+			width:2rem;
+			margin-top:1.67rem;
+			margin-left:calc(1.67rem + $iconSize / 2);
+			border-left:1px solid $color-line;
+			> span{
+				position:absolute;
+				display:inline-block;
+				top:0;
+				left:calc(-$iconSize / 2);
+				width:10rem;
+				height:$iconSize;
+				line-height:$iconSize;
+				padding-left:calc($iconSize + 1rem);
+				text-align:left;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize17;
+				color: $text-color;
+				background:url("$img-dir/devices_icon_gateway_white_44.png") no-repeat left;
+				background-size:contain;
+			}
+		}
+		.box-2{
+			$iconSize:1.84rem;
+			$lineHeight:2rem;
+			position:relative;
+			width:2.92rem;
+/*			height:calc($iconSize * 5 + $lineHeight * 4 - $iconSize / 2);
+*/			margin-left:calc(1.67rem + 3.67rem / 2);
+			border-top:1px solid $color-line;
+			border-right:1px solid $color-line;
+			> ul{
+				padding:0;
+				margin:0;
+				margin-left: calc(2.92rem - $iconSize / 2 + 0.1rem);
+				margin-top: calc(-$iconSize / 2);
+			}
+			> ul > li{
+				list-style: none;
+				width:calc(12.25rem + 1.84rem + 1.34rem);
+				height:$iconSize;
+				line-height:$iconSize;
+				text-align:left;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize14;
+				color: $text-weaken-color;
+				padding-left:calc($iconSize + 1.34rem);
+				&.bulb{
+					background:url("$img-dir/devices_icon_lighting_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+				&.motion{
+					margin-top:$lineHeight;
+					background:url("$img-dir/devices_icon_motion_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+				&.door{
+					margin-top:$lineHeight;
+					background:url("$img-dir/devices_icon_door_lock_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+				&.switch{
+					margin-top:$lineHeight;
+					background:url("$img-dir/devices_icon_switch_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+				&.keypad{
+					margin-top:$lineHeight;
+					background:url("$img-dir/devices_icon_keypad_white_44.png") no-repeat left;
+					background-size:contain;
+				}
+			}
+		}
+	}
+	
+	&.plugDetail{
+		height:100vh;
+		background-color:#3A4056;
+		.bodyer{
+			padding:0;
+			position:relative;
+			border-top:1px solid #333333;
+			}
+		.battery-icon{
+			$iconSize:2rem;
+			width:$iconSize;
+			height:$iconSize;
+			display:inline-block;
+			position:absolute;
+			right:1.67rem;
+			top:1.67rem;
+			background:url("$img-dir/home_icon_low_battery.png") no-repeat center;
+			background-size:contain;
+		}
+		.plug-icon{
+			$iconSize:20rem;
+			width:$iconSize;
+			height:$iconSize;
+			margin:7.5rem auto 0  auto;
+			background:url("$img-dir/plug_control_icon_plug_on.png") no-repeat center;
+			background-size:contain;
+			&.off{
+				background:url("$img-dir/plug_control_icon_plug_off.png") no-repeat center;
+				background-size:contain;
+			}
+		}
+		/*.list{
+			display:table;
+			margin:0 2.59rem;
+			.cell{
+				display:table-cell;
+				width:calc(100vw / 3);
+				text-align:left;
+				> div{
+					width:calc((100vw / 3) / 1.5);
+					margin:0 auto;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize16;
+					color: #C8C8C8;
+					> p{
+						margin-top:1.71rem;
+						font-family: PingFangSC-Medium;
+						font-size: $fontsize24;
+						font-weight: 700;
+						color: #FFFFFF;
+						> span{
+							font-family: PingFangSC-Regular;
+							font-size: $fontsize14;
+							margin-left:0.5rem;
+						}
+					}
+				}
+			}
+			.cell:first-child{
+				> div{
+					margin-left:0;
+				}
+			}
+			.cell:last-child{
+				> div{
+					margin-right:0;
+				}
+			}
+		}
+		.close-btn-box{
+			margin:5.84rem 0 0.67rem 0;
+			text-align:center;
+			.close-btn{
+				$btnSize:5.67rem;
+				width:$btnSize;
+				height:$btnSize;
+				display:inline-block;
+				background:url("$img-dir/smart_plug_icon_on_n.png") no-repeat;
+				background-size:contain;
+				&.off{
+					background:url("$img-dir/smart_plug_icon_off_n.png") no-repeat;
+					background-size:contain;
+				}
+			}
+		}*/
+	}
+	
+	&.wifiPlugDetail{
+		height:100vh;
+		background-color:#3A4056;
+		.bodyer{
+			padding:0;
+			position:relative;
+			border-top:1px solid #333333;
+			}
+			
+		.plug_icon_div{
+			position: relative;
+			$iconSize:20rem;
+			width:$iconSize;
+			height:$iconSize;
+			margin:3.66rem auto 0  auto;
+			
+			.plug_icon_bg{
+				position: absolute;
+				width:$iconSize;
+				height:$iconSize;
+				background:url("$img-dir/plug_control_icon_plug_outer_ring_on.png") no-repeat center;
+				background-size:contain;
+				transform: rotate(0deg);
+                animation: rot 2s linear infinite;
+				&.off{
+					background:url("$img-dir/plug_control_icon_plug_outer_ring_off.png") no-repeat center;
+					background-size:contain;
+					animation: none;
+				}
+			}
+			
+			.plug-icon{
+				position: absolute;
+				width:$iconSize;
+				height:$iconSize;
+				background:url("$img-dir/plug_control_icon_plug_on.png") no-repeat center;
+				background-size:contain;
+				&.off{
+					background:url("$img-dir/plug_control_icon_plug_off.png") no-repeat center;
+					background-size:contain;
+				}
+			}
+			
+		}
+		 .container{
+            width: 100%;
+            margin-top: 3.45rem;
+            
+            .item-box {
+            	color: $text-weaken-color;
+	            width: 48%;
+	            height: 5rem;
+	            text-align: center;
+	            background-color: transparent;
+	            border-radius: 2px; 
+	            margin-bottom: 20px;
+	            display: inline-block;  
+	        }
+	
+	        .item-box-icon{ 
+	            display: inline-block;      
+	           	text-align: center;
+	           	position: relative;
+			    top: 0.3rem;
+			    font-size: $fontsize16;
+	        }
+	
+	        .item-box-text{
+	           display: inline-block;
+	           position: absolute;
+	        }
+	        
+	        .item-box-title{
+	           display: inline-block;
+	            width: 2rem;
+				height: 2rem;
+				background:url("$img-dir/automation_icon_right_arrow.png") no-repeat left;
+				background-size:contain;
+	        }
+	        
+	        
+	        .item-value-div{
+	        	color: white;
+	        	margin-top: 1.58rem;
+	        	.item-value-icon{
+		        	display: inline-block;
+		           	text-align: center;
+		           	position: relative;
+				    font-size: $fontsize24;
+				    
+				    &.energy{
+				    	margin-left: 2.5rem;
+				    }
+				    
+				    &.runtime{
+				    	margin-left: 1.1rem;
+				    }
+		        }
+		
+		        .item-value-text{
+		           display: inline-block;
+		           position: relative;
+		           font-size: $fontsize14;
+		           bottom: 0rem;
+		           margin-left: 0.5rem;
+		        }
+	        }
+        }
+        
+        
+        .un_set_count_down{
+        	position: relative;
+        	width: 5.66rem;
+			height: 5.66rem;
+			margin: 0 auto;
+			margin-top: 5.5rem;
+        	
+        	.count_down_bg{
+        		position: absolute;
+        		width: 5.66rem;
+				height: 5.66rem;
+        		background:transparent;
+        		border: solid 0.5px;
+        		border-radius: 10rem;
+        		border-color: white;
+        		opacity: 0.2;
+        	}
+        	.count_down_bg:active{
+        		background:white;
+        	}
+        	
+			.count_down_icon{
+				position: absolute;
+				top: calc(5.66rem / 2 - 3.66rem / 2);
+				left: calc(5.66rem / 2 - 3.66rem / 2);
+				width: 3.66rem;
+				height: 3.66rem;
+				margin: 0 auto;
+				background:url("$img-dir/plug_icon_countdown.png") no-repeat center;
+				background-size:contain;
+			}
+			
+			.count_down_title{
+				position: absolute;
+				color: white;
+				top: 6.33rem;
+				font-size: $fontsize15;
+			}
+        }
+        
+        .count_down{
+        	position: relative;
+        	width: 12.75rem;
+			height: 4.25rem;
+			margin: 0 auto;
+			margin-top: 5.5rem;
+        	background:#303548;
+        	border-radius: 5rem;
+        	line-height: 4.25rem;
+        	color: #00E49C;
+        	font-size: $fontsize32;
+        	font-weight: bold;
+        	text-align: center;
+        }
+		
+	}
+	
+	&.remoteDetail{
+		height:100vh;
+		background-color:#3A4056;
+		.bodyer{
+			padding:0;
+			position:relative;
+			border-top:1px solid #333333;
+			}
+			
+		.plug_icon_div{
+			position: relative;
+			$iconSize:20rem;
+			width:$iconSize;
+			height:$iconSize;
+			margin:3.66rem auto 0  auto;
+			
+			.plug_icon_bg{
+				position: absolute;
+				width:$iconSize;
+				height:$iconSize;
+				background:url("$img-dir/plug_control_icon_plug_outer_ring_on.png") no-repeat center;
+				background-size:contain;
+				transform: rotate(0deg);
+                animation: rot 2s linear infinite;
+				&.off{
+					background:url("$img-dir/plug_control_icon_plug_outer_ring_off.png") no-repeat center;
+					background-size:contain;
+					animation: none;
+				}
+			}
+			
+			.plug-icon{
+				position: absolute;
+				width:$iconSize;
+				height:$iconSize;
+				background:url("$img-dir/remote_control_icon_remote.png") no-repeat center;
+				background-size:contain;
+				&.off{
+					background:url("$img-dir/remote_control_icon_remote.png") no-repeat center;
+					background-size:contain;
+				}
+			}
+			
+		}
+		 .remote_tittle{
+		 	position: relative;
+		 	margin-top: 2.16rem;
+		 	font-size: $fontsize17;
+			color: #FFFFFF;
+			margin-left: 1.77rem;
+			margin-right: 1.77rem;
+		 }
+		 .container{
+            width: 100%;
+            margin-top: 1.66rem;
+		        .space-list{
+				.am-list-body{
+					background: transparent;
+				}
+				.am-list-body{
+					border: none;
+					&::before{
+						display: none;
+					}
+					&::after{
+						display: none;
+					}
+				}
+				.list-view-section-body{
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction:row;
+					box-sizing: border-box;
+					padding:0 0.67rem 0.67rem;
+					background-color: $bg-major-color;
+				}
+				
+				.list-item{
+					position: relative;
+					/*width: 14.64rem;*/
+					height: 6rem;
+					box-sizing: border-box;
+					width: calc(100% - 0.29rem);
+					margin-top: 1.25rem;
+					text-align: left;
+					background-color: $text-color;
+					margin-left: 1.1rem;
+					margin-right: 1.1rem;
+					border-radius: 0.33rem;			
+				}
+		
+				.list-item:nth-child(odd) {
+				}
+				.list-item:nth-child(even) {
+				}
+		
+				.space-name{
+		    		padding: 0 10px;
+					color: $text-second-color;
+					text-align: left;
+					overflow: hidden;
+		    		text-overflow: ellipsis;
+				}
+		
+				.space-icon{
+					margin: 2.92rem 0 0.67rem;
+				}
+		
+				.setting-icon{
+					position: absolute;
+					top: 2rem;
+					right: 1.92rem;
+					width: 2rem;
+					height: 2rem;
+					background-size: contain;
+				}
+				
+				.space-account {
+					
+					span{
+						position: absolute;
+						width: 3.66rem;
+						height: 3.66rem;
+						top: 1rem;
+		    			left: 1rem;
+						/* top: 1.16rem;
+						left: 1.33rem;
+						background-image: url("$img-dir/devices_icon_camera_s.png");
+						background-size: contain;
+						background-repeat: no-repeat; */
+					}
+					b{
+					position: absolute;
+					margin-left: 19.2%;
+					color: $text-second-color;
+					height: 1.33rem;
+					top: 1.33rem;
+					font-size:17px;
+					width:19rem;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					}
+					p{
+					position: absolute;
+					margin-left: 19.2%;
+					color: $text-second-color;
+					height: 1.3rem;
+					top: 3rem;
+					font-size:13px;
+					}
+					a {
+						position: absolute;
+							display: block;
+							width: 2rem;
+							height: 2rem;
+							top: 2rem;
+							right: calc(1.33rem);
+							background-size: 2rem 2rem;
+						background-image: url("$img-dir/common_icon_checkbox_off.png");
+						
+							&.close{
+								background-image: url("$img-dir/common_icon_checkbox_off.png");
+							}
+							&.open{
+								background-image: url("$img-dir/common_icon_checkbox_on.png");
+							}
+						}
+				}
+		
+			}
+        }
+		
+	}
+}
+
+/*switch选择设备页面*/
+
+.chooseDevice {
+	background-color: #3B4054;
+	height: 100vh;
+}
+
+.chooseDevice-cell {
+	$boxHeight: 6rem;
+	$contentHeight: 3.67rem;
+	margin-top: 1rem;
+	margin-right: 2rem;
+	background-color: white;
+	border-radius: 0.2rem;
+	height: 6rem;
+	margin-left: 2rem;
+	.switchChooseDevice-icon{
+		float: left;
+		margin-top: calc(($boxHeight - 3.67rem)/2);
+		margin-left: 1rem;
+		.light, .Lighting, .Light_ColourTemperature, .Light_ColorTemperature, .Light_Dimmable, .Light_RGBW, .plug, .Smartplug_Meter{
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_lighting_s.png);
+			background-size: contain;
+		}
+		.sensor, .Sensor, .magnet, .Sensor_Doorlock{
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_door_lock_s.png);
+			background-size: contain;
+		}
+		.motion, .Motion, .Sensor_Motion, .Sensor_PIR {
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_motion_s.png);
+			background-size: contain;
+		}
+		.siren, .Siren, .Alarm_Siren{
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_siren_s.png);
+			background-size: contain;
+		}
+		.Switch{
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_switch_s.png);
+			background-size: contain;
+		}
+		.gateway, .Gateway, .Multi_Gateway, .sirenhub {
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_gateway_s.png);
+			background-size: contain;
+		}
+		.Smartplug_Meter{
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_plug_s.png);
+			background-size: contain;
+		}
+		.remote{
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_remote_s.png);
+			background-size: contain;
+		}
+		.wifi_plug {
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_plug_s.png);
+			background-size: contain;
+		}
+		.keypad {
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_keypad_s.png);
+			background-size: contain;
+		}
+		.keyfob {
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_keyfod_s.png);
+			background-size: contain;
+		}
+		.default {
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_default.png);
+			background-size: contain;
+		}
+	}
+	.switchChooseDevice-text {
+		float: left;
+		margin-left: 0.5rem;
+		height: $contentHeight;
+		margin-top: calc(($boxHeight - $contentHeight)/2);
+		color: $text-second-color 100%;
+		font-size: $fontsize13;
+		width: 63%;
+		.spanLine {
+			display: inline-block;
+			height: calc($contentHeight);
+			line-height: calc($contentHeight);
+			color: $text-major-color;
+			text-overflow: ellipsis;
+			width: 95%;
+			overflow: hidden;
+			.txt-bold {
+				font-weight: bold;
+				font-size: $fontsize17;
+				font-weight: 700;
+			}
+		}
+	}
+	.swithChooseDevice-ChooseState {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/common_icon_checkbox_on.png) center no-repeat;
+	}
+	.swithChooseDevice-unchoose {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/common_icon_checkbox_off.png) center no-repeat;
+	}
+}
+
+/*switch 设备详情页*/
+
+.deviceDetail {
+	font-size: $fontsize17;
+	background-color: #3B4054;
+	height: 100vh;
+	.deviceIcon-background {
+		background-color: $color-line;
+		border-radius: 50%;
+		width: 6.67rem;
+		height: 6.67rem;
+		margin-top: 3.34rem;
+		margin: 0 auto;
+		margin-top: 3.33rem;
+		position: relative;
+		.device-icon {
+			width: 3.67rem;
+			height: 3.67rem;
+			position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+
+			&.default{
+				background-image: url($img-dir/devices_icon_default.png);
+				background-size: contain;
+			}
+			&.Alarm_Siren{
+				background-image: url($img-dir/devices_icon_siren_white_44.png);
+				background-size: contain;
+			}
+			&.Sensor_PIR{
+				background-image: url($img-dir/devices_icon_motion_white_44.png);
+				background-size: contain;
+			}
+			&.Sensor_Motion{
+				background-image: url($img-dir/devices_icon_motion_white_44.png);
+				background-size: contain;
+			}
+			&.Sensor_Doorlock{
+				background-image: url($img-dir/devices_icon_door_lock_white_44.png);
+				background-size: contain;
+			}
+		}
+	}
+	.deviceState-text {
+		font-size: $fontsize17;
+		text-align: center;
+		width: 100%;
+		height: 1.42rem;
+		margin-top: 1.33rem;
+		color: $text-color;
+		font-family: PingFangSC-Regular;
+		
+	 .seperateLine{
+		 display: inline-block;
+		 /* width: 1rem; */
+		 height: 1.42rem;
+		 margin-left:1rem;
+		 margin-right: 1rem;
+		 color: #D8D8D8;
+		 
+		}
+	.left-text{
+		display: inline-block;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+	    margin-left: 0rem;
+		width: 8rem;
+		text-align: right;
+		
+	}
+	.right-text{
+		display: inline-block;
+		margin-right: 0rem;
+		width: 8rem;
+		text-align: left;
+		
+	}
+	}
+	.device-lowPower {
+		float: right;
+		width: 3.85rem;
+		height: 2.2rem;
+		background: url($img-dir/home_icon_low_battery.png) center no-repeat;
+		background-size: contain;
+		margin-right: 1.67rem;
+		margin-top: 2.45rem;
+	}
+	
+	.text-background {
+		height: 4.67rem;
+		margin-left: 1.67rem;
+		margin-right: 1.67rem;
+		border-radius: 4px;
+		background-color: $color-line;
+		margin-top: 3.25rem;
+		display: flex;
+		&.textSencond-background {
+			margin-top: 1.25rem;
+		}
+	}
+	.deviceName-text {
+		/* flex: 0 0 12rem; */
+		color: white;
+		/* float: left; */
+		margin-left: 1.34rem;
+		width: 12rem;
+		height: 4.67rem;
+		line-height: 4.67rem;
+		/* font-family: SFProDisplay-Regular; */
+		font-size: $fontsize17;
+		
+	}
+	.input-box {
+		/* float: right; */
+		flex: 1;
+		width: 50%;
+		background-color: $color-line;
+		border: 0;
+		height: 100%;
+		padding: 0;
+		padding-right: 2rem;
+		border-radius: 4px;
+		text-align: right;
+		color: $text-weaken-color;
+		font-size: $fontsize13;
+		caret-color: #DE903A;
+		box-sizing: border-box;
+		Letter-spacing:1.6px;
+	}
+	.deviceInfo-text,
+	.deviceName-icon {
+		flex: 0 0 3.47rem;
+		line-height: 4.67rem;
+		font-size: $fontsize14;
+	}
+	.deviceInfo-text {
+		flex: 1;
+		text-align: right;
+		color: #A6A8B1;
+	}
+	.deviceName-icon {
+		background: url('$img-dir/automation_icon_right_arrow.png') left no-repeat;
+		background-size: 2rem 2rem;
+	}
+	.delete-backgound {
+		height: 4.67rem;
+		margin-left: 1.67rem;
+		margin-right: 1.67rem;
+		margin-top: 3.25rem;
+	}
+	.delete {
+		/*box-sizing: border-box;
+		text-align: center;
+		height: 4.17rem;
+		width: 100%;
+		display: block;
+		margin-top: 3.33rem;
+		background-repeat: no-repeat;
+		outline: none;
+		box-shadow: none;
+		color: $text-color;
+		font-style: inherit;
+		background-color: $color-assist-2;
+		border-color: $color-assist-2;
+		border-radius: 0.33rem;*/
+		
+		/*width: calc(100% - 1.25rem * 2);*/
+		width: 100%;
+		height: 4.17rem;
+		background: $color-assist-2;
+		/*margin: 0 1.33rem;*/
+		font-size: $fontsize17;
+		line-height: 1.25rem;
+		color: $text-color;
+		border-radius: 0.34rem;
+		border: 0;
+				
+	}
+}
+
+/*添加设备引导页*/
+
+.way-step1 {
+	width: 100%;
+	height: 55rem;
+	margin: 0 auto;
+	padding: 0%;
+	background: $bg-major-color;
+	border: 1px solid $bg-major-color;
+	color: $text-color;
+	font-size: $fontsize17;
+	.little-title {
+		margin: 0 auto;
+		padding: 0%;
+		width: 87.2%;
+		height: 2.83rem;
+		color: $text-color;
+		margin-top: 2rem;
+		line-height: 2.83rem;
+	}
+	.way-getlist {
+		margin: 0 auto;
+		/* padding: 0%;  */
+		margin-top: 2rem;
+		height: 27.25rem;
+		width: 87.2%;
+		border-radius: 1.33rem;
+		opacity: 0.5;
+		background: #D8D8D8;
+	}
+	.power-tip {
+		margin: 0 auto;
+		margin-top: 2rem;
+		width: 89.7%;
+		height: 1.4rem;
+		text-align: center;
+	}
+	.step-next {
+		margin: 0 auto;
+		margin-top: 4rem;
+		width: 89.3%;
+		height: 4.1rem;
+		border: 1px solid $color-major;
+		text-align: center;
+		color: $text-color;
+		background: $color-major;
+		display: block;
+		border-radius: 0.3rem;
+	}
+}
+
+/*添加设备引导页结束*/
+
+/*siren volume*/
+
+.sirenVolume-cell {
+	$boxHeight: 4.67rem;
+	$contentHeight: 3.67rem;
+	margin-top: 1rem;
+	margin-right: 2rem;
+	background-color: $color-line;
+	border-radius: 0.2rem;
+	height: 4.67rem;
+	margin-left: 2rem;
+	font-size: $fontsize17;
+	font-weight: 300;
+	.sirenVolume-text {
+		color: white;
+		float: left;
+		margin-top: calc(($boxHeight - 4.67rem)/2);
+		margin-left: 1.34rem;
+		width: 15.71rem;
+		height: 4.67rem;
+		line-height: 4.67rem;
+	}
+	.sirenVolume-ChooseState {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/common_icon_checkbox_on.png) center no-repeat;
+	}
+	.sirenVolume-unchoose {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/common_icon_checkbox_off.png) center no-repeat;
+	}
+}
+
+/*siren volume结束*/
+
+/*siren 详情页*/
+
+.sirenDetail {
+	font-size: $fontsize17;
+	background-color: #3B4054;
+	height: 100vh;
+	.deviceIcon-background {
+		background-color: $color-line;
+		border-radius: 50%;
+		width: 6.67rem;
+		height: 6.67rem;
+		margin-top: 3.34rem;
+		margin: 0 auto;
+		margin-top: 3.33rem;
+		position: relative;
+		.device-icon {
+			width: 3.67rem;
+			height: 3.67rem;
+			background-image: url($img-dir/devices_icon_siren_white_44.png);
+			background-size: contain;
+			position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		
+	}
+	.device-lowPower {
+		float: right;
+		width: 2.85rem;
+		height: 1.5rem;
+		background: url($img-dir/automation_icon_right_arrow.png) center no-repeat;
+		background-size: contain;
+		margin-right: 1.67rem;
+		margin-top: 2.45rem;
+	}
+	.deviceState-text {
+		font-size: $fontsize17;
+		text-align: center;
+		width: 100%;
+		height: 1.42rem;
+		margin-top: 1.33rem;
+		color: $text-color;
+		/* font-family: SFProDisplay-Regular; */
+		> p{
+			text-align: center;
+		}
+	}
+	
+	.text-background {
+		height: 4.67rem;
+		margin-left: 1.67rem;
+		margin-right: 1.67rem;
+		border-radius: 4px;
+		background-color: $color-line;
+		margin-top: 3.25rem;
+		display: flex;
+		&.textSencond-background {
+			margin-top: 1.25rem;
+		}
+	}
+	.deviceName-text {
+		/* flex: 0 0 12rem; */
+		color: white;
+		/* float: left; */
+		margin-left: 1.34rem;
+		width: 12rem;
+		height: 4.67rem;
+		line-height: 4.67rem;
+		/* font-family: SFProDisplay-Regular; */
+		font-size: $fontsize17;
+	}
+	.input-box {
+		/* float: right; */
+		flex: 1;
+		width: 50%;
+		background-color: $color-line;
+		border: 0;
+		height: 100%;
+		padding: 0;
+		padding-right: 2rem;
+		border-radius: 4px;
+		text-align: right;
+		color: $text-weaken-color;
+		font-size: $fontsize13;
+		caret-color: #DE903A;
+		box-sizing: border-box;
+		Letter-spacing:1.6px;
+	}
+	.deviceInfo-text,
+	.deviceName-icon {
+		flex: 0 0 3.47rem;
+		line-height: 4.67rem;
+		font-size: $fontsize13;
+	}
+	.deviceInfo-text {
+		flex: 1;
+		text-align: right;
+		color: #A6A8B1;
+	}
+	.deviceName-icon {
+		background: url('$img-dir/automation_icon_right_arrow.png') left no-repeat;
+		background-size: 2rem 2rem;
+	}
+	.delete-backgound {
+		height: 4.67rem;
+		margin-left: 1.67rem;
+		margin-right: 1.67rem;
+		margin-top: 3.25rem;
+	}
+	.delete {
+		width: 100%;
+		height: 4.17rem;
+		background: $color-assist-2;
+		font-size: $fontsize17;
+		line-height: 1.25rem;
+		color: $text-color;
+		border-radius: 0.34rem;
+		border: 0;
+	}
+}
+
+/*siren 详情页结束*/
+
+.record-box {
+	/*height: calc(100vh - (4.08rem + 64px + 2.33rem + 2.42rem) * $zoom);*/
+	background-color: $bg-major-color;
+	height: 100vh;
+	margin-top: -0.5rem;
+}
+
+
+.icon {
+	display: inline-block;
+	width: calc(4.5rem * $zoom);
+	height: calc(4.5rem * $zoom);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	&.close{
+		background-image: url($img-dir/home_long_press_icon_close_n.png);
+	}
+}
+
+
+.success_add{
+    height: 61.5rem;
+    background: $bg-major-color;
+    color: $text-color;
+    font-size: $fontsize17;
+    .success_tips{
+        width: 5rem;
+        height: 5rem;
+        margin: 0 auto;
+        background: url('$img-dir/common_icon_ssucceed_120.png') center no-repeat;
+        background-size: 100%;
+        margin-top:3.35rem;
+    }
+    .success_tips_text{
+        margin: 0 auto;
+        height: 1.5rem;
+        width: 60%;
+        color: $text-color;
+        line-height: 1.5rem;
+        text-align: center;
+        margin-top: 2.67rem;
+    }
+    .success_done{
+        margin: 0 auto;
+        margin-top:3.6rem;
+        width: 89.3%;
+        height: 4.1rem;
+        border: 1px solid $color-major;
+        text-align: center;
+        color:$text-color;
+        background:$color-major;
+        display: block;
+        border-radius: 0.3rem;
+	}
+	.success_continue{
+        margin: 0 auto;
+        margin-top:4.6rem;
+        width: 89.3%;
+        height: 4.1rem;
+        border: 1px solid $text-color;
+        text-align: center;
+        color:$text-color;
+        background:#3A4056;
+        display: block;
+        border-radius: 0.3rem;
+	}
+	.gateway_main{
+        border-top:1px solid $bg-major-color;
+        background: $bg-major-color;
+        .box-imgtext{
+            height: 3.6rem;
+            width: 100%;
+            margin: 0;
+            margin-top: 1.6rem;
+            display: flex;
+            position: relative;
+            .img_icon{
+                flex: 0 0 3.6rem;
+                display: inline-block;
+                margin-left: 1.6rem;
+                width:3.6rem;
+            }
+            .Gateway, .gateway, .Multi_Gateway{
+                background: url($img-dir/devices_icon_gateway_white_44.png);
+                background-size: contain;
+            },
+            .lighting, .Light_ColorTemperature, .Light_Dimmable, .Light_RGBW{
+                background: url($img-dir/devices_icon_lighting_white_44.png);
+                background-size: contain;
+            }
+            .motion, .Sensor_Motion, .Sensor_PIR{
+                background: url($img-dir/devices_icon_motion_white_44.png);
+                background-size: contain;
+            }
+            .sensor, .Sensor_Doorlock{
+                background: url($img-dir/devices_icon_door_lock_white_44.png);
+                background-size: contain;
+            }
+            .siren, .Alarm_Siren{
+                background: url($img-dir/devices_icon_siren_white_44.png);
+                background-size: contain;
+            }
+
+            .Smartplug_Meter, &.plug{
+                background: url($img-dir/devices_icon_plug_white_44.png);
+                background-size: contain;
+            }
+			.remote{
+                background: url($img-dir/devices_icon_remote_white_44.png);
+                background-size: contain;
+            }
+            .gateway_name{
+                flex: 1;
+                margin-left: 1.6rem;
+                display: inline-block;
+                height: 3.6rem;
+                line-height: 3.6rem;
+                border: 1px solid $bg-major-color;
+                background: $bg-major-color;
+                color: $text-color;
+                caret-color:$color-major;
+            }
+            .edit_name{
+                flex: 1;
+                margin-left: 1.6rem;
+                display: inline-block;
+                height: 3.6rem;
+                line-height: 3.6rem;
+                border: 1px solid $bg-nav-top-color;
+                background: $bg-nav-top-color;
+                border-radius: 8px;
+                color: $text-color;
+                text-indent: 10px;
+                margin-right: 1.4rem;
+                caret-color:$color-major;
+            }
+            .del_icon{
+                width: 2.5rem;
+                height: 2.5rem;
+                background: url($img-dir/add_gateway_icon_delete_n.png);
+                background-size: contain;
+                position: absolute;
+                top: 0.7rem;
+                right: 1.8rem;
+            }
+            .hid_del_icon{
+                display: none;
+            }
+        }
+        .success_tips{
+            margin: 0;
+            width: 100%;
+            height: 2.9rem;
+            background: $color-line;
+            color: $text-weaken-color;
+            text-indent: 1.6rem;
+            margin-top: 3.4rem;
+            line-height: 2.9rem;
+            font-family: SFProDisplay-Regular;
+            font-size:$fontsize13;
+        }
+        .type_icon{
+            height: auto;
+            width: 100%;
+            overflow:auto; 
+            border-bottom: 1px solid $color-line;
+            .row {
+                width: 100%;
+                height: 9.8rem;
+                border-bottom: 1px solid $color-line;
+            }
+            .left{
+                float: left;
+                height: 9.8rem;
+                width: 33%;
+                border-bottom: 1px solid $color-line;
+            }
+            .success_icon{
+                width: 3.7rem;
+                height: 3.7rem;
+                margin: 0 auto;
+                margin-top: 1.7rem;
+            }
+            .default{
+                background: url($img-dir/room_icon_fault.png);
+                background-size: contain;
+            }
+            .default_s{
+                background: url($img-dir/room_icon_fault_s.png);
+                background-size: contain;
+            }
+            .type_name{
+                margin: 0 auto;
+                margin-top: 1.4rem;
+                height: 1.7rem;
+                text-align: center;
+                line-height: 1.7rem;
+                &.selected {
+                    color: #f59c24;
+                }
+            }
+            .bedroom{
+                background: url($img-dir/room_icon_bedroom.png);
+                background-size: contain;
+            }
+            .bedroom_s{
+                background: url($img-dir/room_icon_bedroom_s.png);
+                background-size: contain;
+            }
+            .livingroom{
+                background: url($img-dir/room_icon_living_room.png);
+                background-size: contain;
+            }
+            .livingroom_s{
+                background: url($img-dir/room_icon_living_room_s.png);
+                background-size: contain;
+            }
+            .study{
+                background: url($img-dir/room_icon_study.png);
+                background-size: contain;
+            }
+            .study_s{
+                background: url($img-dir/room_icon_study_s.png);
+                background-size: contain;
+            }
+            .bathroom{
+                background: url($img-dir/room_icon_bathroom.png);
+                background-size: contain;
+            }
+            .bathroom_s{
+                background: url($img-dir/room_icon_bathroom_s.png);
+                background-size: contain;
+            }
+            .diningroom{
+                background: url($img-dir/room_icon_dinning_room.png);
+                background-size: contain;
+            }
+            .diningroom_s{
+                background: url($img-dir/room_icon_dinning_room_s.png);
+                background-size: contain;
+            }
+            .outside{
+                background: url($img-dir/room_icon_outside.png);
+                background-size: contain;
+            }
+            .outside_s{
+                background: url($img-dir/room_icon_outside_s.png);
+                background-size: contain;
+            }
+            .basement{
+                background: url($img-dir/room_icon_basement.png);
+                background-size: contain;
+            }
+            .basement_s{
+                background: url($img-dir/room_icon_basement_s.png);
+                background-size: contain;
+            }
+            .custom{
+                background: url($img-dir/room_icon_custom_n.png);
+                background-size: contain;
+            }
+            .custom_s{
+                background: url($img-dir/room_icon_custom_n.png);
+                background-size: contain;
+            }
+            /* 房间的icon和房间模块的icon样式没统一， 找时间优化  */
+            .bedroom{
+                background-image: url($img-dir/room_icon_bedroom.png);
+                background-size: contain;
+            }
+            .bedroom2{
+                background-image: url($img-dir/room_icon_bedroom2.png);
+                background-size: contain;
+            }
+            .bedroom2_s{
+                background-image: url($img-dir/room_icon_bedroom2_s.png);
+                background-size: contain;
+            }
+            .bedroom3{
+                background-image: url($img-dir/room_icon_bedroom3.png);
+                background-size: contain;
+            }
+            .bedroom3_s{
+                background-image: url($img-dir/room_icon_bedroom3_s.png);
+                background-size: contain;
+            }
+            .bathroom2{
+                background-image: url($img-dir/room_icon_bathroom2.png);
+                background-size: contain;
+            }
+            .bathroom2_s{
+                background-image: url($img-dir/room_icon_bathroom2_s.png);
+                background-size: contain;
+            }
+            .diningroom2{
+                background-image: url($img-dir/room_icon_dinning_room2.png);
+                background-size: contain;
+            }
+            .diningroom2_s{
+                background-image: url($img-dir/room_icon_dinning_room2_s.png);
+                background-size: contain;
+            }
+            .balcony{
+                background-image: url($img-dir/room_icon_balcony.png);
+                background-size: contain;
+            }
+            .balcony_s{
+                background-image: url($img-dir/room_icon_balcony_s.png);
+                background-size: contain;
+            }
+            .kitchen{
+                background-image: url($img-dir/room_icon_kitchen.png);
+                background-size: contain;
+            }
+            .kitchen_s{
+                background-image: url($img-dir/room_icon_kitchen_s.png);
+                background-size: contain;
+            }
+            .fault{
+                background-image: url($img-dir/room_icon_fault.png);
+                background-size: contain;
+            }
+            .living-room{
+                background-image: url($img-dir/room_icon_living_room.png);
+                background-size: contain;
+            }
+            .living-room_s{
+                background-image: url($img-dir/room_icon_living_room_s.png);
+                background-size: contain;
+            }
+            .study2{
+                background-image: url($img-dir/room_icon_study2.png);
+                background-size: contain;
+            }
+            .study2_s{
+                background-image: url($img-dir/room_icon_study2_s.png);
+                background-size: contain;
+            }
+            /*  */
+        }
+        .done,.add_device{
+            margin: 0 auto;
+            width: 89.3%;
+            height: 4.1rem;
+            display: block;
+            border-radius: 0.3rem;
+            font-size: $fontsize17;
+            color: $text-color;
+            
+        }
+        .add_button{
+            height: 15rem;
+            .done{
+                border: 2px solid $color-major;
+                text-align: center;
+                color:$text-color;
+                background:$color-major;
+                margin-top:3.4rem;
+            }
+            .add_device{
+                opacity: 0.5;
+                border: 2px solid #fff;
+                border-radius: 0.3rem;
+                background:$bg-major-color;
+                margin-top:2.65rem;
+            }
+        }
+    }
+}
+
+.add_button{
+	height: 15rem;
+	.done{
+		border: 2px solid $color-major;
+		text-align: center;
+		color:$text-color;
+		background:$color-major;
+		
+	}
+	.add_device{
+		opacity: 0.5;
+		border: 2px solid $text-colorFFF;
+		border-radius: 0.3rem;
+		background:$bg-major-color;
+	}
+}
+
+.modal{
+	.dialog{
+		.warn-icon{
+			$iconSize:2.92rem;
+			display:inline-block;
+			margin:0 auto;
+			width:$iconSize;
+			height:$iconSize;
+			background:url("$img-dir/common_icon_warn.png") no-repeat;
+			background-size:100%;
+			
+		}
+		.content  {
+			text-align: left;
+		}
+	}
+}
+
+.set_wifi{
+	height: 100vh;
+	$inputHeight: 4.66rem;
+	$lineSpace: 16px;
+	$lineHeight: calc($inputHeight + $lineSpace);
+	
+	.wifi_icon_bg{
+		margin-left: calc((100vw / 2) - 5.83rem / 2);
+		margin-top: 3.33rem;
+		display:flex;/*Flex布局*/
+    	display:-webkit-flex; /* Safari */
+    	align-items:center;/*指定垂直居中*/
+		$iconBgSize:5.83rem;
+		width:$iconBgSize;
+		height:$iconBgSize;
+		background:#4E5367;
+        border-radius: 10rem;
+		.wifi_icon{
+			$iconSize:3.66rem;
+			margin: auto;
+			width:$iconSize;
+			height:$iconSize;
+			background:url("$img-dir/ipc_icon_connected_wifi.png") no-repeat;
+			background-size:100%;
+		}
+	}
+	
+	.nextBtn 
+	{
+		display: block;
+		width: calc(100%);
+		height: 4.16rem;
+		border: none;
+		outline: none;
+		margin: 10rem auto 0;
+		background-color: $color-major;
+		color: $text-color;
+		font-size: $fontsize17;
+		border-radius: 5px;
+		font-weight: 100;
+	}
+			
+			
+	.box_div{
+		padding: 5rem 1.66rem;
+		
+		> div{
+			text-align: center;
+			position: relative;
+			padding: 0 0rem 0;
+			
+			&.box-wifi-ssid {
+				select{
+					/*很关键：将默认的select选择框样式清除*/
+					appearance:none;
+					-moz-appearance:none;
+					-webkit-appearance:none;
+					background-image: url("$img-dir/ipc_icon_wifi.png");
+				}
+				
+				select option{
+					background-image: url("$img-dir/ipc_icon_wifi.png");
+				}
+				
+				.arrow{
+					position: absolute;
+					display: block;
+					width: 2rem;
+					height: 2rem;
+					top: 1.4rem;
+					right: 1.33rem;
+					background-size: 2rem 2rem;
+					background-image: url("$img-dir/connect_wifi_icon_dropdown_arrow_n.png");
+                	z-index:11;
+				}
+				input {
+					background-image: url("$img-dir/ipc_icon_wifi.png");
+				}
+			}
+			
+			&.box-password, &.box-wifi-ssid {
+				a{
+					position: absolute;
+					display: block;
+					width: 2rem;
+					height: 2rem;
+					top: 1.4rem;
+					right: 1.33rem;
+					background-size: 2rem 2rem;
+		
+					&.clear-icon{
+						top: 1.5rem;
+						right: 1.33rem;
+						width: 1.5rem;
+						height: 1.5rem;
+						background-image: url("$img-dir/home_long_press_icon_close_n.png");
+						background-size: contain;
+					}
+				}
+			}
+			
+			&.box-password{
+				input {
+					background-image: url("$img-dir/sign_in_icon_password.png");
+				}
+
+				a {
+					&.close{
+						background-image: url("$img-dir/sign_in_icon_eye_close.png");
+					}
+					&.open{
+						background-image: url("$img-dir/sign_in_icon_eye_open.png");
+					}
+					&.clear-icon{
+						right: calc(0.67rem + 2.67rem + 0.25rem);
+					}
+				}
+			}
+			
+			select{
+				box-sizing: border-box;
+				$padLeft: calc(2rem + 1.33rem + $lineSpace);
+				text-align: left;
+				width: 100%;
+				height: $inputHeight;
+				padding: 0;
+				padding-left: $padLeft;
+			    padding-right: calc(0.67rem + 2.67rem + 2rem);
+			    margin-bottom: 0.417rem;
+				background-position: $lineSpace center;
+				background-repeat: no-repeat;
+				background-size: 2rem 2rem;
+				font-size: $fontsize15;
+				outline: none;
+				box-shadow: none;
+				border: 0;
+				background-color: rgba(255, 255, 255, 0.1);
+				border-radius: 4px;
+				color: $text-color;
+				border-radius: 0.33rem;
+			}
+			
+			select option{
+					background-repeat: no-repeat;
+					background-size: 2rem 2rem;
+					outline: none;
+					box-shadow: none;
+					border: 0;
+					background-color: #303548;
+			}
+			
+			
+			input{
+				box-sizing: border-box;
+				$padLeft: calc(2rem + 1.33rem + $lineSpace);
+				text-align: left;
+				width: 100%;
+				height: $inputHeight;
+				padding: 0;
+				padding-left: $padLeft;
+			    padding-right: calc(0.67rem + 2.67rem + 2rem);
+			    margin-bottom: 0.417rem;
+				background-position: $lineSpace center;
+				background-repeat: no-repeat;
+				background-size: 2rem 2rem;
+				font-size: $fontsize15;
+				outline: none;
+				box-shadow: none;
+				border: 0;
+				background-color: rgba(255, 255, 255, 0.1);
+				border-radius: 4px;
+				color: $text-color;
+				border-radius: 0.33rem;
+				
+				&::placeholder{
+					color:  rgba(255, 255, 255, 0.5);
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+	
+}
+
+.fail_plug_add{
+    height: 61.5rem;
+    background: $bg-major-color;
+    color: $text-color;
+    font-size: $fontsize17;
+    .fail_tips{
+        width: 5rem;
+        height: 5rem;
+        margin: 0 auto;
+        background: url('$img-dir/common_icon_fail_120.png') center no-repeat;
+        background-size: 100%;
+        margin-top: 10.35rem;
+    }
+    .fail_tips_text{
+        margin: 0 auto;
+        height: 1.5rem;
+        width: 60%;
+        color: #FF5858;
+        line-height: 1.5rem;
+        text-align: center;
+        margin-top: 1.66rem;
+        font-size: $fontsize17;
+    }
+    .fail_desc_text{
+    	
+        height: 1.5rem;
+        align-items: center;  
+        justify-content: center;  
+        color: $text-weaken-color;
+        line-height: 1.5rem;
+        text-align: center;
+        margin-top: 1.33rem;
+        font-size: $fontsize15;
+        .fail_link{
+        	display: inline-block;
+        	margin-left: 0.5rem;
+	        color: $color-major;
+	    }
+    }
+    
+    .try_again{
+        margin: 0 auto;
+        margin-top:18.6rem;
+        width: 89.3%;
+        height: 4.1rem;
+        border: 1px solid $color-major;
+        text-align: center;
+        color:$text-color;
+        background:$color-major;
+        display: block;
+        border-radius: 0.3rem;
+	}
+}
+
+/** 设置设备模式样式开始 **/
+.device-mode {
+	overflow: hidden;
+	ul {
+		padding: 0 calc(3.33rem * $zoom);
+		margin-top: calc(3.33rem * $zoom);
+		li {
+			position: relative;
+			margin-bottom: 1.25rem;
+			background-color: rgba(255,255,255,0.10);
+			color: $text-color;
+			font-size: 17px;
+			border-radius: 4px;
+			padding-left: 1.335rem;
+			padding-top: 1.66rem;
+			div{
+				width: 85%;
+				line-height: 1.5rem;
+				font-size: $fontsize13;
+				color: $text-weaken-color;
+				padding-bottom: 1.66rem;
+				padding-top: 0.66rem;
+			}
+			>i {
+				display: block;
+				position: absolute;
+				top: calc(50% - 1rem);
+				right: 1.33rem;
+				width: 2rem;
+				height: 2rem;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				&.on {
+					background-image: url("$img-dir/common_icon_the_radio.png");
+				}
+				&.off {
+					background-image: url("$img-dir/common_icon_checkbox_off.png")
+				}
+			}
+		}
+	}
+}
+
+.count_down_root{
+	.count_down_main{
+		width: 100vw;
+		text-align: center;
+		margin-top: 8.08rem;
+		font-size: $fontsize76;
+		font-family: SFProDisplay-Regular;
+	}
+	
+	.am-picker{
+		margin-top: 1.25rem;
+	}
+			
+	.am-picker-col-indicator{
+		border-top:1px solid $color-line;
+		border-bottom: 1px solid $color-line;
+	}
+	.am-picker-col-mask{
+		background-image: linear-gradient(to bottom, rgba(58, 64, 86, 0.95), rgba(58, 64, 86, 0.6)), 
+		linear-gradient(to top, rgba(58, 64, 86, 0.95), rgba(58, 64, 86, 0.6))
+	}
+	.am-picker-col-item{
+		color:#FFFFFF;
+		font-size: 20px;
+	}
+	.am-picker-col-item-selected{
+		color:#FFFFFF;
+		font-size: 30px;
+	}
+	/*.am-picker{
+		margin-top: 1.25rem;
+	}
+	.am-picker-col-indicator{
+		border-top:1px solid $color-line;
+		border-bottom: 1px solid $color-line;
+	}
+	.am-picker-col-mask{
+		background-image:none;
+	}
+	.am-picker-col-item{
+		color:rgba(255,255,255,0.5);
+		font-size: 20px;
+	}
+	.am-picker-col-item-selected{
+		color:#FFFFFF;
+		font-size: 30px;
+	}*/
+	
+	.count_down_enable{
+		position: absolute;
+		top:9.75rem;
+		left: calc(100vw - 10rem);
+		width: 7.5rem;
+		height: 7.5rem;
+		text-align: center;
+		overflow:hidden;
+		
+		&.enable{
+			position: relative;
+			border: 4px solid rgba(0,228,156,0.20);
+			border-radius: 10rem;
+		}
+		
+		&.disable{
+			position: relative;
+			border: 4px solid rgba(245,156,36,0.20);
+			border-radius: 10rem;
+			border-spacing: 5px 5px;
+		}
+		
+		.count_down_status{
+			position: relative;
+			width: 7rem;
+			height: 7rem;
+			margin-top: calc((7.5rem - 7rem) / 2);
+			margin-left: calc((7.5rem - 7rem) / 2);
+			line-height: 6.5rem;
+			border-radius: 10rem;
+			font-size: $fontsize16;
+			
+			&.enable{
+				background: rgba(0,228,156,0.20);
+				color: #00E49C;
+			}
+			
+			&.disable{
+				background: rgba(245,156,36,0.20);
+				color: #F59C24;
+			}
+		}
+	}
+	
+}
+
+/** 设置sirenhub volume样式开始 **/
+.security-delay {
+	/* .bar-content {
+		background-color: $bg-nav-top-color;
+	} */
+	overflow: hidden;
+	ul {
+		padding: 0 calc(3.33rem * $zoom);
+		margin-top: calc(3.33rem * $zoom);
+		li {
+			position: relative;
+			margin-bottom: 1.25rem;
+			background-color: rgba(255,255,255,0.10);
+			color: $text-color;
+			font-size: 17px;
+			border-radius: 4px;
+			padding-left: 1.335rem;
+			line-height: calc(9.33rem * $zoom);
+			>i {
+				display: block;
+				position: absolute;
+				top: 1.335rem;
+				right: 1.335rem;
+				width: 2rem;
+				height: 2rem;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				&.on {
+					background-image: url("$img-dir/common_icon_the_radio.png");
+				}
+				&.off {
+					background-image: url("$img-dir/common_icon_checkbox_off.png")
+				}
+			}
+		}
+	}
+}
+/** 设置sirenhub volume样式结束 **/
+
+/** 设置设备模式样式开始 **/
+
+/** 固件升级样式开始 **/
+.deviceUpdate {
+	width: 100vw;
+	height: calc(100vh - 64px);
+	.updateIcon {
+		width: 5rem;
+		height: 5rem;
+		margin: 8.33rem auto 1.5rem;
+		background-image: url("$img-dir/ipc_icon_cloud.png");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+	.updateTip {
+		text-align: center;
+		font-size: 17px;
+		color: #FFFFFF;
+		line-height: 17px;
+		margin-bottom: calc($zoom * 3.33rem);
+	}
+	.updateNotice {
+		width: calc($zoom * 40rem);
+		margin: auto;
+		text-align: left;
+		font-size: 13px;
+		color: #999999;
+		line-height: 17px;
+	}
+	.updateButton {
+		position: absolute;
+		top: calc(64px + calc($zoom * 83.83rem));
+		left: calc($zoom * 3.33rem);
+		width: calc(100vw - 3.33rem);
+		height: calc($zoom * 8.33rem);
+		line-height: calc($zoom * 8.33rem);
+		margin: auto;
+		text-align: center;
+		font-size: 17px;
+		color: #FFFFFF;
+		border-radius: 4px;
+		background-color: #F59C24;
+	}
+	.updateStatus {
+		>div {
+			width: 5rem;
+			height: 5rem;
+			margin: 10rem auto calc($zoom * 3.33rem);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		>p {
+			text-align: center;
+			font-size: 17px;
+			letter-spacing: 0;
+			line-height: 17px;
+		}
+		&.success {
+			>div {
+				background-image: url("$img-dir/common_icon_ssucceed_120.png");
+			}
+			>p {
+				color: #FFFFFF;
+			}
+		}
+		&.fail {
+			>div {
+				background-image: url("$img-dir/common_icon_fail_120.png");
+			}
+			>p {
+				color: #FF5858;
+			}
+		}
+	}
+	.updateProgress {
+		.circular-progress {
+			position: absolute;
+			top: calc(64px + calc($zoom * 16rem));
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.updateNumber {
+			position: absolute;
+			top: calc(calc($zoom * 25.67rem) + 64px);
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 30px;
+			color: #00E49C;
+			letter-spacing: 0;
+			text-align: center;
+		}
+		.updateProgressTip {
+			position: absolute;
+			top: calc(calc($zoom * 38rem) + 94px);
+			width: 100vw;
+			text-align: center;
+			font-size: 17px;
+			color: #00E49C;
+			letter-spacing: 0;
+			line-height: 17px;
+		}
+	}
+}
+/** 固件升级样式结束 **/
+
+/** 安防套装页面开始 **/
+.security-kit {
+	.kit-title {
+		font-size: 17px;
+		color: #FFFFFF;
+		letter-spacing: 0;
+		margin-top: 7rem;
+		margin-bottom: 1rem;
+		text-indent: 2rem;
+	}
+	.kit-tips {
+		ont-size: 15px;
+		color: #C8C8C8;
+		letter-spacing: 0;
+		line-height: 15px;
+		text-indent: 2rem;
+		margin-bottom: 4.16rem;
+	}
+	.kit-img {
+		width: calc($zoom * 54.5rem);
+		height: calc($zoom * 53.33rem);
+		margin: 0 auto 5.5rem;
+		background-image: url("$img-dir/security_suite_equipment.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	.kit-button {
+		width: calc(100% - 1.25rem * 2);
+		height: 4.17rem;
+		background: #F59C24;
+		border-radius: 4px;
+		font-size: 17px;
+		color: #FFFFFF;
+		line-height: 4.17rem;
+		margin: auto;
+		text-align: center;
+	}
+}
+/** 安防套装页面结束 **/
+
+
+ @keyframes rot{
+        form{transform: rotate(0deg)}
+        to{transform: rotate(360deg)}
+    }

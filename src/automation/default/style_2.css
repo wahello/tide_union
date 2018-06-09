@@ -1,0 +1,17 @@
+.date-picker-list .am-list-item .am-list-line .am-list-extra {
+    flex-basis: initial;
+}
+.am-picker-popup-item {
+    color: $color-major ! important;
+    font-family: PingFangSC-Regular;
+}
+
+.am-picker-popup-item:nth-of-type(2) {
+    color: #09100E ! important;
+}
+.am-picker-popup-header{
+    background: rgba(252,252,252,0.80) ! important;
+}
+.am-picker-popup-header{
+    height: 5rem ! important;
+}

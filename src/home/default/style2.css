@@ -1,0 +1,181 @@
+
+
+/* 设备公共样式开始 */
+.devices-icon, .flow-icon{
+	display: block;
+	width: calc(7.33rem * $zoom);
+	height: calc(7.33rem * $zoom);
+	background-size: 100% 100%;
+	&.camera,&.IPC{
+		background-image: url(./devices-icon/devices_icon_camera_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_camera_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_camera_white.png);
+		}
+	}
+  &.camera2{
+		background-image: url(./devices-icon/devices_icon_camera2_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_camera2_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_camera2_white.png);
+		}
+	}
+  &.camera3{
+		background-image: url(./devices-icon/devices_icon_camera3_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_camera3_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_camera3_white.png);
+		}
+	}
+	&.curtain{
+		background-image: url(./devices-icon/devices_icon_curtain_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_curtain_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_curtain_white.png);
+		}
+	}
+	&.door_lock{
+		background-image: url(./devices-icon/devices_icon_door_lock_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_door_lock_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_door_lock_white.png);
+		}
+	}
+	&.magnet{
+		background-image: url(./devices-icon/devices_icon_door_lock_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_door_lock_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_door_lock_white.png);
+		}
+	}
+	&.gateway{
+		background-image: url(./devices-icon/devices_icon_gateway_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_gateway_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_gateway_white.png);
+		}
+	}
+	&.humiture{
+		background-image: url(./devices-icon/devices_icon_humiture_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_humiture_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_humiture_white.png);
+		}
+	}
+	&.keypad{
+		background-image: url(./devices-icon/devices_icon_keypad_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_keypad_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_keypad_white.png);
+		}
+	}
+	&.lighting{
+		background-image: url(./devices-icon/devices_icon_lighting_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_lighting_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_lighting_white.png);
+		}
+	}
+	&.motion{
+		background-image: url(./devices-icon/devices_icon_motion_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_motion_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_motion_white.png);
+		}
+	}
+	&.plug{
+		background-image: url(./devices-icon/devices_icon_plug_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_plug_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_plug_white.png);
+		}
+	}
+	&.plug4{
+		background-image: url(./devices-icon/devices_icon_plug4_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_plug4_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_plug4_white.png);
+		}
+	}
+	&.remote{
+		background-image: url(./devices-icon/devices_icon_remote_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_remote_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_remote_white.png);
+		}
+	}
+	&.siren{
+		background-image: url(./devices-icon/devices_icon_siren_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_siren_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_siren_white.png);
+		}
+	}
+	&.smoke{
+		background-image: url(./devices-icon/devices_icon_smoke_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_smoke_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_smoke_white.png);
+		}
+	}
+	&.switch{
+		background-image: url(./devices-icon/devices_icon_switch_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_switch_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_switch_white.png);
+		}
+	}
+	&.water_leak{
+		background-image: url(./devices-icon/devices_icon_water_leak_n.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_water_leak_s.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_water_leak_white.png);
+		}
+	}
+	&.default {
+		background-image: url(./devices-icon/devices_icon_default.png);
+		&.on{
+			background-image: url(./devices-icon/devices_icon_default.png);
+		}
+		&.white{
+			background-image: url(./devices-icon/devices_icon_default.png);
+		}
+	}
+}
+/* 设备公共样式结束 */

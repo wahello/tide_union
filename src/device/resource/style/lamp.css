@@ -1,0 +1,207 @@
+
+/* 灯控制页面样式开始 */
+.device.lamp.control {
+	.rc-slider{
+		margin:0px 1.35rem !important;
+		width:calc(100% - 6.7rem) !important;
+	}
+	height: 100vh;
+	background-color: $bg-major-color;
+	.bodyer {padding:0;}
+	.picker-onoff{
+		margin: 5.33rem auto 0;
+		.switch {
+			width: 50% !important;
+			height: 50% !important;
+			margin: 25% !important;
+		}
+	}
+	.switch{
+		&, &.on {
+			background: url($img-dir/bulb_control_icon_on_off_n.png) center no-repeat;
+			background-size: calc(9.46rem * $zoom);
+		}
+		&.off, &.disabled{
+			background: url($img-dir/bulb_control_icon_on_off_pre.png) center no-repeat;
+			background-size: calc(9.46rem * $zoom);
+		}
+	}
+	
+	.lamp-dim{
+		/** 预加载图片 **/
+		background: url("$img-dir/color_disk_dim_off.png") center no-repeat;
+		&.bg{
+			background: url("$img-dir/color_disk_dim_on.png") center no-repeat;
+			background-size: 100% 100%;
+			&.disabled{
+				background: url("$img-dir/color_disk_dim_off.png") center no-repeat;
+				background-size: 100% 100%;
+			}
+		}
+	}
+	
+	.lamp-rgbw{
+		/** 预加载图片 **/
+		background: url("$img-dir/color_disk_rgb_off.png") center no-repeat;
+		&.bg{
+			background: url("$img-dir/color_disk_rgb_on.png") center no-repeat;
+			background-size: 100% 100%;
+			&.disabled{
+				background: url("$img-dir/color_disk_rgb_off.png") center no-repeat;
+				background-size: 100% 100%;
+			}
+		}
+	}
+	
+	.lamp-cct{
+		/** 预加载图片 **/
+		background: url("$img-dir/color_temperature_off.png") center no-repeat;
+		&.bg{
+			background: url("$img-dir/color_temperature_on.png") center no-repeat;
+			background-size: 100% 100%;
+			&.disabled{
+				background: url("$img-dir/color_temperature_off.png") center no-repeat;
+				background-size: 100% 100%;
+			}
+		}
+	}
+	.switchhover {
+		overflow: hidden;
+		.sh-content {
+			.sh-panel {
+				display: none;
+				&.active {
+					display: block;
+				}
+			}
+		}
+		.sh-wrap {
+			background-color: $bg-nav-top-color;
+			.clearfix:after {
+				content: '.';
+				display: block;
+				clear: both;
+				visibility: hidden;
+				height: 0;
+			}
+			.sh-nav {
+				width: 70%;
+				padding: 0;
+				margin: 0 auto;
+				li {
+					/*width: 7.5rem;*/
+					display: inline-block;
+					text-align: center;
+					height: 3.67rem;
+					line-height: 3.67rem;
+					&.color {
+						.title-nav {
+							color:$text-assist-color;
+						}
+						/*.icon-nav {
+							background-image: url($img-dir/devices_button_color_default.png);
+						}*/
+						float: left;
+					}
+					&.colorTemp {
+						.title-nav {
+							color:$text-assist-color;
+						}
+						/*.icon-nav {
+							background-image: url($img-dir/devices_icon_temperature_default.png);
+						}*/
+						float: right;
+					}
+					&.active {
+						color:$text-color;
+						/*&.color {
+							.icon-nav {
+								background-image: url($img-dir/devices_button_color_active.png);
+							}
+						}
+						&.colorTemp {
+							.icon-nav {
+								background-image: url($img-dir/devices_buttton_temperature_active .png);
+							}
+						}*/
+						.title-nav {
+							padding:0 1.5rem;
+							color: $text-color;
+							border-bottom: 0.17rem solid $color-major;
+						}
+					}
+					.icon-nav {
+						$size: 4rem;
+						width: $size;
+						height: $size;
+						margin: 0 auto 1rem;
+						background: no-repeat center center;
+						background-size: $size;
+					}
+					.title-nav {
+						padding:0 1.5rem;
+						color: $text-color;
+						font-size: $fontsize16;
+						/* font-family: SFProDisplay-Regular; */
+						letter-spacing: 0;
+					}
+				}
+			}
+		}
+	}
+}
+/* 灯控制页面样式结束 */
+
+/* 灯的添加引导页开始 */
+.device.lamp.add, .device.lamp.addHelp {
+	background-color: #3B4054;
+	height: 100vh;
+	.addWrap {
+		padding: 0 2rem;
+		.desc {
+			margin-top: 2rem;
+			font-size: $fontsize17;
+			color: $text-color;
+		}
+		.addDesc {
+			font-size: $fontsize15;
+			color: $text-weaken-color;
+			margin-top: 1rem;
+		}
+		.nextStep {
+			padding-top: 6rem;
+			height: 24.33rem;
+			width: 23.66rem;
+			margin: 0 auto;
+			text-align: center;
+			&.backgroud-Light {
+				background: url($img-dir/bulb_installation_drawing_1.png) center no-repeat;
+				background-size: 100%;
+			}
+			&.backgroud-Light2 {
+				background: url($img-dir/bulb_installation_drawing_2.png) center no-repeat;
+				background-size: 100%;
+			}
+		}
+		.nextBtn {
+			display: block;
+			width: calc(100%);
+			height: 4.16rem;
+			border: none;
+			outline: none;
+			margin: 3rem auto;
+			background-color: $color-major;
+			color: $text-color;
+			font-size: $fontsize17;
+			border-radius: 5px;
+			font-weight: 100;
+		}
+		.help{
+			margin: 0 auto;
+			text-align: center;
+			color: $color-major;
+			font-size: $fontsize13;
+		}
+	}
+}
+/*灯的添加引导页结束*/

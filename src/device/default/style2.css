@@ -1,0 +1,500 @@
+
+/* 设备列表样式开始 */
+
+.device.list {
+	padding: 0;
+	margin: 0;
+	margin-top: 3.335rem;
+	.am-list-view-scrollview {
+		height: calc(100vh - (4.08rem + 64px + 2.33rem + 6.42rem) * $zoom);
+	}
+	.am-list-header {
+		padding: 0;
+	}
+	.am-list-body {
+		min-height: calc((100vh - 4.08rem - 64px - 2.33rem - 6.42rem) * $zoom);
+		background: transparent;
+		margin-bottom: calc((2.5rem - 0rem) * $zoom);
+	}
+	.am-list-body {
+		border: none;
+		&::before {
+			display: none;
+		}
+		&::after {
+			display: none;
+		}
+	}
+	.scroll-view {
+		height: calc(100vh - 192px);
+	}
+	/* .list-item {
+		$size: calc((100vw - (1.25rem * 4 + (4rem - 1.25rem) * 2) * $zoom) /2);
+		position: relative;
+		display: inline-block;
+		width: $size;
+		height: $size;
+		margin-top: calc(4rem * $zoom);
+		margin-bottom: calc((2.5rem - 4.5rem) * $zoom);
+		margin-left: calc(4rem * $zoom);
+		margin-right: calc((2.5rem - 4rem) * $zoom);
+		background-color: $text-color;
+		border-radius: calc(1.33rem * $zoom);
+		table{
+			table-layout: fixed;
+			.ellipsis {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.devices-icon {
+				margin: calc(3.33rem * $zoom) calc(2.5rem * $zoom);
+			}
+			.device-status {
+				font-size: calc(26px * $zoom);
+				color: #A6A7AF;
+				margin: 0 calc(2.67rem * $zoom) 0 0;
+			}
+			.device-switch {
+				position: static;
+				display: block;
+				width: calc(8.5rem * $zoom);
+				height: calc(4rem * $zoom);
+				margin: calc(1.17rem * $zoom) calc(2.67rem * $zoom) 0 0;
+				background-size: 100% 100%;
+				background-image: url($img-dir/switch_off.png);
+				&.on {
+					background-image: url($img-dir/switch_on.png);
+				}
+			}
+			.device-name {
+				font-size: calc(36px * $zoom);
+				color: $text-major-color;
+				margin: calc(1.33rem * $zoom) calc(2.5rem * $zoom);
+			}
+			.space-line {
+				display: flex;
+				vertical-align: middle;
+			}
+			.space-name {
+				font-size: calc(30px * $zoom);
+				color: $text-second-color;
+				margin: 0 calc(2.5rem * $zoom);
+				margin-right: 0;
+
+				flex: 1;
+				display: block;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				vertical-align: middle;
+				line-height: 2rem;
+				height: 2rem;
+			}
+		}
+		.mask{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.3)
+		}
+		.close{
+			position: absolute;
+			top: calc(-4.5rem * $zoom * $zoom);
+			left: calc(-4.5rem * $zoom * $zoom);
+		}
+	} */
+	.card {
+		margin-top: calc(4rem * 0.5); 
+    margin-bottom: calc((2.5rem - 4.5rem) * 0.5); 
+    margin-left: calc(4rem * 0.5);
+		margin-right: calc((2.5rem - 4rem) * 0.5);
+		.battery {
+			width: 2rem;
+			height: 2rem;
+			background-size: contain;
+			background-image: url($img-dir/home_icon_low_battery.png);
+		}
+		.switch {
+      display: block;
+      width: 4.25rem;
+      height: 2rem;
+      background-size: contain;
+      &.on {
+        background-image: url($img-dir/switch_on.png);
+      }
+      &.off {
+        background-image: url($img-dir/switch_off.png);
+      }
+		}
+		.close {
+			position: absolute;
+			width: 2.25rem;
+			height: 2.25rem;
+			top: -1.25rem;
+			left: -1.125rem;
+			background-image: url($img-dir/home_long_press_icon_close_n.png);
+			background-size: 100% 100%;
+		}
+		.devices-icon {
+      margin-right: 2.5rem;
+    }
+		.status {
+			color: #F59C24;
+		}
+		.card-row.room {
+			min-height: 2rem;
+		}
+		.card-row .status {
+			margin-bottom: 0;
+		}
+	}
+
+	.empty-root {
+		color: $text-color;
+		text-align: center;
+		font-size: 18px;
+		height: calc(100vh - 10rem - 64px);
+		.empty-tip {
+			position: relative;
+		}
+		.empty-text {
+			position: absolute;
+			top: 40%;
+			width: 100%;
+		}
+	}
+}
+
+
+/* 设备列表样式结束 */
+
+
+/* 选择房间页面样式开始 */
+
+.selectroom{
+	background-color:$bg-major-color;
+	height: 100vh;
+	.promat{
+		background-color:$color-line;
+		font-size:14px;
+		/* font-family: SFProDisplay-Regular; */
+		color:$text-weaken-color;
+		height:2.8rem;
+		position: fixed;
+		width: 100%;
+	}
+	.fault-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_fault.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.balcony-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_balcony.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom2-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom2.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom3-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom3.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bathroom2-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bathroom2.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.diningroom-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.diningroom2-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room2.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.kitchen-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_kitchen.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.living-room-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_living_room.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.study2-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_study2.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bathroom-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bathroom.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.custom-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_custom_n.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.dinning_room-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.living_room-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_living_room.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.outside-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_outside.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.study-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_study.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.basement-false{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_basement.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.fault-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_fault_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.balcony-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_balcony_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom2-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom2_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom3-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom3_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bathroom2-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bathroom2_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.diningroom-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.diningroom2-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room2_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.kitchen-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_kitchen_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.living-room-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_living_room_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.study2-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_study2_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bathroom-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bathroom_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.custom-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_custom_pre.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.dinning_room-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.living_room-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_living_room_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.outside-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_outside_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.study-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_study_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.basement-true{
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_basement_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.li-item {
+		/* font-family: SFProDisplay-Regular; */
+		font-size: 14px;
+		color: $text-color;
+		width: 100%;
+		height: 2.3rem;
+		text-align: center;
+		line-height: 2.3rem;
+		&.true{
+			color: #F59C24;
+			text-align: center;
+		}
+		&.false{
+			color: $text-color;
+			text-align: center;
+		}
+	}
+	.roomlist {
+		height: calc(100vh - (4.08rem + 64px + 2.33rem + 2.42rem) * $zoom);
+		ul {
+			display: flex;
+			padding: 0;
+			flex-wrap: wrap;
+			border-bottom: 0.1px solid #4E5367;
+			li{
+				float: left;
+				width: 33.1%;
+				height: 10rem;
+				border-bottom: 0.1px solid #4E5367;
+				font-size: $fontsize15;
+				font-family: PingFangSC-Regular;
+				display: inline-block;
+			}
+		}
+	}
+	
+}
+
+
+/* 选择房间页面样式结束 */
+
+
+/* 选择房间页面样式开始 */
+
+.device.add-flow {
+	background: $bg-major-color;
+	.flow-list {
+		padding-left: 0;
+		margin: 0;
+		.flow-item {
+			.flow-type {
+				height: calc(5.67rem * $zoom);
+				line-height: calc(5.67rem * $zoom);
+				padding-left: calc(3.33rem * $zoom);
+				font-size: calc(28px * $zoom);
+				color: $text-weaken-color;
+				background: rgba(255, 255, 255, .1);
+			}
+			.flow-children {
+				padding: 0;
+				.flow-icon {
+					margin: 0 auto calc(2.67rem * $zoom);
+				}
+				.flow-name {
+					height:2.34rem;
+					vertical-align: top;
+					font-size: calc(28px * $zoom);
+					color: $text-color;
+				}
+				table {
+					border-width: 0;
+					tr {
+						&:first-child {
+							td {
+								border-top: none;
+							}
+						}
+					}
+					td {
+						width: calc(100vw / 3);
+						height: calc(100vw / 3);
+						text-align: center;
+						border-right: solid calc(0.08rem * $zoom) $color-line;
+						border-top: solid calc(0.08rem * $zoom) $color-line;
+						&:last-child {
+							border-right: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* 选择房间页面样式结束 */

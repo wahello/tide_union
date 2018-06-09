@@ -1,0 +1,546 @@
+/* 家庭列表模块 */
+.home-list {
+	margin-top: 1rem;
+	margin-left: 1.67rem;
+	margin-right: 1.67rem;
+	color: $text-color;
+	font-size: 12px;
+	.header {
+		margin-bottom: 1.25rem;
+		font-size:17px; 
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		background: $color-line;
+		padding: 1.33rem;
+		border-radius: 0.2rem;
+		margin-bottom: 1.25rem;
+		height:2.25rem;
+		line-height: 2.5rem;
+		font-size:17px;
+		a {
+			position: relative;
+			display: block;
+			color: $text-color;
+			width: 100%;
+			background: url($img-dir/automation_icon_right_arrow.png) no-repeat 100%;
+			background-size: 2rem 2.25rem;
+		}
+	}
+}
+
+/* 用户家设置模块 */
+
+.home-setting {	
+	color: $text-color;
+	background-color: $bg-major-color;
+	/* padding-bottom: 3.875rem; */
+	.title {
+		padding-left: 1.67rem;
+		padding-right: 1.67rem;
+		height: 2.835rem;
+		line-height: 2.835rem;
+		background: $color-line;
+		color: $text-weaken-color;
+		font-size:1.165rem;
+	}
+    .family-Name{
+	  height: 3rem;
+	  padding: 0.8rem 1.67rem;
+	  display: flex; 
+	  font-size: 1.665rem;
+	  .input-name{
+		
+        float: left;
+		height: 2.3rem;
+		background: $bg-major-color;
+		color:  $text-color;
+		border:0;
+		width: 100%;
+		font-size: 1.415rem;
+	  }
+	  .clear-icon{
+
+		float: right;
+		margin-top: 0.7rem;
+		padding-right: 15px;
+		margin-left:15px;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-image: url("$img-dir/home_long_press_icon_close_n.png");
+		background-size: contain;
+		background-repeat: no-repeat;		
+	
+	}
+	.clear-icon-hiden{
+
+		float: right;
+		margin-top: 0.5rem;
+		padding-right: 15px;
+		margin-left:15px;
+		width: 1.5rem;
+		height: 1.5rem;
+		
+	}
+
+	}
+
+	.content2 {
+		padding: 1.335rem 1.67rem;
+		.gateway {
+			display: flex;
+			display: -webkit-flex;
+			align-items: center;
+			font-size: 1.415rem;
+			&:before {
+				content: '';
+				position: relative;
+				display: inline-block;
+				width: 3.665rem;
+				height: 3.665rem;
+				margin-right: 1.335rem;
+				background: url($img-dir/devices_icon_gateway_white.png) no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	.take-photo {
+		color: $color-major;
+		border-bottom: 0.04rem solid $color-line;
+		font-size: 1.415rem;
+	}
+	.album {
+		color: $text-color;
+		border-bottom: 0.04rem solid $color-line;
+		font-size: 1.415rem;
+		a {
+			display: inline-block;
+			color: $text-color;
+			width: 100%;    		
+			background: url($img-dir/automation_icon_right_arrow.png) no-repeat 100%;
+			background-size: 2rem 2.25rem;
+		}
+	}
+	.currentbackground {
+		text-align: center;
+		margin-top: 1.665rem;
+		margin-bottom: 1.665rem;
+		background: $bg-major-color;
+		padding: 0;
+	}
+	.img {
+		display: inline-block;
+		background: $bg-major-color;
+		height: 16.66rem;
+		width: 10rem;
+		border-radius: 5px;
+		/* background-image: url("$img-dir/bg2.png"); */
+		background-size: contain;
+		img{
+			border-radius: 5px;
+		}
+	}
+	.remove {
+		margin: 0 1.665rem;
+		background: $color-assist-2;
+		text-align: center;
+		padding: 1.3rem 0;
+		margin: 0 1.665rem;
+		border-radius: 5px;
+		margin-bottom:2.6rem;
+		font-size:1.215rem;
+	}
+}
+
+/* 用户创建家模块 */
+
+.cerateHome {
+	background-image: url($img-dir/bg.png);
+	background-size: cover;
+	height:100%;
+
+	div {
+		color: $text-color;
+		
+	}
+	.hiTitle {
+		margin-left: 2.66rem;
+		padding-top: 8.33rem;
+		font-size: 36px;
+	}
+	.tipTitle {
+		margin-left: 2.66rem;
+		margin-top: 1.08rem;
+		font-size: 16px;
+		line-height: 16px;
+	}
+
+	.inputName {
+
+		margin-left: 0rem;
+		margin: 2.58rem 1.67rem;
+		height: 4.67rem;
+		background: $color-line;
+		border-radius: 5px;
+		/* width: 100%; */
+		/* overflow: hidden;  */
+		display: flex; 
+
+		.input-image {
+			margin: 1.53rem;
+			width: 2.5rem;
+			height: 2.5rem;
+			background-image: url("$img-dir/sign_in_icon_edit.png");
+			float: left;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.input-eg {
+			float: left;
+			margin-left: 0rem;
+			margin-top: 1.58rem;
+		}
+
+		.input-name {
+			margin-left: 0rem;
+			height: 4rem;
+			margin-top: 0.1rem;	
+			width: 100%; 
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+			color: white;
+			left: 0px; 
+			right: 0px; 
+
+		}
+	
+		.clear-icon{
+
+			float: right;
+			margin-top: 1.5rem;
+			padding-right: 15px;
+			margin-left:15px;
+			width: 1.5rem;
+			height: 1.5rem;
+			background-image: url("$img-dir/home_long_press_icon_close_n.png");
+			background-size: contain;
+			background-repeat: no-repeat;		
+		
+		}
+		.clear-icon-hiden{
+
+			float: right;
+			margin-top: 1.5rem;
+			padding-right: 15px;
+			margin-left:15px;
+			width: 1.5rem;
+			height: 1.5rem;
+			
+		}
+
+	}
+	  /* .input-name {
+		height: 4rem;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin-top: 0.4rem;
+		margin-left: 7.5rem;
+	     width: 100%; 
+		border: 0;
+		background: rgba(0, 0, 0, 0);
+		color: white;
+		position: absolute;
+		left: 0px;
+		right: 0px;
+	}  */
+	/* .input-eg {
+		float: left;
+		margin-left: 0.0rem;
+		margin-top: 1.58rem;
+	} */
+	/* .input-image {
+		margin: 1.30rem 1.0rem 1.53rem 1.53rem;
+		width: 2rem;
+		height: 2rem;
+		background-image: url("$img-dir/sign_in_icon_edit.png");
+		float: left;
+		background-size: contain;
+		background-repeat: no-repeat;
+	} */
+
+	/* .clear-icon{
+
+		float: right;
+		margin-top: 1.5rem;
+		padding-right: 15px;
+		left: 0px;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-image: url("$img-dir/home_long_press_icon_close_n.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}  */
+
+
+
+
+
+
+
+	.createButton {
+		/*padding-top:  1.75rem;*/
+		text-align: center;
+		line-height: 4.165rem;
+		margin-top: 13rem;
+		margin-right: 1.67rem;
+		margin-left: 1.67rem;
+		/*margin: 10rem 1.67rem;*/
+		height: 4.165rem;
+		background: $color-major;
+		color: $text-color;
+		border-radius: 5px;
+		font-size: 17px;
+	}
+
+	.createButtonEnable {
+		background-color: $color-major;
+		color: $text-color;
+	}
+
+	.createButtonEnable:active {
+		background-color: rgba(182, 105, 22, 1);
+		color: rgba(250, 244, 236, 1);
+	}
+	
+	.createButtonDisable {
+		background-color: rgba(131, 90, 46, 1);
+		color: rgba(185, 162, 132, 1);
+	}
+
+
+	.skip {
+		text-align: center;
+		line-height: 4.165rem;
+		margin-left: 0;
+		margin: 8.87rem 1.67rem 2.67rem;
+		height: 4.165rem;
+		background: rgba(0, 0, 0, 0);
+		/*background: red;*/
+		color: $text-color;
+		font-size: 16px;
+		/*position: fixed;*/
+		/*width: 100%;*/
+		/*bottom: 0;*/
+
+	}
+}
+
+/* 换壁纸页面样式 */
+
+.choosewallpaper {}
+
+.choosewallpaper-title {
+	color: $text-weaken-color;
+	font-size: $fontsize17;
+	margin-left: 1.5rem;
+	line-height: 3.3rem;
+}
+
+.choosewallpaper-list {
+	display: block;
+	white-space: nowrap;
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: auto;
+	height: 17.7rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+
+	li {
+		width: 10rem;
+		height: 17.7rem;
+		margin-right: 1.25rem;
+		display: inline-block;
+		z-index: 99;
+		border-radius: 0.4rem;
+		-moz-border-radius: 0.4rem;
+		/* Old Firefox */
+	}
+	ul {
+		padding: 0 0 0 1.5rem;
+		margin: 0 0 0 0;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: 0.4rem;
+		-moz-border-radius: 0.4rem;
+	}
+}
+
+.choosewallpaper-camera {
+	background-color: white;
+	margin-left: 1.3rem;
+	margin-right: 1.3rem;
+	height: 8rem;
+	position: relative;
+	border-radius: 0.4rem;
+	-moz-border-radius: 0.4rem;
+	/* Old Firefox */
+	div {
+		margin-left: 8rem;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.choosewallpaper-camera-title {
+	font-size: $fontsize17;
+	line-height: 2rem;
+	color:$text-major-color;
+}
+
+.choosewallpaper-camera-desc {
+	font-size: $fontsize11;
+	line-height: 2rem;
+	color: $text-assist-color;
+}
+
+.choosewallpaper-camera-img {
+	height: 6rem;
+	width: 6rem;
+	margin: 1rem 1rem 1rem 1rem;
+	float: left;
+}
+
+.choosewallpaper-camera-right {
+	height: 2rem;
+	width: 2rem;
+	float: right;
+	margin-top: 3rem;
+	margin-right: 1.335rem;
+}
+
+.previewView {
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	display: none;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-color: #555555;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	input {
+		float: left;
+		width: 50%;
+		height: 100%;
+		background-color: black;
+		color: white;
+		border-top: 0;
+		border-bottom: 0;
+		border-left: 0;
+		border-radius: 0rem;
+		-moz-border-radius: 0rem;
+	}	
+}
+
+.right-border{
+		border-right: 1px solid #2a2a2a;
+	}
+
+.right-border-hide{
+		border-right: 0;
+}
+.set-pwd {
+
+  .PasswordInputing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: calc(100vh);
+    background-color: rgba(0, 0, 0, .16);
+  }
+
+  .PasswordInputing-title {
+    margin-right: 3.67rem;
+  	margin-left: 3.67rem;
+  	margin-top: 8.67rem;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: SFProDisplay-Regular;
+  }
+
+  .PasswordInputing_row {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin-right: 3.67rem;
+  	margin-left: 3.67rem;
+  	margin-top: 1rem;
+  	margin-bottom: 1rem;
+  }
+
+  .PasswordInputing_row-dots {
+  	margin-right: 7.02rem;
+  	margin-left: 7.02rem;
+  	margin-top: 1.67rem;
+  	margin-bottom: 2.67rem;
+  }
+
+  .PasswordInputing_dot {
+    width: 1.07rem;
+    height: 1.07rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
+  .PasswordInputing_dot-on {
+    background-color: #fff;
+  }
+
+  .PasswordInputing_number {
+    width: 5.67rem;
+    height: 5.67rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .1);
+    text-align: center;
+    line-height: 5.67rem;
+    font-size: 32px;
+  }
+
+  .PasswordInputing_number:active {
+    background-color: rgba(255, 255, 255, .32);
+  }
+
+  .PasswordInputing_number:focus {
+    background-color: rgba(255, 255, 255, .32);
+  }
+
+  .PasswordInputing_footer {
+    line-height: 9.75rem;
+  }
+
+  .PasswordInputing_cancel {
+    float: right;
+    margin-right: 2.67rem;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  .PasswordInputing_back {
+    float: left;
+    margin-left: 2.67rem;
+    color: #fff;
+    font-size: 15px;
+  }
+}

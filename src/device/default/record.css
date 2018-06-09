@@ -1,0 +1,126 @@
+
+
+.record-img-camera{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_camera_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}
+	.record-img-humiture{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_humiture_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+	.record-img-curtain{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_curtain_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+.record-img-doorlock,.record-img-magnet{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_door_lock_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+	.record-img-gateway{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_gateway_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+	.record-img-keypad{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_keypad_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+	.record-img-lighting{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_lighting_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+	.record-img-motion{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_motion_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+	.record-img-plug{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_plug_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+	.record-img-Smartplug_Meter{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_plug_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}
+	.record-img-remote{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_remote_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}		
+	.record-img-siren{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_siren_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}		
+		.record-img-smoke{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_smoke_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}		
+		.record-img-switch{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_switch_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}	
+	.record-img-waterleak{
+	    height: 20px;
+	    width: 20px;
+		background: url('$img-dir/devices_icon_water_leak_white_44.png') center no-repeat;
+		background-size:20px 20px ;
+	}
+		.record-img-off{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/security_icon_off_44.png') center no-repeat;
+		background-size:20px 20px  ;
+		flex: 0 0 2rem;
+	}
+
+	.record-img-stay{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/security_icon_stay.png') center no-repeat;
+		background-size:20px 20px;
+		flex: 0 0 2rem;
+	}	
+
+	.record-img-away{
+	    height: 3.67 rem;
+	    width: 3.67 rem;
+		background: url('$img-dir/security_icon_away.png') center no-repeat;
+		background-size:20px 20px;
+		flex: 0 0 2rem;
+	}
+
+	.cd-timeline-img {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #FFB90F;
+		}		
+.record-item{
+	    height:50px;
+	    background:  $bg-major-color;
+	}	

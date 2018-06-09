@@ -1,0 +1,3159 @@
+/** 公共样式 begin **/
+
+.ipcsetting {
+	.am-list {
+		border-radius: 0.25rem !important;
+	}
+	.am-list-body {
+		background-color: $color-line !important;
+		border-top: 1PX solid $bg-major-color !important;
+		border-bottom: 1PX solid $bg-major-color !important;
+		border-radius: 0.25rem !important;
+	}
+	.am-list-body div:not(:last-child) .am-list-line {
+		border-bottom: 1PX solid $bg-major-color !important;
+	}
+	.am-list-item {
+		background-color: $color-line !important;
+		margin-left: 0.25rem;
+		margin-right: 0.25rem;
+	}
+	.am-list-item .am-list-line .am-list-content {
+		color: white !important;
+	}
+	.am-list-extra {
+		color: $text-weaken-color !important;
+	}
+	.get_ipc_name {
+		display:inline-block;
+		height: 2rem;
+		width: 53%;
+		color: #C8C8C8;
+		margin-left: 1rem;
+		font-size: $fontsize14;
+		text-align: right;
+		float: right;
+		line-height: 2rem;
+	}
+}
+
+.am-button {
+	background-color: $color-major !important;
+	color: white !important;
+	border: none !important;
+}
+
+.am-button-warning {
+	background-color: $color-assist-2 !important;
+}
+
+.am-button-active {
+	opacity: 0.5 !important;
+	filter: Alpha(opacity=50) !important;
+}
+
+.am-progress-outer {
+	background-color: $bg-nav-top-color !important;
+	border-radius: 0.5rem !important;
+}
+
+.am-progress-bar {
+	border-color: $color-major !important;
+	border-radius: 0.5rem !important;
+}
+
+.ipcupdate {
+	div {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.appIcon {
+		width: 10rem;
+		height: 10rem;
+		background: url(image/logo_240.png);
+		background-size: contain;
+		margin-top: 6rem;
+	}
+	.titleVersion {
+		color: white;
+		font-size: $fontsize17;
+		text-align: center;
+		margin-top: 2rem;
+	}
+	.versionNumber {
+		color: $text-weaken-color;
+		font-size: $fontsize12;
+		text-align: center;
+	}
+	.updateDiv {
+		display: none;
+	}
+	.versionHint {
+		text-align: center;
+		color: $text-assist-color;
+		font-size: $fontsize12;
+	}
+}
+
+.ipcinfo {
+	.deviceIconBackground {
+		margin-left: auto;
+		margin-right: auto;
+		background-color: $color-line;
+		border-radius: 50%;
+		width: 6.67rem;
+		height: 6.67rem;
+		margin-top: 3.34rem;
+		margin-top: 3.33rem;
+		position: relative;
+		.deviceIcon {
+			width: 3.67rem;
+			height: 3.67rem;
+			position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+    .camera3{
+        background:url($img-dir/devices_icon_camera3_white_44.png) no-repeat center;
+        background-size: contain;
+      }
+    .camera{
+      background:url($img-dir/devices_icon_camera_white_44.png) no-repeat center;
+      background-size: contain;
+    }
+    .camera2{
+      background:url($img-dir/security_alarm_icon_camera2_white_44.png) no-repeat center;
+      background-size: contain;
+    }
+	}
+	.content{
+		
+		.customlist{
+			.item{
+				padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+				.name{
+					opacity: 0.5;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize14;
+					color: #fff;
+          margin-right:0 !important;
+				}
+				.title{
+					color: #fff;
+					font-size: $fontsize17;
+					display: inline-block;
+					font-family: PingFangSC-Regular;
+          margin-left:0 !important;
+				}
+			}
+		}
+	}
+}
+
+.customlist {
+	.content_bg{
+		margin: 1.2rem;
+	}
+	div {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.item {
+		line-height: 3.66rem;
+		padding: 0.5rem;
+		height: 3.66rem;
+		background-color: $color-line;
+		border-radius: 0.25rem;
+		margin-top: 1rem;
+		&.item-list{
+			margin-top: 0rem;
+			border-radius: 0rem;
+		}
+		&.item-top{
+			margin-top: 0rem;
+			border-top-left-radius: 0.25rem;
+			border-top-right-radius: 0.25rem;
+			border-bottom-left-radius: 0rem;
+			border-bottom-left-radius: 0rem;
+		}
+		&.item-bottom{
+			margin-top: 0rem;
+			border-top-left-radius: 0rem;
+			border-top-right-radius: 0rem;
+			border-bottom-left-radius: 0.25rem;
+			border-bottom-left-radius: 0.25rem;
+		}
+		.title {
+			color: white;
+			font-size: $fontsize17;
+			display: inline-block;
+			margin-left: 1rem;
+		}
+		.name {
+			color: $text-weaken-color;
+			font-size: $fontsize13;
+			display: inline-block;
+			float: right;
+			margin-right: 1rem;
+		}
+		.input{
+			color: $text-weaken-color;
+			font-size: $fontsize13;
+			/* display: inline-block; */
+			background:transparent;
+			outline:none;
+			border:none;
+			height: 100%;
+			float: right;
+			margin-right: 1rem;
+			text-align:right;
+			
+		}
+		.line{
+			height:0.05rem;
+			width: calc(100% - 2.5rem);
+			background-color: $bg-major-color;
+			margin-left:1.25rem;
+			margin-right:1.25rem;
+			display: inline-block;
+			float: right;
+			margin-bottom:0rem;
+			padding:0rem;
+			margin-top:0.5rem;
+		}
+		.switch {
+			color: $text-weaken-color;
+			font-size: $fontsize13;
+			margin-top: 0.78rem;
+			display: inline-block;
+			float: right;
+		}
+		.arrow-span {
+			width: 2rem;
+			float: right;
+			text-align: right;
+			height: 2rem;
+			margin-top: 0.80rem;
+			/*background-color: blue;*/
+			background: url($img-dir/automation_icon_right_arrow.png) no-repeat;
+			background-size: contain;
+			display: inline-block;
+		}
+		a {
+			margin-top: 1rem;
+		}
+	}
+	.updateIcon_a {
+		$btnSize: 6.67rem;
+		margin:0 auto;
+		margin-top: 4.67rem;
+		margin-bottom:2rem;
+		/* display: inline-block; */
+		width: $btnSize;
+		height: $btnSize;
+		border-radius: 50%;
+		background: url('$img-dir/ipc_icon_cloud.png') no-repeat center;
+		background-size:contain;
+		background-color: rgba(255, 255, 255, 0.17);
+		/* border:1px solid #fff; */
+	}
+	
+}
+
+.payresult {
+	div {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.payIcon {
+		width: 5rem;
+		height: 5rem;
+		margin-top: 10rem;
+		background-size: contain;
+	}
+	.sucess {
+		background-image: url($img-dir/common_icon_ssucceed_120.png);
+	}
+	.fail {
+		background-image: url($img-dir/common_icon_fail_120.png);
+	}
+	.payhint {
+		text-align: center;
+		font-size: $fontsize17;
+		margin-top: 3rem;
+	}
+}
+
+.foudWifi {
+	height: 61.5rem;
+	margin: 0 auto;
+	background: $bg-major-color;
+	border: 1px solid $bg-major-color;
+	font-size: $fontsize17;
+	color: $text-color;
+	
+	.foud_step {
+		margin: 0 auto;
+		padding: 0%;
+		width: 87.2%;
+		height: 2.83rem;
+		margin-top: 2rem;
+		line-height: 2.83rem;
+	},
+	.wifi_list {
+		width: 88%;
+		height: 30rem;
+		margin: 0 auto;
+		border: 1px solid #D8D8D8;
+		border-radius: 0.333rem;
+		margin-top: 2rem;
+	},
+	ul {
+		padding: 0;
+	},
+	.get-wifi-lsit {
+		height: 2.5rem;
+		height: 2.5rem;
+		display: flex;
+		border-bottom: 1px solid #D8D8D8;
+	}
+	,
+	.wifi_name {
+		flex: 1;
+		line-height: 2.5rem;
+		margin-left: 10px;
+		opacity: 0.5;
+	}
+	.wifi-lock,
+	.wifi_Strength {
+		flex: 0 0 2.5rem;
+		background: url($img-dir/sign_in_icon_password.png);
+		background-size: contain;
+		display: inline-block;
+		margin-rgiht: 5px;
+	}
+}
+
+.adding {
+	$addLoadH: 19.1rem;
+	$loadTomeH: 5rem;
+	$loadTomeW: 6rem;
+	$clockW: 17.1rem;
+	.adding_main {
+		height: 100vh;
+		background: $bg-major-color;
+		.add_load {
+			width: $addLoadH;
+			border: none;
+			height: $addLoadH;
+			margin-top: 8rem;
+			position: relative;
+			.time_clock {
+				width: $clockW;
+				height: $clockW;
+				position: absolute;
+				top: calc(($addLoadH - $clockW) /2);
+				left: calc(($addLoadH - $clockW) /2);
+			}
+			.load_time {
+				position: absolute;
+				width: 80px;
+				height: $loadTomeH;
+				left: calc(($addLoadH - $loadTomeW) /2);
+				top: calc(($addLoadH - $loadTomeH)/2);
+				text-align: center;
+				line-height: 60px;
+				color: $color-assist-1;
+				font-family: PingFangSC-Medium;
+				font-size: 30px;
+			}
+		}
+		.wifi_search {
+			margin: 0 auto;
+			width: 87.9%;
+			height: 1.5rem;
+			color: $color-assist-1;
+			text-align: center;
+			line-height: 1.5rem;
+			margin-top: 1.6rem;
+		}
+		.wifi_search_text {
+			margin: 0 auto;
+			width: 83%;
+			height: 3.4rem;
+			color: $text-weaken-color;
+			text-align: center;
+			margin-top: 3.4rem;
+			font-family: SFProDisplay-Regular;
+			font-size: $fontsize16;
+			line-height: 30px;
+		}
+	}
+}
+
+.fail_add {
+	background: $bg-nav-top-color;
+	color: $text-color;
+	font-size: $fontsize17;
+	.main_fail {
+		background: $bg-major-color;
+		height: 100vh;
+		.fail_main {
+			width: 100%;
+			height: 35rem;
+			margin: 0 auto;
+			border: 1px solid $bg-major-color;
+			.fail_tips {
+				width: 5rem;
+				height: 5rem;
+				margin: 0 auto;
+				background: url($img-dir/common_icon_fail_120.png);
+				background-size: contain;
+				margin-top: 9rem;
+			}
+			.suceess_tips {
+				width: 5rem;
+				height: 5rem;
+				margin: 0 auto;
+				background: url($img-dir/common_icon_ssucceed_120.png);
+				background-size: contain;
+				margin-top: 9rem;
+			}
+			.fail_tips_text {
+				margin: 0 auto;
+				height: 1.5rem;
+				width: 60%;
+				color: $color-assist-2;
+				line-height: 1.5rem;
+				text-align: center;
+				margin-top: 2.67rem;
+			}
+			.success_tips_text {
+				margin: 0 auto;
+				height: 1.5rem;
+				width: 60%;
+				color: #89EEA5;
+				line-height: 1.5rem;
+				text-align: center;
+				margin-top: 2.67rem;
+			}
+			.fail_tips_sub_text {
+				margin: 0 auto;
+				height: 1.5rem;
+				width: 100%;
+				color: #c2c2c3;
+				line-height: 1.5rem;
+				text-align: center;
+				margin-top: 0.97rem;
+				font-size: $fontsize15;
+			}
+			.ap_mode{
+				font-size: $fontsize15;
+				color: #EBB53F;
+				display:inline-block;
+
+			}
+		}
+		.try_again {
+			margin: 0 auto;
+			margin-top: 6.6rem;
+			width: 89.3%;
+			height: 4.1rem;
+			border: 1px solid $color-major;
+			text-align: center;
+			color: $text-color;
+			background: $color-major;
+			display: block;
+			border-radius: 0.3rem;
+			position: absolute;
+			bottom: 7.5%;
+			left: calc((100% - 89.3%) /2);
+			font-family: SFProDisplay-Regular;
+			font-size: 17px;
+		}
+		.try_again_ipc {
+			margin: 0 auto;
+			margin-top: 1.35rem;
+			width: 89.3%;
+			height: 4.1rem;
+			border: 1px solid $color-major;
+			text-align: center;
+			color: $text-color;
+			background: $color-major;
+			display: block;
+			border-radius: 0.3rem;
+			position: absolute;
+			bottom: 18.5%;
+			left: calc((100% - 89.3%) /2);
+			font-family: SFProDisplay-Regular;
+			font-size: 17px;
+		}
+		.quit_add_ipc {
+			margin: 0 auto;
+			margin-top: 6.6rem;
+			width: 89.3%;
+			height: 4.1rem;
+			border: 2px solid $color-line;
+			text-align: center;
+			color: $text-color;
+			background: $bg-major-color;
+			display: block;
+			border-radius: 0.3rem;
+			position: absolute;
+			bottom: 7.5%;
+			left: calc((100% - 89.3%) /2);
+			font-family: SFProDisplay-Regular;
+			font-size: 17px;
+		}
+	}
+}
+
+.addCamera {
+	background-color: #3B4054;
+	height: 100vh;
+	.addWrap {
+		padding: 0 2rem;
+		.desc {
+			margin-top: 2rem;
+			font-size: $fontsize17;
+			color: $text-color;
+		}
+		.addDesc {
+			font-size: $fontsize15;
+			color: $text-weaken-color;
+			margin-top: 2rem;
+		}
+		.nextStep {
+			padding-top: 0rem;
+			height: 24.33rem;
+			width: 23.66rem;
+			margin: 0 auto;
+			text-align: center;
+			margin-top: 2.33rem;
+			margin-bottom: 4rem;
+			;
+			&.backgroud-ap {
+				background: url($img-dir/camera_installation_drawing_AP.png) center no-repeat;
+				background-size: 100%;
+			}
+			&.backgroud-ap2 {
+				background: url($img-dir/camera_installation_drawing_1.png) center no-repeat;
+				background-size: 100%;
+			}
+			&.backgroud-ap3 {
+				background: url($img-dir/camera_installation_drawing_2.png) center no-repeat;
+				background-size: 100%;
+			}
+		}
+		.tips{
+			height: 2.16rem;
+			float: left;
+			margin-right: 0.85rem;
+			margin-left: 0.85rem;
+			vertical-align: middle;
+			margin-bottom:2.16rem;
+		}
+		.selectBtn {
+			width: 2.16rem;
+			height: 2.16rem;
+			float: left;
+			margin-right: 0.85rem;
+			vertical-align: middle;
+			display: table-cell;
+			&.choose {
+				background: url($img-dir/common_icon_checkbox_on.png) center no-repeat;
+				background-size: 100%;
+			}
+			&.unchoose {
+				background: url($img-dir/common_icon_checkbox_off.png) center no-repeat;
+				background-size: 100%;
+			}
+		}
+		.chooseDesc {
+			display: table-cell;
+			height: 2.16rem;
+			font-size: $fontsize15;
+			color: $text-color;
+			text-align: left;
+			vertical-align: middle;
+		}
+		.nextBtn {
+			display: block;
+			width: calc(100%);
+			height: 4.16rem;
+			border: none;
+			outline: none;
+			margin: 2.16rem auto;
+			background-color: $color-major;
+			color: $text-color;
+			font-size: $fontsize17;
+			border-radius: 5px;
+			font-weight: 100;
+			margin-bottom: 0.85rem;
+			&.can {
+				background-color: $color-major;
+				color: $text-color;
+			}
+			&.cannot {
+				background-color: #8B6C41;
+				color: #BEAE96
+			}
+		}
+		.notHear {
+			text-align: center;
+			font-size: $fontsize13;
+			color: $text-color;
+			width: 100%;
+			height: 1.58rem;
+			line-height: 1.58rem;
+		}
+	}
+}
+
+.timeZone {
+	background: $bg-nav-top-color;
+	.time_main {
+		width: 100vw;
+		height: 90vh;
+		background: $bg-major-color;
+		position: relative;
+		.select_city {
+			height: 6.66rem;
+			position: relative;
+			.city_name {
+				width: 89.3%;
+				height: 3.665rem;
+				position: absolute;
+				top: calc((6.66rem - 3.665rem) /2);
+				left: calc((100vw - 89.3vw) /2); 
+				border: 1px solid $color-line;
+				background: $color-line;
+				border-radius: 0.3rem;
+				color: $text-color;
+				caret-color: $color-major;
+				text-indent: 4.4rem;
+				font-family: SFProDisplay-Regular;
+				font-size: $fontsize17;
+			}
+			.search_city_remove,
+			.search_city_icon {
+				display: inline-block;
+			}
+			.search_city_icon {
+				width: 2.25rem;
+				height: 2.25rem;
+				position: absolute;
+				top: calc((6.66rem - 2.250rem) /2);
+				left: 8.5%;
+				z-index: 20;
+				background: url($img-dir/common_nav_btn_search_pre.png) no-repeat center;
+				background-size: contain;
+			}
+			.search_city_remove {
+				width: 2rem;
+				height: 2rem;
+				position: absolute;
+				top: calc((6.66rem - 2rem) /2);
+				right: 8.5%;
+				background: url($img-dir/add_gateway_icon_delete_n.png) no-repeat center;
+				background-size: contain;
+			}
+		}
+		.scroll-view {
+			height: calc(100vh - 12rem);
+			overflow-x: hidden;
+			overflow-y: auto;
+			.city_initials {
+				width: 100vw;
+				height: 2.8rem;
+				background: $bg-nav-top-color;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize17;
+				color: $text-color;
+				line-height: 2.8rem;
+				text-indent: 5.3%;
+				.inss_a {
+					color: $text-color;
+				}
+			}
+			.checked_name {
+				width: 94.7%;
+				height: 3.6rem;
+				border-bottom: 1px solid $color-line;
+				margin-left: 5.3%;
+				line-height: 3.6rem;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize14;
+			}
+			.checked_name_click {
+				width: 100%;
+				text-indent: 5.3%;
+				margin-left: 0;
+				background: #4E5367;
+			}
+			.checked_name:last-child {
+				border: none;
+			}
+      .time_best{
+        width:100vw;
+        height:2.8rem;
+        background: #303548;
+        line-height:2.8rem;
+        text-indent:5.3%;
+        font-size:$fontsize17;
+      }
+		}
+		.initials_text {
+			width: 1rem;
+			margin: 0;
+			padding: 0;
+			position: fixed;
+			top: 16rem;
+			right: 2.7%;
+			color: $color-major;
+			text-align: center;
+      z-index:100;
+			font-size: $fontsize12;
+			.a_link {
+				color: $color-major;
+			}
+		}
+	}
+}
+.change_picture{
+  background: $bg-nav-top-color;
+  .picture_main{
+    width: 100vw;
+		height: 90vh;
+		background: $bg-major-color;
+    border-top:1px solid $bg-major-color;
+    .select_p{
+      width:91.4%;
+      height:8.4rem;
+      margin:0 auto;
+      position:relative;
+      margin-top:1.6%;
+      display:flex;
+      .picture_item{
+        /* display:inline-block; */
+        /* width:8.4rem;
+        height:8.4rem; */
+        border:1px solid #4E5367;
+        background: #4E5367;
+        border-radius:0.3rem;
+        flex-grow: 1;
+        display:inline-flex;
+        align-items:center;
+      }
+      /* .item_i{
+        width:4rem;
+        height:4rem;
+        margin:0 auto; 
+      } */
+      .camera3{
+        width:4rem;
+        height:4rem;
+        margin:0 auto;
+        background:url($img-dir/devices_icon_camera3_white_44.png) no-repeat center;
+        background-size: contain;
+      }
+      .camera{
+        width:4rem;
+        height:4rem;
+        margin:0 auto;
+        background:url($img-dir/devices_icon_camera_white_44.png) no-repeat center;
+        background-size: contain;
+      }
+      .camera2{
+        width:4rem;
+        height:4rem;
+        margin:0 auto;
+        background:url($img-dir/security_alarm_icon_camera2_white_44.png) no-repeat center;
+        background-size: contain;
+      }
+      .item_cheched{
+        border:1px solid #F59C24 ;
+        background: #F59C24;
+      }
+    }
+  }
+}
+.setName {
+	background: $bg-nav-top-color;
+	.camera_main{
+		width: 100vw;
+		height: 90vh;
+		background: $bg-major-color;
+		.set_name_title{
+			height:4rem;
+			line-height:4rem;
+			margin:1.8% 0 1.3% 5.3%;
+			font-family: PingFangSC-Medium;
+			font-size: $fontsize17;
+		}
+		.setName_set{
+			width:89.3%;
+			height:4rem;
+			margin:0 auto;
+			position:relative;
+			.set_name{
+				width:100%;
+				height:100%;
+				border: 1px solid #4E5367;
+				background: #4E5367;
+				border-radius: 0.3rem;
+				color: #ffffff;
+				caret-color: #F59C24;
+				text-indent: 1rem;
+				font-family: SFProDisplay-Regular;
+				font-size: 17px;
+			}
+			.rem_icon{
+				display:block;
+				position:absolute;
+				width:2rem;
+				height:2rem;
+				top:1rem;
+				right:1rem;
+				background: url($img-dir/add_gateway_icon_delete_n.png) no-repeat center;
+				background-size: contain;
+			}
+		}
+	}
+}
+
+.DeviceLanguage {
+	background: $bg-nav-top-color;
+	.language_main {
+		width: 100vw;
+		height: 90vh;
+		background: $bg-major-color;
+		padding-top: 1.6rem;
+		.english,
+		.chinese {
+			width: 89.3%;
+			height: 4.6rem;
+			margin: 0 auto;
+			margin-bottom: 1.6rem;
+			background: $color-line;
+			border-radius: 0.3rem;
+			line-height: 4.6rem;
+			position: relative;
+			.language_text {
+				height: 100%;
+				width: 10rem;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize17;
+				color: $text-color;
+				margin-left: 4.3%;
+				display: inline-block;
+			}
+			.check_lang {
+				width: 2rem;
+				height: 2rem;
+				position: absolute;
+				top: calc((4.6rem - 2rem) /2);
+				right: 4.3%;
+				display: inline-block;
+			}
+			.check_lang_true {
+				background: url($img-dir/common_icon_the_radio.png) no-repeat;
+				background-size: contain;
+			}
+			.check_lang_false {
+				background: url($img-dir/common_icon_checkbox_off.png) no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}
+
+.ipc_volume {
+	.volume_main {
+		width: 100vw;
+		height: 90vh;
+		background: $bg-major-color;
+		.am-slider-example {
+			font-family: PingFangSC-Medium;
+			font-size: $fontsize17;
+			color: $text-color;
+			.volume_tarck {
+				width: 89.3%;
+				height: 10rem;
+				border: 1px solid $text-color;
+				margin: 0 auto;
+			}
+			.am-wingblank {
+				.am-slider-wrapper {
+					.am-slider {
+						margin-top: 50px;
+						.am-slider-rail {
+							height: 0.5rem;
+							background: $bg-nav-top-color;
+							border-radius: 15px;
+						}
+						.am-slider-track {
+							height: 0.5rem;
+							background: $color-major;
+							border-radius: 15px;
+						}
+						.am-slider-handle {
+							margin-top: -8px;
+							border: 2px solid $text-color;
+						}
+						.am-slider-step {
+							.am-slider-dot {
+								width: 1px;
+								height: 4px;
+								border-radius: 0;
+								background: $color-major;
+								border: 1px solid $color-major;
+								bottom: -2px;
+							}
+							.am-slider-dot:nth-child(1) {
+								margin-left: 1px;
+							}
+						}
+					}
+				}
+			}
+			.tarck_num {
+				width: 93%;
+				height: 2rem;
+				margin: 0 auto;
+				line-height: 2rem;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize17;
+				margin-top: 0.5rem;
+				.volume_num {
+					width: calc(100% / 5);
+					float: left;
+				}
+				.volume_num:nth-child(2) {
+					text-indent: 3.5%;
+				}
+				.volume_num:nth-child(3) {
+					text-indent: 8%;
+				}
+				.volume_num:nth-child(4) {
+					text-indent: 13%;
+				}
+				.volume_num:nth-child(5) {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+.PictureRotation {
+	.rotation_main {
+		width: 100vw;
+		height: 100vh;
+		background: $bg-major-color;
+		margin-top: 1.7rem;
+		>ul {
+			margin: 0;
+			padding: 0;
+		}
+		.rotation_lsit {
+			width: 89.3%;
+			height: 4.6rem;
+			margin: 0 auto;
+			margin-bottom: 1.3rem;
+			background: $color-line;
+			border-radius: 0.3rem;
+			line-height: 4.6rem;
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize17;
+			position: relative;
+			.rotation_text {
+				margin-left: 4.3%;
+			}
+			.check_rotation {
+				width: 2rem;
+				height: 2rem;
+				position: absolute;
+				top: calc((4.6rem - 2rem) /2);
+				right: 4.3%;
+				display: inline-block;
+			}
+			.check_rotation_true {
+				background: url($img-dir/common_icon_the_radio.png) no-repeat;
+				background-size: contain;
+			}
+			.check_rotation_false {
+				background: url($img-dir/common_icon_checkbox_off.png) no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}
+
+.ipc_select_room {
+	/* height: auto; */
+	background: $bg-nav-top-color;
+	color: $text-color;
+	.fiexd {
+		background: $bg-major-color;
+		border-top: 1px solid $bg-major-color;
+		width: 100%;
+		height: 135px;
+		.success_fixed {
+			/* position:fixed; */
+			left: 0;
+			background: $bg-major-color;
+			z-index: 999;
+			width: 100%;
+			.success_img {
+				width: 5rem;
+				height: 5rem;
+				margin: 0 auto;
+				background: url($img-dir/common_icon_ssucceed_120.png);
+				background-size: contain;
+				margin-top: 3.35rem;
+			}
+			.success_text {
+				margin: 0 auto;
+				height: 1.5rem;
+				width: 90%;
+				color: $text-color;
+				line-height: 1.5rem;
+				text-align: center;
+				margin-top: 2.67rem;
+				font-size: $fontsize17;
+			}
+			.success_tips {
+				margin: 0;
+				width: 100%;
+				height: 2.9rem;
+				background: $color-line;
+				color: $text-weaken-color;
+				text-indent: 1.6rem;
+				margin-top: 3.4rem;
+				line-height: 2.9rem;
+				font-family: SFProDisplay-Regular;
+				font-size: $fontsize13;
+			}
+		}
+	}
+	.gateway_main {
+		border-top: 1px solid $bg-major-color;
+		background: $bg-major-color;
+		.box-imgtext {
+			height: 3.6rem;
+			width: 100%;
+			margin: 0;
+			margin-top: 1.6rem;
+			display: flex;
+			position: relative;
+			.img_icon {
+				flex: 0 0 3.6rem;
+				display: inline-block;
+				margin-left: 1.6rem;
+				width: 3.6rem;
+			}
+			.Camera,
+			.camera,
+			.Multi_Camera {
+				background: url($img-dir/devices_icon_camera_white_44.png);
+				background-size: contain;
+			}
+			.gateway_name {
+				flex: 1;
+				margin-left: 1.6rem;
+				display: inline-block;
+				height: 3.6rem;
+				line-height: 3.6rem;
+				border: 1px solid $bg-major-color;
+				background: $bg-major-color;
+				color: $text-color;
+				caret-color: $color-major;
+			}
+			.edit_name {
+				flex: 1;
+				margin-left: 1.6rem;
+				display: inline-block;
+				height: 3.6rem;
+				line-height: 3.6rem;
+				border: 1px solid $bg-nav-top-color;
+				background: $bg-nav-top-color;
+				border-radius: 8px;
+				color: $text-color;
+				text-indent: 10px;
+				margin-right: 1.4rem;
+				caret-color: $color-major;
+			}
+			.del_icon {
+				width: 2.5rem;
+				height: 2.5rem;
+				background: url($img-dir/add_gateway_icon_delete_n.png);
+				background-size: contain;
+				position: absolute;
+				top: 0.7rem;
+				right: 1.8rem;
+			}
+			.hid_del_icon {
+				display: none;
+			}
+		}
+		.success_tips {
+			margin: 0;
+			width: 100%;
+			height: 2.9rem;
+			background: $color-line;
+			color: $text-weaken-color;
+			text-indent: 1.6rem;
+			margin-top: 3.4rem;
+			line-height: 2.9rem;
+			font-family: SFProDisplay-Regular;
+			font-size: $fontsize13;
+		}
+		.type_icon {
+			height: auto;
+			width: 100%;
+			overflow: auto;
+			.row {
+				width: 100%;
+				height: 9.8rem;
+				border-bottom: 1px solid $color-line;
+			}
+			.left {
+				float: left;
+				height: 9.8rem;
+				width: 33.1%;
+				border-bottom: 1px solid $color-line;
+			}
+			.success_icon {
+				width: 3.7rem;
+				height: 3.7rem;
+				margin: 0 auto;
+				margin-top: 1.7rem;
+			}
+			.default {
+				background: url($img-dir/room_icon_fault.png);
+				background-size: contain;
+			}
+			.default_s {
+				background: url($img-dir/room_icon_fault_s.png);
+				background-size: contain;
+			}
+			.type_name {
+				margin: 0 auto;
+				margin-top: 1.4rem;
+				height: 1.7rem;
+				text-align: center;
+				line-height: 1.7rem;
+				&.selected {
+					color: #f59c24;
+				}
+			}
+			.bedroom {
+				background: url($img-dir/room_icon_bedroom.png);
+				background-size: contain;
+			}
+			.bedroom_s {
+				background: url($img-dir/room_icon_bedroom_s.png);
+				background-size: contain;
+			}
+			.livingroom {
+				background: url($img-dir/room_icon_living_room.png);
+				background-size: contain;
+			}
+			.livingroom_s {
+				background: url($img-dir/room_icon_living_room_s.png);
+				background-size: contain;
+			}
+			.study {
+				background: url($img-dir/room_icon_study.png);
+				background-size: contain;
+			}
+			.study_s {
+				background: url($img-dir/room_icon_study_s.png);
+				background-size: contain;
+			}
+			.bathroom {
+				background: url($img-dir/room_icon_bathroom.png);
+				background-size: contain;
+			}
+			.bathroom_s {
+				background: url($img-dir/room_icon_bathroom_s.png);
+				background-size: contain;
+			}
+			.dinning_room {
+				background: url($img-dir/room_icon_dinning_room.png);
+				background-size: contain;
+			}
+			.dinning_room_s {
+				background: url($img-dir/room_icon_dinning_room_s.png);
+				background-size: contain;
+			}
+			.outside {
+				background: url($img-dir/room_icon_outside.png);
+				background-size: contain;
+			}
+			.outside_s {
+				background: url($img-dir/room_icon_outside_s.png);
+				background-size: contain;
+			}
+			.basement {
+				background: url($img-dir/room_icon_basement.png);
+				background-size: contain;
+			}
+			.basement_s {
+				background: url($img-dir/room_icon_basement_s.png);
+				background-size: contain;
+			}
+			.custom {
+				background: url($img-dir/room_icon_custom_n.png);
+				background-size: contain;
+			}
+			.custom_s {
+				background: url($img-dir/room_icon_custom_n.png);
+				background-size: contain;
+			}
+			/* 房间的icon和房间模块的icon样式没统一， 找时间优化  */
+			.bedroom {
+				background-image: url($img-dir/room_icon_bedroom.png);
+				background-size: contain;
+			}
+			.bedroom2 {
+				background-image: url($img-dir/room_icon_bedroom2.png);
+				background-size: contain;
+			}
+			.bedroom2_s {
+				background-image: url($img-dir/room_icon_bedroom2_s.png);
+				background-size: contain;
+			}
+			.bedroom3 {
+				background-image: url($img-dir/room_icon_bedroom3.png);
+				background-size: contain;
+			}
+			.bedroom3_s {
+				background-image: url($img-dir/room_icon_bedroom3_s.png);
+				background-size: contain;
+			}
+			.bathroom2 {
+				background-image: url($img-dir/room_icon_bathroom2.png);
+				background-size: contain;
+			}
+			.bathroom2_s {
+				background-image: url($img-dir/room_icon_bathroom2_s.png);
+				background-size: contain;
+			}
+			.diningroom2 {
+				background-image: url($img-dir/room_icon_dinning_room2.png);
+				background-size: contain;
+			}
+			.diningroom2_s {
+				background-image: url($img-dir/room_icon_dinning_room2_s.png);
+				background-size: contain;
+			}
+			.balcony {
+				background-image: url($img-dir/room_icon_balcony.png);
+				background-size: contain;
+			}
+			.balcony_s {
+				background-image: url($img-dir/room_icon_balcony_s.png);
+				background-size: contain;
+			}
+			.kitchen {
+				background-image: url($img-dir/room_icon_kitchen.png);
+				background-size: contain;
+			}
+			.kitchen_s {
+				background-image: url($img-dir/room_icon_kitchen_s.png);
+				background-size: contain;
+			}
+			.fault {
+				background-image: url($img-dir/room_icon_fault.png);
+				background-size: contain;
+			}
+			.living_room {
+				background-image: url($img-dir/room_icon_living_room.png);
+				background-size: contain;
+			}
+			.living_room_s {
+				background-image: url($img-dir/room_icon_living_room_s.png);
+				background-size: contain;
+			}
+			.study2 {
+				background-image: url($img-dir/room_icon_study2.png);
+				background-size: contain;
+			}
+			.study2_s {
+				background-image: url($img-dir/room_icon_study2_s.png);
+				background-size: contain;
+			}
+			/*  */
+		}
+		.done,
+		.add_device {
+			margin: 0 auto;
+			width: 89.3%;
+			height: 4.1rem;
+			display: block;
+			border-radius: 0.3rem;
+			font-size: $fontsize17;
+			color: $text-color;
+		}
+		.add_button {
+			height: 15rem;
+			.done {
+				border: 2px solid $color-major;
+				text-align: center;
+				color: $text-color;
+				background: $color-major;
+				margin-top: 3.4rem;
+			}
+			.add_device {
+				opacity: 0.5;
+				border: 2px solid #fff;
+				border-radius: 0.3rem;
+				background: $bg-major-color;
+				margin-top: 2.65rem;
+			}
+		}
+	}
+}
+
+.selectroom {
+	background-color: $bg-major-color;
+	height: 100vh;
+	.promat {
+		background-color: $color-line;
+		font-size: 14px;
+		/* font-family: SFProDisplay-Regular; */
+		color: $text-weaken-color;
+		height: 2.8rem;
+		position: fixed;
+		width: 100%;
+	}
+	.fault-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_fault.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.balcony-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_balcony.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom2-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom2.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom3-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom3.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bathroom2-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bathroom2.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.diningroom-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.diningroom2-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room2.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.kitchen-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_kitchen.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.living-room-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_living_room.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.study2-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_study2.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bathroom-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bathroom.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.custom-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_custom_n.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.dinning_room-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.living_room-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_living_room.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.outside-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_outside.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.study-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_study.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.basement-false {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_basement.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.fault-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_fault_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.balcony-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_balcony_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom2-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom2_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom3-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom3_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bathroom2-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bathroom2_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.diningroom-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.diningroom2-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room2_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.kitchen-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_kitchen_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.living-room-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_living_room_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.study2-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_study2_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bathroom-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bathroom_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.bedroom-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_bedroom_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.custom-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_custom_pre.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.dinning_room-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_dinning_room_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.living_room-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_living_room_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.outside-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_outside_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.study-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_study_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.basement-true {
+		height: 3.7rem;
+		width: 3.7rem;
+		background: url('$img-dir/room_icon_basement_s.png') center no-repeat;
+		background-size: 3.7rem 3.7rem;
+	}
+	.li-item {
+		/* font-family: SFProDisplay-Regular; */
+		font-size: 14px;
+		color: $text-color;
+		width: 100%;
+		height: 2.3rem;
+		text-align: center;
+		line-height: 2.3rem;
+		&.true {
+			color: #F59C24;
+			text-align: center;
+		}
+		&.false {
+			color: $text-color;
+			text-align: center;
+		}
+	}
+	.roomlist {
+		height: calc(100vh - (4.08rem + 64px + 2.33rem + 2.42rem) * $zoom);
+		ul {
+			display: flex;
+			padding: 0;
+			flex-wrap: wrap;
+			border-bottom: 0.1px solid #4E5367;
+			li {
+				float: left;
+				width: 33.1%;
+				height: 10rem;
+				border-bottom: 0.1px solid #4E5367;
+				font-size: $fontsize15;
+				font-family: PingFangSC-Regular;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.ipcmemory {
+	.memorytitle {
+		font-size: $fontsize18;
+		margin-top: 1rem;
+	}
+	.memorysubtext {
+		margin-top: 2rem;
+		color: $text-weaken-color;
+		font-size: $fontsize14;
+	}
+	.progress {
+		margin-top: 1rem;
+	}
+	.customlist {
+		margin-top: 2.5rem;
+	}
+}
+
+.connectAPWiFi {
+	font-family: PingFangSC-Regular;
+	.tipImg {
+		margin: 0 auto;
+		margin-top: 2rem;
+		height: 26.6rem;
+		width: 87.2%;
+		opacity: 1.0;
+		background: url($img-dir/connection_device_wifi_step_diagram.png) no-repeat center top;
+		background-size: contain;
+	}
+	.tip {
+		margin: 0 auto;
+		margin-top: 1rem;
+		width: 87.2%;
+		height: 3rem;
+		color: $text-weaken-color;
+		text-align: left;
+		font-size: $fontsize15;
+	}
+	.currentwifi {
+		margin: 0 auto;
+		margin-top: 2.5rem;
+		width: 87.2%;
+		height: 3rem;
+		color: $text-weaken-color;
+		text-align: center;
+		font-size: $fontsize14;
+	}
+	.wifi-setting {
+		margin: 0 auto;
+		width: 89.3%;
+		height: 4.1rem;
+		border: 1px solid $color-major;
+		text-align: center;
+		color: $text-color;
+		background: $color-major;
+		border-radius: 0.3rem;
+		display: block;
+		left: calc((100% - 89.3%) /2);
+	}
+	.step-next {
+		margin: 0 auto;
+		margin-top: 2.65rem;
+		width: 89.3%;
+		height: 4.1rem;
+		border: 2px solid $color-line;
+		text-align: center;
+		color: $text-color;
+		background: $bg-major-color;
+		display: block;
+		border-radius: 0.3rem;
+		left: calc((100% - 89.3%) /2);
+		font-size: 17px;
+		margin-bottom: 0.85rem;
+	}
+}
+
+.wifiList {
+	font-family: PingFangSC-Regular;
+	.am-list-body {
+		background: transparent;
+		border: none;
+	}
+	.little-title {
+		margin: 0 auto;
+		padding: 0%;
+		width: 87.2%;
+		height: 1.5rem;
+		color: $text-color;
+		margin-top: 2rem;
+		line-height: 1.5rem;
+	}
+	.power-tip {
+		margin: 0 auto;
+		margin-top: 1rem;
+		width: 87.2%;
+		height: 8rem;
+		/* font-family: SFProDisplay-Regular; */
+		color: $text-weaken-color;
+		text-align: left;
+		font-size: $fontsize15;
+	}
+	.listview-item {
+		margin: 0 auto;
+		padding: 0%;
+		width: 90.5%;
+		height: 4.6rem;
+		color: $text-color;
+		line-height: 4.6rem;
+		border-bottom: 1px solid #3A4056;
+	}
+	.item-text {
+		float: left;
+		width: 70%;
+	}
+	.item-imginfo {
+		margin: 0 auto;
+		float: right;
+		height: 3.3rem;
+		margin-top: 1.3rem;
+		width: 2rem;
+		opacity: 1.0;
+		background: url($img-dir/add_camera_icon_about_n.png) no-repeat center top;
+		background-size: contain;
+	}
+	.item-imgwifi {
+		margin: 0 auto;
+		float: right;
+		height: 3.3rem;
+		margin-top: 1.3rem;
+		width: 2rem;
+		opacity: 1.0;
+		background: url($img-dir/add_camera_icon_wifi.png) no-repeat center top;
+		background-size: contain;
+	}
+	.item-imglock {
+		margin: 0 auto;
+		float: right;
+		height: 3.3rem;
+		margin-top: 1.3rem;
+		width: 2rem;
+		opacity: 1.0;
+		background: url($img-dir/add_camera_icon_lock.png) no-repeat center top;
+		background-size: contain;
+	}
+	.item-footer {
+		height: 2.8rem;
+		color: $text-color;
+		line-height: 2.8rem;
+	}
+}
+
+.setWiFi {
+	font-family: PingFangSC-Regular;
+	$inputHeight: 4.66rem;
+	$lineSpace: 16px;
+	$lineHeight: calc($inputHeight + $lineSpace);
+	position: relative;
+	font-size: $fontsize15;
+	height: 100%;
+	.imgparent {
+		position: relative;
+		margin-top: 2rem;
+		.imgBg {
+			background: $color-line;
+			height: 5.66rem;
+			width: 5.66rem;
+			border-radius: 2.92rem;
+			margin: 0 auto;
+		}
+		.tipImg {
+			height: 3.66rem;
+			width: 3.66rem;
+			margin: 0 auto;
+			opacity: 1.0;
+			background: url($img-dir/ipc_icon_connected_wifi.png) no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.tip {
+		margin: 0 auto;
+		margin-top: 1rem;
+		width: 87.2%;
+		height: 7.5rem;
+		color: $text-weaken-color;
+		text-align: left;
+		font-size: $fontsize15;
+	}
+	.bottom-tip {
+		margin: 0 auto;
+		height: 1.4rem;
+		width: 100%;
+		color: $text-weaken-color;
+		text-align: center;
+		font-size: $fontsize15;
+		position: absolute;
+		bottom: 16.5%;
+	}
+	.step-next {
+		margin: 0 auto;
+		width: 89.3%;
+		height: 4.1rem;
+		border: 1px solid $color-major;
+		text-align: center;
+		color: $text-color;
+		background: $color-major;
+		display: block;
+		border-radius: 0.3rem;
+		position: absolute;
+		left: calc((100% - 89.3%) /2);
+		bottom: 7.5%;
+		/* top:50rem; */
+	}
+	>div {
+		text-align: center;
+		position: relative;
+		padding: 0 0rem 0;
+		&.box-account {
+			input {
+				background-image: url("$img-dir/sign_in_icon_email.png");
+			}
+		}
+		&.box-password,
+		&.box-account {
+			width: 89.3%;
+			margin: 0 auto;
+			a {
+				position: absolute;
+				display: block;
+				width: 2rem;
+				height: 2rem;
+				top: 1.4rem;
+				right: calc(0.67rem + 2.67rem);
+				background-size: 2rem 2rem;
+				&.clear-icon {
+					top: 1.5rem;
+					right: calc(0.67rem + 2.67rem + 0.25rem);
+					width: 1.5rem;
+					height: 1.5rem;
+					background-image: url("$img-dir/home_long_press_icon_close_n.png");
+					background-size: contain;
+				}
+			}
+		}
+		input {
+			box-sizing: border-box;
+			$padLeft: calc(2rem + 1.33rem + $lineSpace);
+			text-align: left;
+			width: 100%;
+			height: $inputHeight;
+			padding: 0;
+			padding-left: $padLeft;
+			padding-right: calc(0.67rem + 2.67rem + 2rem);
+			margin-bottom: 0.417rem;
+			background-position: $lineSpace center;
+			background-repeat: no-repeat;
+			background-size: 2rem 2rem;
+			font-size: $fontsize15;
+			outline: none;
+			box-shadow: none;
+			border: 0;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-radius: 4px;
+			color: $text-color;
+			border-radius: 0.33rem;
+		}
+		&.box-password {
+			input {
+				background-image: url("$img-dir/sign_in_icon_password.png");
+			}
+			a {
+				&.close {
+					background-image: url("$img-dir/sign_in_icon_eye_close.png");
+				}
+				&.open {
+					background-image: url("$img-dir/sign_in_icon_eye_open.png");
+				}
+				&.clear-icon {
+					right: calc(0.67rem + 2.67rem + 0.25rem + 2rem);
+				}
+			}
+		}
+	}
+}
+
+.event_item {
+	padding: 2rem;
+	border-radius: 10px;
+	width: 100%;
+	height: 6.16rem;
+	.img_head {
+		display: inline;
+		float: left;
+		width: 45%;
+		.img_time {
+			width: 100%;
+			margin: 0rem;
+			margin-top: 4rem;
+			color: $text-color;
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize17;
+		}
+	}
+	.timeinfo {
+		display: inline;
+		float: left;
+		width: 55%;
+		.hourTime {
+			margin-left: 2rem;
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize17;
+			color: black;
+			text-align: left;
+		}
+		.dateTime {
+			margin-left: 2rem;
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize13;
+			color: #C6C6C6;
+			text-align: left;
+		}
+	}
+}
+
+.ipc.main {
+	position: relative;
+	.video-player {
+		width: 100vw;
+		position: relative;
+	}
+	/*.barTitle-box {
+		position: absolute;
+		top: 0;
+		left: 0;
+		.component.bar-title {
+			background: none;
+		}
+		.ipc-title {
+			>h2 {
+				font-family: PingFangSC-Medium;
+				font-weight: 700;
+				font-size: $fontsize16;
+				color: $text-color;
+				line-height: $fontsize16;
+			}
+			>h3 {
+				font-family: PingFangSC-Regular;
+				font-weight: normal;
+				font-size: $fontsize11;
+				color: $text-color;
+				line-height: $fontsize11;
+				margin-top: 0.34rem;
+				.green {
+					font-size: $fontsize15;
+					color: #00E49C;
+				}
+				.gray {
+					font-size: $fontsize15;
+					color: #80807e;
+				}
+			}
+		}
+	}*/
+	.video-button-bar {
+		$barHeight: 4.17rem;
+		$btSize: 2.25rem;
+		height: $barHeight;
+		background: $bg-nav-top-color;
+		
+		.drop-menu-mask,
+		.sdCard-btn-mask,
+		.localFile-btn-mask,
+		.sound-btn-mask,
+		.fullScreen-btn-mask {
+			height: $barHeight;
+			position: absolute;
+			z-index: 1;
+			
+			background: rgba(0, 0, 0, 0.5);
+		}
+		
+		.lf {
+			float: left;
+			width: 30%;
+			height: $barHeight;
+			margin-left: 1.34rem;
+			.drop-menu{
+				display:inline-block;
+				width:4.67rem;
+				height:2rem;
+				border:0.09rem solid rgba(255,255,255,0.5);
+				border-radius:0.34rem;
+				margin-top:1rem;
+				font-family:'PingFangSC-Regular';
+				font-size:$fontsize13;
+				color:#ffffff;
+				text-align:center;
+				line-height:2rem;
+				&.disable{
+					border:0.09rem solid rgba(255,255,255,0.3);
+					color:rgba(255,255,255, 0.3)
+				}
+			}
+		}
+		.rg {
+			float: right;
+			width: 60%;
+			height: $barHeight;
+			margin-right: 1.34rem;
+			text-align: right;
+			>a {
+				display: inline-block;
+				width: $btSize;
+				height: $btSize;
+				margin-top: calc(($barHeight - $btSize) / 2);
+				margin-right: 1.67rem;
+				&.sdCard-btn {
+					background: url('$img-dir/ipc_icon_sd_card_n.png') no-repeat center;
+					background-size: 90%;
+					&.disable{
+						background: url('$img-dir/ipc_icon_sd_card_d.png') no-repeat center;
+						background-size: 90%;
+					}
+				}
+				&.localFile-btn {
+					background: url('$img-dir/ipc_icon_local_file_n.png') no-repeat center;
+					background-size: 90%;
+					&.disable{
+						background: url('$img-dir/ipc_icon_local_file_d.png') no-repeat center;
+						background-size: 90%;
+					}
+				}
+				&.sound-btn {
+					background: url('$img-dir/ipc_icon_sound_up_n.png') no-repeat center;
+					background-size: 90%;
+					&.mute {
+						background: url('$img-dir/ipc_icon_sound_null_n.png') no-repeat center;
+						background-size: 90%;
+						&.muteDisable{
+							background: url('$img-dir/ipc_icon_sound_null_d.png') no-repeat center;
+							background-size: 90%;
+						}
+					}
+					&.disable{
+						background: url('$img-dir/ipc_icon_sound_up_d.png') no-repeat center;
+						background-size: 90%;
+					}
+				}
+				&.fullScreen-btn {
+					background: url('$img-dir/ipc_icon_full_screen_n.png') no-repeat center;
+					background-size: 90%;
+					&.disable{
+						background: url('$img-dir/ipc_icon_full_screen_d.png') no-repeat center;
+						background-size: 90%;
+					}
+				}
+			}
+			>a:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.control-area {
+		text-align: center;
+		position:relative;
+		.mask{
+			position:absolute;
+			left:0;
+			top:0;
+			z-index:1;
+			background-color:rgba(0,0,0,0.3);
+			width:100vw;
+			height:calc(4.17rem + 4.35rem + 17.35rem + 6rem);
+		}
+		.default-module {
+			>a,.updateIcon_a {
+				$btnSize: 6.67rem;
+				margin-top: 4.67rem;
+				display: inline-block;
+				width: $btnSize;
+				height: $btnSize;
+				border-radius: 50%;
+				background: url('$img-dir/ipc_icon_cloud.png') no-repeat center;
+				background-size: 75%;
+				background-color: rgba(255, 255, 255, 0.17);
+			}
+			>h2 {
+				font-family: PingFangSC-Semibold;
+				font-weight: 900;
+				font-size: $fontsize17;
+				color: $text-color;
+				margin: 1.34rem auto 0 auto;
+				width: 23rem;
+				text-align: center;
+				line-height: 17px;
+			}
+			>h3 {
+				opacity: 0.5;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize14;
+				color: $text-color;
+				margin: 0.67rem auto 0 auto;
+				width: 23rem;
+				text-align: center;
+				line-height: 21px;
+				font-weight: normal;
+			}
+			.loading{
+				width:3rem;
+				height:3rem;
+				background:url('$img-dir/loading_the_drop_down.png') no-repeat;
+				background-size:contain;
+				margin:13rem auto 0 auto;
+			}
+		}
+		.video-control {
+			.none{
+				display:none;
+			}
+			.time-bar {
+				$barHeight: 4.35rem;
+				width: 100%;
+				height: $barHeight;
+        display:flex;
+				.time-txt {
+					/* float: left; */
+					text-align:left;
+					height: $barHeight;
+					/* line-height: $barHeight; */
+					margin-left: 2rem;
+					width: 10rem;
+					color: #ffffff;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize17;
+          padding-top:1rem;
+          flex:1;
+          .video_event_date{
+            display: inline-block;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 7px solid #fff;
+            border-right: 7px solid transparent;
+            border-left: 7px solid transparent;
+            margin-left:1rem;
+          }
+				}
+				.time-arrow {
+					$arrowSize: 2rem;
+					display: inline-block;
+					float: right;
+					margin-right: 1.35rem;
+					height: $arrowSize;
+					width: $arrowSize;
+					margin-top: calc(($barHeight - $arrowSize) / 2);
+					background: url($img-dir/home_icon_down_arrow_n.png) no-repeat;
+					background-size: contain;
+				}
+				.eventCount{
+					display: inline-block;
+					float: right;
+					margin-right: 1.35rem;
+					height: $barHeight;
+					/* line-height: $barHeight; */
+					width: 13rem;
+					color: #F5A623;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize17;
+					opacity: 0.5;
+					/* text-align: right; */
+					/* background:red; */
+          display:flex;
+          flex:1
+				}
+        .eventCount > div{
+          flex:1;
+        }
+        .event_start_time,.event_end_time{
+            border: 1px solid #F59C24;
+            border-radius: 2rem;
+            /* padding: 0.3rem; */
+            height: 2rem;
+            margin-top: 1.2rem;
+            line-height:2rem;
+        }
+        .event_from{
+          height: 2rem;
+          margin-top: 1.2rem;
+          flex:0 0 20% !important;
+          line-height:2rem;
+        }
+			}
+			
+			/*全时播放刻度样式开始*/
+			.scale-box{
+				width:100vw;
+				height:calc(100vh - 4.35rem - 4.17rem - 17.35rem - 6rem);
+				overflow:hidden;
+				.scale-bg{
+					width:5.63rem;
+					height:calc(100vh - 4.35rem - 4.17rem - 17.35rem - 6rem);
+				}
+				.line{
+					stroke: rgba(255,255,255,0.8);
+					stroke-width:0.03rem;
+				}
+				.text{
+					opacity: 0.5;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize11;
+					fill: #FFFFFF;
+					line-height: $fontsize11;
+				}
+				.video-area{
+					fill: rgba(204,204,204,0.35);
+					width:2.63rem;
+				}
+				.event-area{
+					fill: rgba(245,156,36,0.70);
+					width:2.63rem;
+				}
+				.polygon{
+					fill: #FFFFFF;
+				}
+				.base-line{
+					height:0.04rem;
+					width:calc(100vw - 13px - 18px - 10px - 5rem - 1.34rem - 0.75rem);
+					box-shadow: 0 -2px 2px 0 rgba(0,0,0,0.48);
+					border-radius: 100px;
+				}
+				.base-text{
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize11;
+					fill: #FFFFFF;
+					line-height: $fontsize11;
+					text-shadow: 0 -2px 2px rgba(0,0,0,0.15);
+				}
+				.event-image-bg{
+					width:10rem;
+					height:5.59rem;
+				}
+				.event-image{
+					width:calc(10rem - 4px);
+					height:calc(5.59rem - 4px);
+				}
+				.event-image-loading{
+					width:2rem;
+					height:2rem;
+				}
+				
+				.touch-area{
+					position:absolute;
+					left:0;
+					top:0;
+					z-index:9;
+					background:rgba(255,255,255, 0);
+					width:5.63rem;
+					height:calc(100vh - 4.35rem - 4.17rem - 17.35rem - 6rem);
+				}
+				.scale{
+					position:absolute;
+					top:0;
+					.scale-inner{
+						position:relative;
+						width:100%;
+						height:calc(100vh - 4.35rem - 4.17rem - 17.35rem - 6rem);
+						padding-left:3rem;
+						> ul{
+							margin:0;
+							padding:0;
+							position:absolute;
+							left:3.92rem;
+							top:0;
+							> li{
+								$liWidth:1.71rem;
+								width:$liWidth;
+								text-align:right;
+								position:relative;
+								line-height:0;
+								> span{
+									display:inline-block;
+									width:1.11rem;
+									height:calc(1.8rem - 0.05rem);
+									border-top:0.05rem solid rgba(255,255,255,0.48);
+									&.long{
+										width:$liWidth;
+									}
+								}
+								> p{
+									position:absolute;
+									top:0;
+									left:calc($liWidth + 1rem);
+									opacity: 0.5;
+									font-family: PingFangSC-Regular;
+									font-size: $fontsize11;
+									color: #FFFFFF;
+								}
+							}
+						}
+						.event-area{
+							position:absolute;
+							width:2.63rem;
+							height:calc(100vh - 4.35rem - 4.17rem - 17.35rem - 6rem);
+							left:3rem;
+							bottom:0;
+							> span{
+								display:inline-block;
+								width:100%;
+								height:2rem;
+								background: rgba(245,156,36,0.80);
+							}
+						}
+						
+					}
+					
+					
+				}
+				.triangle{
+					width:0; 
+			        height:0;
+			        position:absolute;
+			        top:3.63rem;
+			        left:1.67rem;
+			        border-width:0.7rem;
+			        border-style:solid;
+			        border-color: transparent transparent transparent white;
+				}
+				
+				.current-time{
+					position:absolute;
+					top:calc(3.67rem);
+					right:1.34rem;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize11;
+					color: #FFFFFF;
+					text-shadow: 0 -2px 2px rgba(0,0,0,0.15);
+				}
+			}
+			/*全时播放刻度样式结束*/	
+			
+			/*事件播放样式开始*/
+			.eventList {
+				width: 100%;
+				background: $bg-major-color;
+				margin-bottom: 0rem;
+				margin-top: 0rem;
+				position: relative;
+				.eventHead {
+					width: 100%;
+					height: 4.35rem;
+				}
+				.am-list {
+					.am-list-body::before,
+					.am-list-body::after {
+						display: none;
+					}
+					.am-list-body {
+						border: none !important;
+						.am-list-item {
+							.am-list-line {
+								display: none !important;
+							}
+							background-color:$bg-major-color !important;
+						}
+						.am-list-item-middle {
+							display: none !important;
+						}
+						background-color:$bg-major-color !important;
+					}
+				}
+				.time {
+					display: inline;
+					float: left;
+					margin-left: 2rem;
+					height: 4.35rem;
+					line-height: 4.35rem;
+					text-align: right;
+					width: 10rem;
+					color: $text-color;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize21;
+				}
+				.eventCount {
+					display: inline;
+					float: right;
+					margin-right: 0.25rem;
+					height: 4.35rem;
+					line-height: 4.35rem;
+					width: 8rem;
+					color: $text-color;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize17;
+					opacity: 0.5;
+					text-align: right;
+				}
+				.nextImage {
+					display: inline;
+					float: right;
+					margin-right: 1.35rem;
+					height: 2rem;
+					width: 2rem;
+					margin-top: 1.17rem;
+					background: url($img-dir/home_icon_down_arrow_n.png) no-repeat;
+					background-size: contain;
+				}
+				.no_list_image {
+					width: 7.15rem;
+					height: 7.15rem;
+					background: url($img-dir/empty_page_no_video_device.png) no-repeat;
+					background-size: contain;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-top: -7.15rem;
+					margin-left: -3.2rem;
+					/* background: red; */
+				}
+				.no_list_text {
+					width: 100%;
+					text-align: center;
+					height: 1.25rem;
+					line-height: 1.25rem;
+					opacity: 0.5;
+					color: $text-color;
+					font-family: PingFangSC-Regular;
+					font-size: $fontsize14;
+					position: absolute;
+					top: 50%;
+				}
+				
+				.event-item {
+					$itemHeight:7.25rem;
+					background-color:$text-color;
+					width: calc(100vw - 1.34rem * 2);
+					margin:0 auto 0.5rem auto;
+					height: $itemHeight;
+					border-radius: 0.34rem;
+					border:0.165rem solid #3A4056;
+					&.palying {
+						border:0.165rem solid #FFA834;
+					}
+					.headImg {
+						$btnSize:3.67rem;
+						$btnIconSize:2.25rem;
+						width: 45%;
+						height: $itemHeight;
+						/*background:#515466; 
+						background-size: contain;*/
+						border-bottom-left-radius: 0.34rem;
+						border-top-left-radius: 0.34rem;
+						.no_image {
+							width: 5rem;
+							height: 5rem;
+							margin:0 auto;
+							background: url($img-dir/ipc_icon_record_n.png) no-repeat;
+							background-size: contain; 
+							margin-top:1.12rem;
+						}
+						.play-btn, .pause-btn{
+							display:inline-block;
+							position:relative;
+							width:$btnSize;
+							height:$btnSize;
+							border-radius: 50%;
+							margin:calc(($itemHeight - $btnSize) / 2) auto 0 auto;
+							background-color: rgba(0, 0, 0, 0.5);
+							position: relative;
+							> i{
+								position:absolute;
+								width:$btnIconSize;
+								height:$btnIconSize;
+								background: url($img-dir/ipc_icon_play_n.png) no-repeat;	
+								background-size: contain;
+								left:50%;
+								top:50%;
+								margin:calc(-$btnIconSize / 2) 0 0 calc(-$btnIconSize / 2);
+							}
+						}
+						.pause-btn{
+							> i{
+								background: url($img-dir/ipc_icon_pause_n.png) no-repeat;	
+								background-size: contain;
+							}
+						}
+						
+					}
+					.playTime {
+						/*height: $itemHeight;*/
+						text-align: left;
+						margin-left:calc(45% + 1.34rem);
+						margin-top:1.75rem;
+						> h2{
+							color: $text-major-color;
+							font-size: $fontsize20;
+							font-family: PingFangSC-Medium;
+							text-align:left;
+							font-weight: 700;
+						}
+						> h3{
+							margin-top: 0.84rem;
+							color: $text-assist-color;
+							font-size: $fontsize13;
+							font-family: PingFangSC-Regular;
+							text-align:left;
+							font-weight:normal;
+						}
+					}
+					
+				}
+				
+			}
+			.eventList .am-swipe-content{
+				background-color:rgba(255,255,255,0);
+			}
+			
+			/*事件播放样式结束*/
+			
+			
+		}
+		
+		
+	}
+	.talk-box {
+		position: fixed;
+		bottom: 0;
+		z-index: 100;
+		width: 100vw;
+		height: 13.59rem;
+		background: #303548;
+	}
+	.talk-circle {
+		position: relative;
+		margin: 0 auto;
+		height: 100%;
+		.talk-circle-3 {
+			$circle3Size: 10.42rem;
+			width: $circle3Size;
+			height: $circle3Size;
+			background: rgba(245, 156, 36, 0.50);
+			/* border: 1px solid #FFA834; */
+			border-radius: 50%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: calc(-$circle3Size / 2);
+			margin-left: calc(-$circle3Size / 2);
+			animation: largeScale 1s infinite;
+		}
+		.talk-circle-2 {
+			$circle2Size: 7.75rem;
+			width: $circle2Size;
+			height: $circle2Size;
+			position: absolute;
+			z-index: 1;
+			background: rgba(245, 156, 36, 0.50);
+			/* border: 1px solid #FFA834; */
+			border-radius: 50%;
+			left: 50%;
+			top: 50%;
+			margin-top: calc(-$circle2Size / 2);
+			margin-left: calc(-$circle2Size / 2);
+			animation: middleScale 1s infinite;
+		}
+		.talk-circle-btn {
+			$circle3Size: 5rem;
+			width: $circle3Size;
+			height: $circle3Size;
+			position: absolute;
+			z-index: 2;
+			border-radius: 50%;
+			left: 50%;
+			top: 50%;
+			margin-top: calc(-$circle3Size / 2);
+			margin-left: calc(-$circle3Size / 2);
+			background: url($img-dir/ipc_icon_close_talk.png) no-repeat center;
+			background-size: 45%;
+			background-color: #F59C24;
+		}
+	}
+	.non-card-warn {
+		position: fixed;
+		bottom: 0;
+		z-index: 100;
+		width: 100vw;
+		height: calc(100vh - 17.35rem - 4.17rem);
+		background: #FFFFFF;
+		text-align: center;
+		.non-card-img {
+			width: 13.17rem;
+			height: 12.22rem;
+			margin: 4.42rem auto 1rem auto;
+			background: url($img-dir/view_image_tip_No-SD.png) no-repeat center;
+			background-size: contain;
+		}
+		>h2 {
+			font-family: PingFangSC-Semibold;
+			font-weight: 900;
+			font-size: $fontsize17;
+			color: #333333;
+			line-height: 15px;
+			width: 23.46rem;
+			text-align: center;
+			margin: 0 auto;
+		}
+		>ul{
+			color:#666;
+			list-style:decimal inside none !important;
+			margin:3rem auto;
+			>li{
+				display:block;
+				opacity: 0.5;
+				font-family: PingFangSC-Regular;
+				font-size: $fontsize14;
+				color: #666;
+				line-height: 21px;
+				width: 23.46rem;
+				text-align: left;
+				margin: 1rem auto ;
+				font-weight: normal;
+			}
+		}
+		>button {
+			width: calc(100vw - 1.67rem * 2);
+			margin: 0 auto;
+			height: 4.17rem;
+			text-align: center;
+			line-height: 4.17rem;
+			background: #F59C24;
+			border-radius: 0.34rem;
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize17;
+			color: #FFFFFF;
+			border: 0 none;
+		}
+	}
+	.nonCardMask {
+		width: 100vw;
+		height: 100vw;
+		position: absolute;
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 1;
+	}
+}
+
+.ipcSD {
+	width: 100vw;
+	position: relative;
+	.emptyMsg {
+		width: 100vw;
+		height: 10rem;
+		background: url($img-dir/empty_page_sd_card_video.png) no-repeat center/contain;
+		position: absolute;
+		text-align: center;
+		top: 25vh;
+		span {
+			opacity: 0.5;
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize14;
+			color: #FFF;
+			display: block;
+			margin-top: 11rem;
+		}
+	}
+	.videoList {
+		width: 91.5vw;
+		margin: 0 auto;
+		.videoListItem {
+			margin: 1.5rem 0;
+			height: 7rem;
+			label {
+				float: left;
+				margin-top: 2.5rem;
+			}
+			.videoItemInfo {
+				border-radius: 4px;
+				background-repeat:no-repeat;
+				background-position:left;
+				background-size:12.5rem 7rem;
+				background-color: #fff;
+				height: 100%;
+				position: relative;
+				h2 {
+					font-family: PingFangSC-Medium;
+					color: $text-major-color;
+					font-size: $fontsize20;
+					position: absolute;
+					left: 50%;
+					top: 25%;
+				}
+				span {
+					font-family: PingFangSC-Regular;
+					color: $text-assist-color;
+					font-size: $fontsize13;
+					position: absolute;
+					left: 50%;
+					bottom: 25%;
+				}
+				&.videoItemSelect {
+					left: 3rem;
+				}
+			}
+		}
+	}
+	.ck {
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		line-height: 22px;
+		background-size: 100% !important;
+		background: url($img-dir/common_icon_checkbox_off.png) center no-repeat;
+		&.on {
+			background: url($img-dir/common_icon_checkbox_on.png) center no-repeat;
+		}
+	}
+	.SD_alltime {
+		margin: 1rem;
+		.videoOfDay {
+			width: 100%;
+			h2 {
+				font-family: PingFangSC-Medium;
+				font-size: $fontsize14;
+				margin: 2rem 0;
+			}
+			.singleDay {
+				width: 100%;
+				border-radius: 8px;
+				display: block;
+				overflow: hidden;
+				.singleHour {
+					display: inline-block;
+					margin: 1px;
+					text-align: center;
+					height: 3rem;
+					line-height: 3rem;
+					background-color: $color-line;
+					/* backgroud-color:transparent */
+				}
+			}
+			.choose {
+				background-color: rgb(217, 153, 20) !important;
+			}
+		}
+	}
+	.delBottomBar {
+		position: fixed;
+		bottom: 0;
+		background-color: $bg-nav-top-color;
+		height: 4rem;
+		width: 100%;
+		label {
+			margin: 1rem 1.5rem;
+		}
+		span.textAll {
+			font-family: PingFangSC-Regular;
+			font-size: $fontsize18;
+			color: #FFFFFF;
+			width: 4rem;
+			height: 4rem;
+			line-height: 4rem;
+			position: absolute;
+		}
+		.delete {
+			float: right;
+			margin: 1rem;
+		}
+	}
+}
+.ipc_set_wifi{
+	$inputHeight: 4.66rem;
+	$lineSpace: 16px;
+	$lineHeight: calc($inputHeight + $lineSpace);
+	
+	.wifi_icon_bg{
+		margin-left: calc((100vw / 2) - 5.83rem / 2);
+		margin-top: 3.33rem;
+		display:flex;/*Flex布局*/
+    	display:-webkit-flex; /* Safari */
+    	align-items:center;/*指定垂直居中*/
+		$iconBgSize:5.83rem;
+		width:$iconBgSize;
+		height:$iconBgSize;
+		background:#4E5367;
+        border-radius: 10rem;
+		.wifi_icon{
+			$iconSize:3.66rem;
+			margin: auto;
+			width:$iconSize;
+			height:$iconSize;
+			background:url("$img-dir/ipc_icon_connected_wifi.png") no-repeat;
+			background-size:100%;
+		}
+	}
+	.wifi-tips{
+		font-size: $fontsize15;
+		color: $text-weaken-color;
+		margin-top: 2rem;
+		margin-left:1.66rem;
+		margin-right:1.66rem;
+	}
+	.not-support{
+		font-size: $fontsize13;
+		color: $text-weaken-color;
+		margin-bottom: 1.25rem;
+		margin-left:1.66rem;
+		margin-right:1.66rem;
+		height: 2.6rem;
+		line-height: 2.6rem;
+		text-align:center;
+		margin-top:11.65rem;
+		
+	}
+	.nextBtn 
+	{
+		display: block;
+		width: calc(100%);
+		height: 4.16rem;
+		border: none;
+		outline: none;
+		background-color: $color-major;
+		color: $text-color;
+		font-size: $fontsize17;
+		border-radius: 5px;
+		font-weight: 100;
+		margin-bottom:4.17rem;
+		padding:0px;
+	}
+			
+			
+	.box_div{
+		padding: 2.25rem 1.66rem;
+		
+		> div{
+			text-align: center;
+			position: relative;
+			padding: 0 0rem 0;
+			
+			&.box-wifi-ssid {
+				select{
+					/*很关键：将默认的select选择框样式清除*/
+					appearance:none;
+					-moz-appearance:none;
+					-webkit-appearance:none;
+					background-image: url("$img-dir/ipc_icon_wifi.png");
+				}
+				
+				select option{
+					background-image: url("$img-dir/ipc_icon_wifi.png");
+				}
+				
+				.arrow{
+					position: absolute;
+					display: block;
+					width: 2rem;
+					height: 2rem;
+					top: 1.4rem;
+					right: 1.33rem;
+					background-size: 2rem 2rem;
+					background-image: url("$img-dir/connect_wifi_icon_dropdown_arrow_n.png");
+                	z-index:11;
+				}
+				input {
+					background-image: url("$img-dir/ipc_icon_wifi.png");
+				}
+			}
+			
+			&.box-password, &.box-wifi-ssid {
+				a{
+					position: absolute;
+					display: block;
+					width: 2rem;
+					height: 2rem;
+					top: 1.4rem;
+					right: 1.33rem;
+					background-size: 2rem 2rem;
+		
+					&.clear-icon{
+						top: 1.5rem;
+						right: 1.33rem;
+						width: 1.5rem;
+						height: 1.5rem;
+						background-image: url("$img-dir/home_long_press_icon_close_n.png");
+						background-size: contain;
+					}
+				}
+			}
+			
+			&.box-password{
+				input {
+					background-image: url("$img-dir/sign_in_icon_password.png");
+				}
+
+				a {
+					&.close{
+						background-image: url("$img-dir/sign_in_icon_eye_close.png");
+					}
+					&.open{
+						background-image: url("$img-dir/sign_in_icon_eye_open.png");
+					}
+					&.clear-icon{
+						right: calc(0.67rem + 2.67rem + 0.25rem);
+					}
+				}
+			}
+			
+			select{
+				box-sizing: border-box;
+				$padLeft: calc(2rem + 1.33rem + $lineSpace);
+				text-align: left;
+				width: 100%;
+				height: $inputHeight;
+				padding: 0;
+				padding-left: $padLeft;
+			    padding-right: calc(0.67rem + 2.67rem + 2rem);
+			    margin-bottom: 0.417rem;
+				background-position: $lineSpace center;
+				background-repeat: no-repeat;
+				background-size: 2rem 2rem;
+				font-size: $fontsize15;
+				outline: none;
+				box-shadow: none;
+				border: 0;
+				background-color: rgba(255, 255, 255, 0.1);
+				border-radius: 4px;
+				color: $text-color;
+				border-radius: 0.33rem;
+			}
+			
+			select option{
+					background-repeat: no-repeat;
+					background-size: 2rem 2rem;
+					outline: none;
+					box-shadow: none;
+					border: 0;
+					background-color: #303548;
+			}
+			
+			
+			input{
+				box-sizing: border-box;
+				$padLeft: calc(2rem + 1.33rem + $lineSpace);
+				text-align: left;
+				width: 100%;
+				height: $inputHeight;
+				padding: 0;
+				padding-left: $padLeft;
+			    padding-right: calc(0.67rem + 2.67rem + 2rem);
+			    margin-bottom: 0.417rem;
+				background-position: $lineSpace center;
+				background-repeat: no-repeat;
+				background-size: 2rem 2rem;
+				font-size: $fontsize15;
+				outline: none;
+				box-shadow: none;
+				border: 0;
+				background-color: rgba(255, 255, 255, 0.1);
+				border-radius: 4px;
+				color: $text-color;
+				border-radius: 0.33rem;
+				
+				&::placeholder{
+					color:  rgba(255, 255, 255, 0.5);
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+	
+}
+
+
+/* IPC设备样式 */
+.deviceIPCItem{
+	width:88vw;
+	margin:2rem auto;
+	height:calc(49.5vw+4rem);
+	border-radius:1rem;
+	overflow: hidden;
+	.header{
+		width:100%;
+		height:4rem;
+		background-color:#fff;
+		.leftTip{
+			line-height:4rem;
+			display:inline-block;
+			color:#333;
+			text-indent:3rem;
+			font-size:$fontsize18;
+		}
+		.rightTip{
+			display:inline-block;
+			height:4rem;
+			float:right;
+			color:#666;
+			text-align:right;
+			margin-right:2rem;
+			margin-top:0.25rem;
+			.topMessage{
+				height:1rem;
+				margin:0.5rem 0;
+				>span{
+					vertical-align:middle
+				}
+				.icon{
+					width:5px;
+					height:5px;
+					border-radius:50%;
+					display:inline-block;
+					margin-right:5px;
+				}
+				.onlineIcon{
+					background-color:#00E49C;
+				}
+				.offlineIcon{
+					background-color:#FF5858;
+				}
+			}
+		}
+	}
+	.videoContend{
+		width:100%;
+		height:49.5vw;
+		line-height:calc(49.5vw);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-color:#4E5367;
+		border-top:1px solid #fff;
+		.reconifg{
+			display:block;
+			margin:10rem auto;
+			text-align:center;
+			line-height:2rem;
+			height:2rem;
+			width:8rem;
+			font-size:$fontsize12;
+			color:#fff;
+			background-color:#F59C24;
+			border-radius: 25px;
+		}
+	}
+}
+.planBindDevice{
+	background-color: #3B4054;
+	height: 100vh;
+	.chooseDevice-cell {
+	$boxHeight: 6rem;
+	$contentHeight: 3.67rem;
+	margin-top: 1rem;
+	margin-right: 2rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 0.2rem;
+	height: 6rem;
+	margin-left: 2rem;
+	.camera3{
+        background:url($img-dir/devices_icon_camera3_white_44.png) no-repeat center;
+        background-size: contain;
+      }
+    .camera{
+      background:url($img-dir/devices_icon_camera_white_44.png) no-repeat center;
+      background-size: contain;
+    }
+    .camera2{
+      background:url($img-dir/devices_icon_camera2_white.png) no-repeat center;
+      background-size: contain;
+    }
+	.switchChooseDevice-icon{
+		float: left;
+		margin-top: calc(($boxHeight - 3.67rem)/2);
+		margin-left: 1rem;
+		width: 3.67rem;
+		height: 3.67rem;
+		/* background-image: url($img-dir/devices_icon_camera_white.png);
+		background-size: contain; */
+		
+	
+	}
+	.switchChooseDevice-text {
+		float: left;
+		margin-left: 0.5rem;
+		height: $contentHeight;
+		margin-top: calc(($boxHeight - 3rem)/2);;
+		color: $text-second-color 100%;
+		font-size: $fontsize13;
+		/* background:red; */
+		width: 63%;
+		.spanLine {
+			display: inline-block;
+			height: calc($contentHeight);
+			line-height: calc($contentHeight);
+			color:$text-weaken-color;
+			text-overflow: ellipsis;
+			height: 50%;
+			line-height:100%;
+			/* background-color:red; */
+			overflow: hidden;
+			vertical-align:middle;
+			.txt-bold {
+				font-weight: bold;
+				font-size: $fontsize17;
+				font-weight: 700;
+				color: $text-color;
+				/* background-color:yellow; */
+				vertical-align:bottom;
+			    
+			}
+		}
+	}
+	.swithChooseDevice-ChooseState {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/common_icon_the_radio.png) center no-repeat;
+	}
+	.swithChooseDevice-unchoose {
+		float: right;
+		margin-top: calc(($boxHeight - 2rem)/2);
+		margin-right: 1rem;
+		height: 2rem;
+		width: 2rem;
+		background-size: 90% !important;
+		border-radius: 50%;
+		background: url($img-dir/common_icon_checkbox_off.png) center no-repeat;
+	}
+}
+}
+@keyframes largeScale {
+	0% {
+		opacity: 1;
+		width: 5rem;
+		height: 5rem;
+		margin-top: calc(-5rem / 2);
+		margin-left: calc(-5rem / 2)
+	}
+	80% {
+		opacity: 1;
+		width: $circle3Size;
+		height: $circle3Size;
+		margin-top: calc(-$circle3Size / 2);
+		margin-left: calc(-$circle3Size / 2)
+	}
+	100% {
+		opacity: 0
+	}
+}
+
+@keyframes middleScale {
+	0% {
+		opacity: 1;
+		width: 5rem;
+		height: 5rem;
+		margin-top: calc(-5rem / 2);
+		margin-left: calc(-5rem / 2)
+	}
+	80% {
+		opacity: 1;
+		width: $circle2Size;
+		height: $circle2Size;
+		margin-top: calc(-$circle2Size / 2);
+		margin-left: calc(-$circle2Size / 2)
+	}
+	100% {
+		opacity: 0;
+	}
+}
