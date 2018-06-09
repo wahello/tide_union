@@ -117,14 +117,14 @@ class Refresh extends React.Component {
 			return;
 		
 		}
-		that.props.showDialog(Lang.public.dialog.title[0], Lang.public.dialog.tip[0], [{
+		that.props.showDialog("", Lang.public.dialog.tip[2], [{
 				text: Lang.public.dialog.button[0],
 				handleClick: function() {
 					this.hide();
 				}
 			},
 			{
-				text: Lang.public.dialog.button[1],
+				text: Lang.public.dialog.button[5],
 				className: "btn-split",
 				handleClick: function() {
 					this.hide();

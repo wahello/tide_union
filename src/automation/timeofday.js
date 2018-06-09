@@ -281,7 +281,7 @@ class PageTimeOfDay extends Component {
 		this.props.showDialog(dialogLang.title[0], Lang.automation.create.backTip, [{
 			text: dialogLang.button[7],
 			handleClick: function () {
-			    that.handleClickSave();
+			    //that.handleClickSave();
 				this.hide();
 			}
 		},{

@@ -314,7 +314,7 @@ class App extends Component {
     MQTTService.onAutoConncetFailed(res => {
       // todo 搜索网关后建立tcp连接
       const {directDevIds, deviceItems} = this.props;
-      if(!window.tcpToGateway.isConnected && !window.tcpToGateway.isConnecting && directDevIds.gateway) {
+      if(!window.tcpToGateway.isConnected && !window.tcpToGateway.isConnecting && directDevIds.gateway.length) {
         window.tcpToGateway.connectTCP(directDevIds.gateway[0], deviceItems[directDevIds.gateway[0]].password);
       }
     });
@@ -396,7 +396,8 @@ class App extends Component {
         	if(Number(res.code) !== 200) {
         		return;
         	}
-        	
+          
+          userApi.notifyOnline();
           actions.setMqttSubscribed(1);
 		      	
         });
@@ -436,11 +437,13 @@ class App extends Component {
       //   return;
       // }
 
+      const topic = res.topic;
+
       // 通知弹窗处理
       this.alertNotify(response);
       this.showAlarmPage(response);
       const { actions } = this.props;
-      actions.onMessageReceive(response);
+      actions.onMessageReceive(response, topic);
       actions.onReceivePushMessage(response);
       actions.onOTAMessageReceive(response);
     });
@@ -493,7 +496,7 @@ class App extends Component {
   onNetworkStatus() {
     const { actions } = this.props;
     systemApi.onNetworkStatusChange(function(res){
-    	console.log('--------------------------network status change---------------------------', res);
+    	console.log('---------------network status change------------------', res);
       window.system.networkStatus = res.state;
       actions.setNetworkStatus(res.state);
     });

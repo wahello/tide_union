@@ -117,7 +117,7 @@ class SelectWifi extends Component {
 		const passWord = formData.passWord;
 
 		if(!passWord) {
-			Toast.info("请输入Wifi密码");
+			Toast.info("Please enter the wi-fi password");
 			return;
 		}
 		console.log("ssid = " + this.state.ssid + ", password = " + passWord);
@@ -199,7 +199,7 @@ class SelectWifi extends Component {
 
 		return(
 			<div className="set_wifi">
-        <BarTitle onBack={this.handleClickBack} title={Lang.gateway.foudWifi.title} />
+        <BarTitle onBack={this.handleClickBack} title={Lang.device.selectWifi.title} />
         <div className="wifi_icon_bg">
         	<div className="wifi_icon"></div>
         </div>
@@ -222,7 +222,7 @@ class SelectWifi extends Component {
             {this.props.form.getFieldValue('passWord').length ? <a id="password-clear-icon-id"className="clear-icon"  onClick={() => this.props.form.setFieldsValue({passWord: ''})}></a> : ''}
           </div>
           
-          <button className ="nextBtn" onClick={this.handleOnNext}>Next</button>
+          <button className ="nextBtn" onClick={this.handleOnNext}>Next step</button>
         </div>
         
        

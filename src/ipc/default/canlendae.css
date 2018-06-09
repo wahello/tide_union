@@ -2,13 +2,13 @@
     position:absolute;
     width: 100%;
     z-index:100;
-    bottom:-6.2rem;
+    bottom:-6rem;
     .rc-calendar{
         width: 100%;
         background-color: #FCFCFC;
         border-radius: 0;
         box-shadow: none;
-        height:25rem;
+        height:calc(100vh / 2);
         border: none;
         .rc-calendar-panel{
             .rc-calendar-input-wrap{

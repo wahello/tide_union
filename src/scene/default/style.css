@@ -838,7 +838,7 @@
 		}
 	}
 	&.lighting {
-		background-image: url($img-dir/devices_icon_lighting_n.png);s
+		background-image: url($img-dir/devices_icon_lighting_n.png);
 		&.on {
 			background-image: url($img-dir/devices_icon_lighting_s.png);
 		}

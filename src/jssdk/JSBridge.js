@@ -65,16 +65,18 @@ class JSBridge {
           console.log('-----------', requestName, data, '----------');
           bridge.callHandler(url, data, (res) => {
             const request_data = data;
-            try{
-              res = typeof res === 'string' && !/^\s?$/.test(res) ? JSON.parse(res) : res;
-            }catch(e){
-              console.log("callHandler_____________err____catch")
-              console.log(e)
-            }
-            console.info('-----------', requestName + ' response:', (typeof res === 'string' ? res : JSON.stringify(res)), 'request message:', (typeof request_data === 'string' ? request_data : JSON.stringify(request_data)), '-----------');
-            console.log('-----------', requestName + ' response:', res, 'request message:', request_data, '-----------');
-            resolve(res);
-            clearTimeout(timer);
+              try{
+	             res = typeof res === 'string' && !/^\s?$/.test(res) ? JSON.parse(res) : res;
+	          }catch(e){
+	             console.log("callHandler_____________err____catch");
+	             console.log(e);
+	          }
+	          console.info('-----------', requestName + ' response:', (typeof res === 'string' ? res : JSON.stringify(res)), 'request message:', (typeof request_data === 'string' ? request_data : JSON.stringify(request_data)), '-----------');
+	          console.log('-----------', requestName + ' response:', res, 'request message:', request_data, '-----------');
+	          resolve(res);
+	          clearTimeout(timer);
+              this.sending = false;
+  
           });
 
         });

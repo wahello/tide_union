@@ -128,11 +128,40 @@ class SearchHub extends Component {
   }
 
   tryAgain() {
-    this.startSearchDevices();
-    this.setState({
-      searching: true,
-      error: false,
-    });
+    console.log(this.props.match.params.type)
+    const type = this.props.match.params.type;
+    if (!type) {
+      this.startSearchDevices();
+      this.setState({
+        searching: true,
+        error: false,
+      });
+      return;
+    }
+
+    switch(type.toLowerCase()) {
+      case 'light':
+        this.props.history.replace('/device/lightAdd');
+        break;
+      case 'motion':
+        this.props.history.replace('/device/motionAdd1');
+        break;
+      case 'door':
+        this.props.history.replace('/device/doorAdd1');
+        break;
+      case 'siren':
+        this.props.history.replace('/device/sirenAdd1');
+        break;
+      case 'keypad':
+        this.props.history.replace('/device/keypadAdd');
+        break;
+      case 'keyfob':
+        this.props.history.replace('/device/keyfobAdd');
+        break;
+      default:
+        this.props.history.replace('/device/addFlow');
+        break;      
+    }
   }
 
   handleClickBack() {
@@ -152,7 +181,8 @@ class SearchHub extends Component {
     }
 
     actions.initAddDevNotifyList();
-    this.props.history.goBack();
+    // this.props.history.goBack();
+    this.props.history.replace('/home'); // 直接跳回首页
   }
 
   delDevForUnselect(devIds) {

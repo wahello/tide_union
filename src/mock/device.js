@@ -15,7 +15,7 @@ export default {
           "roomId": "Study_id_0001",
           "parentId": "02114102",
           "productId": "00004",
-          "devType": "Smartplug_Meter_Wifi",
+          "devType": "wifi_plug",
           "icon": "wifi_plug",
           "devModel":"1.0",
           "mac":"00:50:56:b7:e7:a2",

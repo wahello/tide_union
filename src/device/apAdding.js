@@ -373,14 +373,18 @@ class ApAdding extends Component {
 			currentHomeId,
 			addDevNotifyList,
 		} = this.props;
-		 if(networkStatus !== this.props.networkStatus && networkStatus === 1){
+		if(networkStatus !== this.props.networkStatus && networkStatus === 1){
 		 	this.MQTTBasic.reconnect();
-		 }
+		}
+		
 		if(devBindNotif && devBindNotif !== this.props.devBindNotif) {
+			console.log("devBindNotif.payload.devId = ",devBindNotif.payload.devId);
+			console.log("this.state.devId = ",this.state.devId)
 			if(devBindNotif.payload.devId === this.state.devId && !this.jobDone) {
 				const device = devBindNotif.payload;
+				console.log("productName=======",device.productName)
 				const data = {
-					name: searchType || device.name,
+					name: device.productName,
 					devId: device.devId,
 					type: searchType,
 					icon: searchType,

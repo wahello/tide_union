@@ -1484,7 +1484,7 @@ Modules - reusable parts of our design
 			.count_down_icon{
 				position: absolute;
 				top: calc(5.66rem / 2 - 3.66rem / 2);
-				left: calc(5.66rem / 2 - 3.66rem / 2);
+				left: calc(5.76rem / 2 - 3.66rem / 2);
 				width: 3.66rem;
 				height: 3.66rem;
 				margin: 0 auto;
@@ -1513,7 +1513,14 @@ Modules - reusable parts of our design
         	font-size: $fontsize32;
         	font-weight: bold;
         	text-align: center;
+        	opacity:1
+        	
         }
+        
+        .disable{
+    		opacity:0.6;
+    		color:#C8C8C8
+    	}
 		
 	}
 	
@@ -3000,7 +3007,7 @@ Modules - reusable parts of our design
 			height: 7rem;
 			margin-top: calc((7.5rem - 7rem) / 2);
 			margin-left: calc((7.5rem - 7rem) / 2);
-			line-height: 6.5rem;
+			line-height: 7rem;
 			border-radius: 10rem;
 			font-size: $fontsize16;
 			

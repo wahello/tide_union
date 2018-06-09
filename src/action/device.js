@@ -601,7 +601,7 @@ export function saveDeviceItem(deviceItem) {
  * @param {Object} res 消息体
  * @return {Promise}
  */
-export function onMessageReceive(res) {
+export function onMessageReceive(res, topic) {
   const payload = res.payload;
   const ack = res.ack;
   console.log('onMessageReceive payload: ', payload);
@@ -666,44 +666,23 @@ export function onMessageReceive(res) {
               return dev.devId === payload.devId;
             })
           }
-          
-          const devSimpleType = {
-            Light_ColorTemperature: 'Light_CCT',
-            Light_ColourTemperature: 'Light_CCT',
-            Light_Dimmable: 'Light_Dim',
-            Light_RGBW: 'Light_RGB',
-            Sensor_Doorlock: 'Door/Window',
-            Sensor_PIR: 'Motion',
-            Sensor_Motion: 'Motion',
-            Alarm_Siren: 'Siren',
-            Multi_Gateway: 'Gateway',
-            Smartplug_Meter: 'Plug',
-            remote: 'remote',
-            SirenHub: 'SirenHub',
-            Sensor_Keypad: 'Keypad',
-            Sensor_Keyfob: 'Keyfob',
-            light: 'lighting',
-            gateway: 'multi_gateway',
-            plug: 'plug',         
-            magnet: 'door/window',
-            motion: 'motion',
-            camera: 'camera',
-            keyfob: 'keyfob',
-            keypad: 'keypad'
+
+          // 添加子设备的topic只接收云端的，目前会收到云端和网关的
+          const topicArray =  topic.split('/');
+          let isFromCloud = false;
+          if (topicArray && topicArray.length >= 3) {
+            isFromCloud = topicArray[2] === 'c';
           }
-
-
-          if (hasAdded.length === 0) {
-            const code = getHashCode();
+          
+          if (hasAdded.length === 0 && isFromCloud) {
             let str = payload.productId; 
             let arr = str.split(".");
             let devType =  arr[1];
-            const simpleName = devSimpleType[devType] !== undefined ? devSimpleType[devType] : devType;
             devNotifyList.push({
               devId: payload.devId,
               devType: payload.devType,
               productId: payload.productId,
-              name: devSimpleType[devType] !== undefined ? `${simpleName}_${code}` : simpleName,
+              name: payload.productName,
               deviceSelect: false,
             });
           }

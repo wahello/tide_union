@@ -17,6 +17,8 @@ const deviceLang = Lang.device;
 
 let hours = [];
 let minutes = [];
+let setCountDownHour = 0;
+let setCountDownMinute = 0;
 
 class SetCountDown extends Component {
 	cookies = new Cookies();
@@ -24,9 +26,14 @@ class SetCountDown extends Component {
   constructor(props) {
     super(props);
 		
+    if(this.props.deviceItem.setCountDown){
+      setCountDownHour = parseInt(this.props.deviceItem.setCountDown / 60 / 60);
+      setCountDownMinute = parseInt(this.props.deviceItem.setCountDown / 60 % 60);
+    }
+
 		this.state = {
 			datas:[],
-			value:[0,0]
+			value:[setCountDownHour,setCountDownMinute]
     };
     this.device = new Device;
     this.systemApi = new SystemApi;
@@ -35,8 +42,34 @@ class SetCountDown extends Component {
     this.onChange = this.onChange.bind(this);
     this.handleSave = this.handleSave.bind(this);
   }
-  
+
   handleSave(){
+  if(this.state.value.length == 2){
+      if(this.state.value[0] != setCountDownHour || this.state.value[1] != setCountDownMinute){
+
+        let that = this;
+        this.props.showDialog(dialogLang.title[0], Lang.automation.create.backTip, [{
+          text: dialogLang.button[7],
+          handleClick: function () {
+              that.startSave();
+            this.hide();
+          }
+        },{
+          text: dialogLang.button[6],
+          handleClick: function () {
+            // console.log('----------------------------------------------goback save ----------------------')
+            that.props.history.goBack();
+            this.hide();
+          }
+        }]);
+
+      }else{
+        this.props.history.goBack();
+      }
+    }
+  }
+  
+  startSave(){
   	if(this.state.value.length == 2){
   		Toast.loading("", 0, null, true);
   		let sec = 0;
@@ -165,7 +198,7 @@ class SetCountDown extends Component {
   	
     return (
       <div className="count_down_root">
-      	<BarTitle onBack={this.handleClickBack} title="setCountDown" onDone={this.handleSave}/>
+      	<BarTitle onBack={this.handleSave} title="setCountDown" />
       	
       	<PickerView
 	        onChange={this.onChange}

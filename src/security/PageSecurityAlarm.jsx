@@ -31,28 +31,25 @@ class AlarmPage extends React.Component {
 			//if(triggerList !== this.props.triggerList) {
 				let list = triggerList
 				let records = [];
-				console.log("willrecord0===",triggerList)
+
 				console.log(triggerList.length);
 
 				triggerList.forEach((item) => {
 					if (records.indexOf(item.devId) === -1) {
 		        records.push(item.devId);
 		      }
-		    });
-				console.log("willrecord1===",records)
+		   });
 
 				this.setState({ 
 		    	records: records
-		    });
-		    
-		    console.log("willrecord1===",this.state.records)
+		   });
 			//}	
 		}			
 	}
 
   componentDidMount() {
     const { devices, location, triggerList } = this.props;
-    const triggers = location.state.trigger || [];
+    const triggers = [];
     let records = [];
 
     systemApi.offGoBack();
@@ -108,7 +105,12 @@ class AlarmPage extends React.Component {
     return (
       <div className="security-alarm">
         <div className="bell-bg-wrap">
-          <i className="bell">{langSecurity.alarm}</i>
+        	{
+        		this.state.records.length?
+        		<i className="bell"></i>:
+        		<i className="sos"></i>
+        	}
+          
           <div className="bell-bg bell-bg1" />
           <div className="bell-bg bell-bg2" />
           <div className="bell-bg bell-bg3" />

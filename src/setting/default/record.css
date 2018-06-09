@@ -112,22 +112,6 @@
 		background: url('$img-dir/devices_icon_water_leak_white_44.png') center no-repeat;
 		background-size:3.67 rem 3.67 rem  ;
 		flex: 0 0 2rem;
-	}		
-
-	.record-img-stay{
-	    height: 3.67 rem;
-	    width: 3.67 rem;
-		background: url('$img-dir/security_icon_stay.png') center no-repeat;
-		background-size:3.67 rem 3.67 rem  ;
-		flex: 0 0 2rem;
-	}	
-
-	.record-img-away{
-	    height: 3.67 rem;
-	    width: 3.67 rem;
-		background: url('$img-dir/security_icon_away.png') center no-repeat;
-		background-size:3.67 rem 3.67 rem  ;
-		flex: 0 0 2rem;
 	}				
   
 }

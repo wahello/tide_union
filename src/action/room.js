@@ -45,6 +45,7 @@ export function fetchRoomList(request) {
         list.push(item.roomId)
       });
 
+			console.log("****************-----------------fetchRoomListSucces")
       dispatch(fetchRoomListSucces({
         items,
         list,
@@ -54,6 +55,29 @@ export function fetchRoomList(request) {
     dispatch({
       type: 'FETCH_ROOM_LIST_REQUEST',
     });
+
+		if(window.globalState.isLocal == 1){
+			let sql = `SELECT space.id,space.name,space.icon,spaceDevice.devNum FROM space LEFT JOIN (SELECT space_id,COUNT(space_id) as devNum FROM space_device) spaceDevice ON space.id=spaceDevice.space_id and type='room'`;
+			return querySQL(sql).then(res => {
+				console.log("query rooms = ",res);
+				handleData({
+					"code":res.code,
+					"desc":"Success",
+					data:{
+						totalCount:res.data?res.data.length:0,
+						rooms:res.data.map((item) => {
+              let newItem = {};
+              newItem.name = item.name;
+              newItem.roomId = item.id;
+              newItem.icon = item.icon,
+              newItem.devNum = 0;
+              
+              return newItem;
+            }),
+					}
+				});
+      });
+		}
 
     const { mqttStatus } = getState().system;
     if(!mqttStatus) {
@@ -159,6 +183,15 @@ export function fetchRoomDevices(request) {
     dispatch({
       type: 'FETCH_ROOM_DEVICES_REQUEST'
     });
+
+//		if(window.globalState.isLocal == 1){
+//			let sql = "SELECT * FROM SELECT device_id FROM space_device Where space_id='${roomId}'";
+//			return querySQL(`SELECT * FROM space_device WHERE space_id='${roomId}'`).then(res => {
+//      if(res.code === 200 && res.data.length) {
+//        handleData(JSON.parse(res.data[0].value));
+//      }
+//    });
+//		}
 
     const { mqttStatus } = getState().system;
     if(!mqttStatus) {

@@ -57,6 +57,7 @@ class WifiPlugDetail extends Component {
 			devId: devId,
 			devType: deviceItem.devType,
 			remainCountDown:0,
+			isEnable:0
 		}
 
 		this.dataDetail = deviceItem;
@@ -103,6 +104,9 @@ class WifiPlugDetail extends Component {
 		if(countDownTimer != null){
   			clearTimeout(countDownTimer);
   		}
+  		if(!this.state.hasCountDown){
+			this.props.deviceItems[this.props.devId].setCountDown = 0;
+		}
 		this.props.history.push(`/device/setCountDown`);
 	}
 
@@ -139,9 +143,6 @@ class WifiPlugDetail extends Component {
 	}
 
 	handleChangeSwitch(value) {
-		if(!isShowOver){
-			return;
-		}
 		if(!isShowOver){
 			return;
 		}
@@ -274,6 +275,7 @@ class WifiPlugDetail extends Component {
 			console.log("wifiPlugDetail getCountDownResp ：", res);
 			console.log("isShowOver ：", isShowOver);
 			if(res){
+				that.props.deviceItems[that.props.devId].setCountDown = res.setCountDown;
 				if(res.remainCountDown > 0){
 					that.setState({
 						hasCountDown: true,
@@ -320,9 +322,11 @@ class WifiPlugDetail extends Component {
 		}).then(res => {
 			console.log("getCountDownResp ：", res);
 			if(res && res.ack && res.ack.code == 200) {
+				that.props.deviceItems[that.props.devId].setCountDown = res.payload.setCountDown;
 				if(res.payload.remainCountDown > 0){
 					that.setState({
 						hasCountDown: true,
+						isEnable:res.payload.enable,
 						remainCountDown:res.payload.remainCountDown
 					});
 					
@@ -336,6 +340,7 @@ class WifiPlugDetail extends Component {
 				} else {
 					that.setState({
 						hasCountDown: false,
+						isEnable:0,
 						remainCountDown:res.payload.remainCountDown
 					});
 				}
@@ -343,6 +348,7 @@ class WifiPlugDetail extends Component {
 			} else {
 				that.setState({
 					hasCountDown: false,
+					isEnable:0,
 					remainCountDown:0
 				});
 			}
@@ -498,6 +504,10 @@ class WifiPlugDetail extends Component {
 		console.log("currentDevice.attr.OnOff = ",currentDevice.attr.OnOff);
 		let iconState = !Number(currentDevice.attr.OnOff) ? ' off' : '';
 		let btnState = !Number(currentDevice.attr.OnOff) ? ' off' : '';
+
+		if(!this.state.hasCountDown){
+			this.props.deviceItems[this.props.devId].setCountDown = 0;
+		}
 		return(
 			<div className="device wifiPlugDetail">
 				<BarTitle onBack={fromPage != 'list' ? this.handleClickSave :this.handleClickBack} title={currentDevice.name} >
@@ -507,7 +517,7 @@ class WifiPlugDetail extends Component {
 		        <div className="bodyer">
 		        	<div className='plug_icon_div'>
 			        	<div className={'plug_icon_bg' + iconState}></div>
-				        <div className={'plug-icon' + iconState} onClick={this.handleChangeSwitch.bind(this,!this.state.OnOff)}>
+				        <div className={'plug-icon' + iconState} onClick={this.handleChangeSwitch.bind(this,!Number(currentDevice.attr.OnOff))}>
 		                </div>
 		        	</div>
 		        	
@@ -552,7 +562,7 @@ class WifiPlugDetail extends Component {
 		        	
 		        	{
 		        		this.state.hasCountDown && Number(currentDevice.attr.OnOff) == 1?
-		        		<div className="count_down" onClick={this.handGoToCountDown}>
+		        		<div className={this.state.isEnable?'count_down':'count_down disable'} onClick={this.handGoToCountDown}>
 		        			{this.getCountDownTime(this.state.remainCountDown)}
 		        		</div>
 		        		:
@@ -579,7 +589,9 @@ const mapStateToProps = (state) => {
 		recordAttr: state.device.recordAttr,
 		devId: devId,
 		deviceItems: state.device.items,
+		deviceIds: state.device.list,
 		fromPage: state.device.fromPage,
+		directDevIds: state.device.directDevIds || [],
 	}
 };
 

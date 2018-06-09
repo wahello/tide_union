@@ -36,7 +36,7 @@ export default {
 			placeholder:["Email Address", "Verification code", "New Password", "Reenter Password"]
 		},
 		title:'Adding hub',
-		littleTitle:['Step 1','Power on your gateway'],
+		littleTitle:['Step 1','Power on your hub'],
 		nextstep:"Next step",
 		dialog: {
 			tip: ["You will not be able to control the device and receive message reminders. Are you sure you want to log out?"]
@@ -51,7 +51,7 @@ export default {
 		removeHomeTip: 'By removing this Home selection, you will also remove all of the data associated with it. Are you sure want to remove it?',
 		setting: 'Settings',
 		homeName: 'Home Name',
-		gateway: 'gateway',
+		gateway: 'hub',
 		homeWallpaper: 'Home Wallpaper',
 		takePhoto: 'Take photo...',
 		removeHome: 'Remove Home',
@@ -70,7 +70,7 @@ export default {
 		dialog: {
 			button: ["Cancel", "OK", "Reset","Remove","Update","Confirm","Yes","No"],
 			title: ["Tip"],
-			tip: ["Are you sure to remove？", "unknown error, please try later"]
+			tip: ["Are you sure to remove？", "unknown error, please try later","Are you sure you want to delete all of the past activity?"]
 		},
 		delete: "Remove",
 		edit: "Edit",
@@ -235,7 +235,7 @@ export default {
 			name: "Device Name",
 			room: "Group Room",
 			record: "Activity Record",
-			mode:"Mode",
+			mode:"Use Mode",
 			safeMode:"Safe mode",
 			userMode:"User mode",
 			deviceUpdate:"Device update",
@@ -257,7 +257,7 @@ export default {
 			mac:"MAC address"
 		},
 		mode:{
-			title:"Device Mode",
+			title:"Use Mode",
 			safeDesc:"The plug always turn off when it powered on again every time.",
 			userDesc:"Recovery the last status that it turned off."
 		},
@@ -308,7 +308,7 @@ export default {
 		doorAdd3: {
 			title: "Adding door/window sensor",
 			desc: "Step 3",
-			addDesc: "The LED will stop flashing once the device has paired sucessfully with the gateway.",
+			addDesc: "The LED will stop flashing once the device has paired sucessfully with the hub.",
 			nextStep: "Next step",
 		},
 		doorAddhelp: {
@@ -337,7 +337,7 @@ export default {
 		sirenAdd3: {
 			title: "Adding siren",
 			desc: "Step 3",
-			addDesc: "The LED will stop flashing once the device has paired sucessfully with the gateway.",
+			addDesc: "The LED will stop flashing once the device has paired sucessfully with the hub.",
 			nextStep: "Next step",
 		},
 		sirenhubAdd1: {
@@ -511,7 +511,7 @@ export default {
 		motionAdd3: {
 			title: "Adding Motion sensor",
 			desc: "Step 3",
-			addDesc: "The LED will stop flashing once the device has paired sucessfully with the gateway.",
+			addDesc: "The LED will stop flashing once the device has paired sucessfully with the hub.",
 			nextStep: "Next step",
 		},
 		motionAddHelp: {
@@ -535,7 +535,7 @@ export default {
 		plugAdd3: {
 			title: "Adding Plug",
 			desc: "Step 3",
-			addDesc: "The LED will stop flashing and turn red once the device has paired sucessfully with the gateway.",
+			addDesc: "The LED will stop flashing and turn red once the device has paired sucessfully with the hub.",
 			nextStep: "Next step",
 		},
 		plugAddHelp: {
@@ -565,9 +565,9 @@ export default {
 		},
 		gatewayDetail:{
 			title:"Added devices ",
-			gatewayName:"Gateway",
+			gatewayName:"Hub",
 			buttonName:"Add product",
-			settingTitle:"Gateway",
+			settingTitle:"Hub",
 			resetTxt:"Reset to factory settings",
 			tip:["Resetting to factory settings will clear all devices data, are you sure to reset?"]
 		},
@@ -575,7 +575,7 @@ export default {
 			title:"Added devices ",
 			sirenhubName:"Siren Hub",
 			buttonName:"Add product",
-			settingTitle:"Gateway",
+			settingTitle:"Hub",
 			resetTxt:"Reset to factory settings",
 			tip:["Resetting to factory settings will clear all devices data, are you sure to reset?"]
 		},
@@ -587,15 +587,15 @@ export default {
 		},
 		smartLinkPlug:{
 			barTitle: "Adding Plug",
-			desc:"Confirm that your device is powered on and the indicaton is flashing slowly in green .",
+			desc:"Confirm that your device is powered on and the indicator is flashing slowly in green .",
 			helpBarTitle:"Help",
-			helpDesc:"Press the reset button and hold it for 10s and the led will start to flash in green once per second.",
+			helpDesc:"Press the reset button and hold it for 10s and the LED indicator will start to flash in green once per second.",
 			nextStep:"Next step"
 		},
 		apModePlug:{
 			barTitle: "Adding Plug",
 			desc:"Confirm that your device is powered on.Press the reset button and hold it for 5s to let the device enter AP mode.",
-			desc2:"The LED indicaton will flash slowly once per three seconds in green from bright to dim and then go out.",
+			desc2:"The LED indicator will flash slowly once per three seconds in green from bright to dim and then go out.",
 			nextStep:"Next step"
 		},
 		sirenHub:{
@@ -610,7 +610,7 @@ export default {
 			desc:"Confirm that your device is powered on and the indicator is flashing in red for 3 seconds.",
 			desc2:"The network indicatior will begin to flash once per second in green letting you know the device is in pairing mode.",
 			desc3:"Press the number “",
-			desc4:"The LED will stop flashing once the device has paired sucessfully with the gateway.",
+			desc4:"The LED will stop flashing once the device has paired sucessfully with the hub.",
 			desc5:"” and “",
 			desc6:"” in keypad and",
 			desc7:"hold it for 3 seconds, the LED indicaton will start to flashing in green once per second.",
@@ -623,11 +623,14 @@ export default {
 			desc2:"The network indicaton will begin to flash once per second in green letting you know the device is in pairing mode.",
 			desc3:"LED does't flash in right status",
 			desc3:"Press the number “ 3 ” in keypad and hold it for 3 seconds, and the LED indicaton will start to flashing in green once per second.",
-			desc4:"The LED will stop flashing once the device has paired sucessfully with the gateway.",
+			desc4:"The LED will stop flashing once the device has paired sucessfully with the hub.",
 			nextStep:"Next step"
 		},
 		setWifi:{
 			placeholder: "Wi-Fi password",
+		},
+		selectWifi:{
+			title:"Select Wi-Fi network"
 		},
 		plugAddFail:{
 			title:"Adding plug",
@@ -876,7 +879,7 @@ export default {
 			tips: ['Confirm that your device is powered on.','Press the button three times within 3 seconds to let the device enter Ap mode.'],
 		},
 		title:'Adding',
-		littleTitle:['Step 1','Power on your gateway','Room name','Choose the icon'],
+		littleTitle:['Step 1','Power on your hub','Room name','Choose the icon'],
 		nextstep:"Next step",
 		dialog: {
 			tip: ["Exit the application？"]
@@ -899,7 +902,7 @@ export default {
 			tips:["WI-FI Password",'Enter WIFI Password','Please enter password']
 		},
 		adding:{
-			load:["Adding...",'Place the gateway, phone, and the device close to each other during pairing.']
+			load:["Adding...",'Place the hub, phone, and the device close to each other during pairing.']
 		},
 		fail:{
 			tips:["Failed to Add",'Try again']
@@ -919,11 +922,11 @@ export default {
 			fail: 'Failed to save',
 		},
 		noGateway:{
-			tips:['Devices cannot function without adding a gateway first.','Adding hub'],
-			title:"NO gateway"
+			tips:['Devices cannot function without adding a hub first.','Adding hub'],
+			title:"NO hub"
 		},
 		searchGateway:{
-			tips:['Searching','Pull down to continue searching','No gateways found!','Please choose the gateway you need first.'],
+			tips:['Searching','Pull down to continue searching','No gateways found!','Please choose the hub you need first.'],
 			button:["Try again","Done"]
 		},
 		failAdd:{
@@ -933,7 +936,7 @@ export default {
 			title:"自定义房间"
 		},
 		gatewayReset:{
-			text:"The gateway already been add, please reset first and then add again.",
+			text:"The hub already been add, please reset first and then add again.",
 			buttonText:"Already reset"
 		}
 	},

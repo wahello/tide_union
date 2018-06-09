@@ -164,43 +164,6 @@ class ActivityRecord extends React.Component {
 	render() {
 		console.log("执行-----render")
 		const data = [
-			// {
-			// 		"des": "2018-4-13",
-			// 		type:1
-			// 	},{
-			// 		"icon":"gateway",
-			// 		"title": "Siren activated",
-			// 		"des": " 18:13:01",
-			// 		type:0
-			// 	}
-			// 	,{
-			// 		"icon":"gateway",
-			// 		"title": "Siren activatedfdsfsfs fsafsdf fsaf sfsafdfsaf",
-			// 		"des": "18:13:02",
-			// 		type:0
-			// 	},{
-			// 		"icon":"gateway",
-			// 		"title": "Siren activated jkkfl;s fjlj kjfksajf kldsjfklsajfklsdjf",
-			// 		"des": "18:13:03",
-			// 		type:0
-			// 	},
-			// 	{
-			// 		"icon":"gateway",
-			// 		"title": "Siren activated jkkfl;s fjlj kjfksajf kldsjfklsajfklsdjf",
-			// 		"des": "18:13:03",
-			// 		type:0
-			// 	},{
-			// 		"icon":"gateway",
-			// 		"title": "Siren activated jkkfl;s fjlj kjfksajf kldsjfklsajfklsdjf",
-			// 		"des": "18:13:03",
-			// 		type:0
-			// 	},
-			// 	{
-			// 		"icon":"gateway",
-			// 		"title": "Siren activated jkkfl;s fjlj kjfksajf kldsjfklsajfklsdjf",
-			// 		"des": "18:13:22",
-			// 		type:0
-			// 	}
 		];
 		console.log("newData开始长度"+this.state.newData.length)
 		const {dataList, dataCount,currentPage,shouldUpdateActivityRecord} = this.props;

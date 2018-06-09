@@ -23,6 +23,12 @@ class WifiPlugApGuide extends Component {
     
     this.handleClickBack = this.handleClickBack.bind(this);
     this.handleOnNext = this.handleOnNext.bind(this);
+    this.handleChangeSnartLinkMode = this.handleChangeSnartLinkMode.bind(this);
+  }
+  
+  handleChangeSnartLinkMode(event){
+  	console.log("handleChangeSnartLinkMode click");
+  	this.props.history.push(`/device/wifiPlugSLGuide`);
   }
 
   handleClickBack(event){
@@ -66,7 +72,7 @@ class WifiPlugApGuide extends Component {
   	
     return (
       <div className="device addLight">
-        <GuideComponent onBack={this.handleClickBack} data={guideDataList} onNext={this.handleOnNext}  nextStep={Lang.device.apModePlug.nextStep}/>
+        <GuideComponent onBack={this.handleClickBack} data={guideDataList} onNext={this.handleOnNext}  nextStep={Lang.device.apModePlug.nextStep} onSmartLinkMode={this.handleChangeSnartLinkMode} />
       </div>
     );
   }

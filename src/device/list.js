@@ -29,6 +29,8 @@ const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 const cookies = new Cookies();
 
 class DeviceList extends Component {
+  locationChanged = false;
+  
   constructor(props) {
     super(props);
 
@@ -37,7 +39,8 @@ class DeviceList extends Component {
       isLongPress: false,
       onlyIpc:this.setOnlyIpc(),
       hasSearchedGateway:false,
-      dataSource:ds.cloneWithRows(this.props.deviceIds)
+      dataSource:ds.cloneWithRows(this.props.deviceIds),
+      refreshing: false
     };
 
     this.device = new Device();
@@ -102,8 +105,19 @@ class DeviceList extends Component {
         this.fetchList();
       }
     }
-    this.setState({ dataSource:ds.cloneWithRows(nextProps.deviceIds)})
+
+    if(this.locationChanged && nextProps.history.location.pathname === this.props.location.pathname) {
+      this.locationChanged = false;
+      this.fetchList();
+    }
+
+    if(nextProps.history.location.pathname !== this.props.location.pathname) {
+      this.locationChanged = true;
+    }
+
+    this.setState({ dataSource:ds.cloneWithRows(nextProps.deviceIds)});
     if(deviceIds.length === 0) {this.setState({onlyIpc:this.setOnlyIpc(nextProps)})}
+
     if (nextProps.cancelLongPress) {
       this.setState({
         isLongPress: false,
@@ -277,9 +291,9 @@ class DeviceList extends Component {
       //   }
       // }
       
-      // if (isFirstIn) {
-      //   Toast.loading('loading');
-      // }
+      if (this.props.isFirstIn) {
+        Toast.loading('loading');
+      }
       console.log("=============刷主页列表")
       actions.fetchHomeDevices({
         userId: cookies.get('userId'),
@@ -291,7 +305,10 @@ class DeviceList extends Component {
         isFirstIn: isFirstIn !== undefined ? isFirstIn : this.props.isFirstIn
       }).then(() => {
         Toast.hide();
-        this.setState({onlyIpc:this.setOnlyIpc()})
+        this.setState({
+          onlyIpc:this.setOnlyIpc(),
+          refreshing: false
+        })
         this.subscribeDirectDev();
 
         const {
@@ -325,15 +342,17 @@ class DeviceList extends Component {
       familyItems
     } = this.props;
 
-    if(familyItems[currentHomeId]){
-        this.device.startConnect({
-          meshName: familyItems[currentHomeId].currentMeshName,
-          meshPassword: familyItems[currentHomeId].currentMeshPassword
-        });
-      }
+    // if(familyItems[currentHomeId]){
+    //   this.device.startConnect({
+    //     meshName: familyItems[currentHomeId].currentMeshName,
+    //     meshPassword: familyItems[currentHomeId].currentMeshPassword
+    //   });
+    // }
 
     this.fetchList();
-
+    this.setState({
+      refreshing: true
+    });
     
   }
 
@@ -432,7 +451,7 @@ class DeviceList extends Component {
 		            return;
 		          }
 		          if (pageFrom === 'home') {
-		            if (dataDetail.devType === 'Multi_Gateway'||dataDetail.devType === 'Siren_Hub') {
+		            if (dataDetail.devType === 'Multi_Gateway'||dataDetail.devType === 'Siren_Hub'||dataDetail.devType === 'wifi_plug') {
 		              // 直连设备解绑
 		              that.device.devUnbindReq({
 		                payload: {
@@ -548,6 +567,9 @@ class DeviceList extends Component {
           break
         }
         case 'camera': {
+          status = props.online ? Lang.device.onLine : Lang.device.offLine;
+          break
+        }case 'wifi_plug': {
           status = props.online ? Lang.device.onLine : Lang.device.offLine;
           break
         }
@@ -700,16 +722,16 @@ class DeviceList extends Component {
     // });
 
     const EmptyTip = (() => {
-      if (isFirstIn) {
-        return null;
-      }
+//    if (isFirstIn) {
+//      return null;
+//    }
       return (
         <div className="empty-tip">
           <PullToRefresh
             distanceToRefresh={window.devicePixelRatio * 35}
               indicator={this.state.down ? {} : { deactivate: Lang.refresh.pull, finish: Lang.refresh.finish,activate: Lang.refresh.activate}}
-            refreshing={isFetching}
-            onRefresh={this.handleRefresh}
+              refreshing={this.state.refreshing}
+              onRefresh={this.handleRefresh}
           >
             {pageFrom === 'room' && <p className="empty-text">{Lang.room.NotDevice}</p>}{pageFrom === 'home' && <p className="empty-text">{Lang.home.notDeviceTip}</p>}
           </PullToRefresh>
@@ -779,8 +801,8 @@ class DeviceList extends Component {
               <PullToRefresh
                 distanceToRefresh={window.devicePixelRatio * 35}
                  indicator={this.state.down ? {} : { deactivate: Lang.refresh.pull, finish: Lang.refresh.finish,activate: Lang.refresh.activate}}
-                refreshing={isFetching}
                 onRefresh={this.handleRefresh}
+                refreshing={this.state.refreshing}
               />}
           />
           :

@@ -148,7 +148,6 @@ function camera (state = stateInit,action){
             timeListInfo:{}
         }
         case 'GET_SDCARD_ONE_HOUR_LIST':
-        console.log(action.hour)
         return {
             ...state,
             isFetching:true,

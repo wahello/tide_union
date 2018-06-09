@@ -82,7 +82,7 @@ class MQTTService extends MQTTBasic {
 //    }
       
       if(!window.system.mqttStatus) {
-        if(window.tcpToGateway.isConnected){
+        if(window.tcpToGateway && window.tcpToGateway.isConnected){
           if(['setDevAttrReq','excSceneReq','setArmModeReq','bypassReq'].indexOf(message.method) == -1) {
             Toast.info(Lang.public.cannotControl);
             return;
@@ -95,7 +95,7 @@ class MQTTService extends MQTTBasic {
           });
         }else{
           //重连
-           window.tcpToGateway.reconnectTCP();
+           if(window.tcpToGateway)window.tcpToGateway.reconnectTCP();
         }
       }else{
         super.sendData({

@@ -53,7 +53,7 @@ export default class guideComponent extends Component {
 		
 		return (
 			<div>
-				<BarTitle onBack={this.state.isShowHelp ? this.handleBack : this.props.onBack} title={this.state.data[this.state.currentIndex].barTitle} onApMode={this.props.onApMode} />
+				<BarTitle onBack={this.state.isShowHelp ? this.handleBack : this.props.onBack} title={this.state.data[this.state.currentIndex].barTitle} onApMode={this.props.onApMode} onSmartLinkMode={this.props.onSmartLinkMode} />
 				<ScrollView>
 			        <div className="addWrap">
 			        	<div className="desc">{this.state.data[this.state.currentIndex].title}</div>

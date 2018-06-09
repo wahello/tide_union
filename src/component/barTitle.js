@@ -21,6 +21,7 @@ class BarTitle extends Component {
 			  		{this.props.onSave ? <a onClick={this.props.onSave} className="txt save">Save</a> : ''}
 			  		{this.props.onDone ? <a onClick={this.props.onDone} className="txt done">{this.props.doneTitle?this.props.doneTitle:'Done'}</a> : ''}
 			  		{this.props.onApMode ? <a onClick={this.props.onApMode} className="txt save">Ap mode</a> : ''}
+			  		{this.props.onSmartLinkMode ? <a onClick={this.props.onSmartLinkMode} className="txt save">Smart link</a> : ''}
 			  		{this.props.onRevise ? <a onClick={this.props.onRevise} className="txt save">Revise</a> : ''}
 			  		{this.props.onEdit ? <a onClick={this.props.onEdit} className="icon edit"></a> : ''}
 			  		{this.props.onMenu ? <a onClick={this.props.onMenu} className="icon menu"></a> : ''}
@@ -39,7 +40,7 @@ class BarTitle extends Component {
           	// 		</span>}
 	          // </NetworkAlert>
 						<NetworkAlert onClick={()=>MQTTService.reconnect()}>
-	            The network is disconnect, please check!
+	            Network disconnected
 	          </NetworkAlert> : ''
 	      }
 	    </React.Fragment>

@@ -52,7 +52,7 @@ class selectroom extends Component {
 	handleClickDone(event) {
 		Toast.loading(Lang.public.loading);
 		this.device.setDevInfoReq({
-			parentId: this.props.directDevIds.gateway[0] || '',
+			parentId: this.props.directDevIds.gateway?(this.props.directDevIds.gateway[0] || ''):'',
 			payload: {
 				devId: this.props.deviceItem.devId,
 				icon: this.props.deviceItem.icon,
@@ -100,7 +100,7 @@ class selectroom extends Component {
 
 		return (
 			<div className="selectroom" >
-				<BarTitle onBack={this.handleClickBack} title={Lang.device.selectroom.title} >	<a className="txt txt-done" onClick={this.handleClickDone} > {Lang.public.txtDone} </a> </BarTitle >
+				<BarTitle onBack={this.handleClickDone} title={Lang.device.selectroom.title} > </BarTitle >
 				<div className="promat" style={{ paddingTop: "1.7rem", paddingLeft: "1.7rem" }}> {Lang.device.selectroom.promat} </div>
 				<div className="roomlist" style={{ marginTop: "54px" }} >
 					<ul > {items} </ul>

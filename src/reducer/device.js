@@ -372,7 +372,12 @@ function device(state = stateInit, action) {
 	    return {
 	    	...state,
 	    	deviceConnect:false
-	    };
+      };
+    case 'UPDATE_DEVICE_INFO':
+      return {
+        ...state,
+        items: action.deviceItems,
+      };
     default:
       return state;
   }

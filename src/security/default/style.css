@@ -488,11 +488,25 @@
 
   .bell{
     position: absolute;
-    left: calc( 50vw - 1.63rem);
+    left: calc( 50vw - 2.04rem);
     top: calc( 10rem - 2.13rem - 7px );
-    width: 3.25rem;
-    padding-top: 4.25rem;
+    width: 4.08rem;
+    height: 4.9rem;
     background: url($img-dir/Security_icon_alarm.png) center top no-repeat;
+    background-size: contain;
+    font-style: normal;
+    color: $text-color;
+    font-size: $fontsize13;
+    z-index: 4;
+  }
+  
+  .sos{
+    position: absolute;
+    left: calc( 50vw - 3.04rem);
+    top: calc( 10rem - 0.7rem - 7px );
+    width: 6.08rem;
+    padding-top: 2.29rem;
+    background: url($img-dir/security_icon_sos.png) center top no-repeat;
     background-size: contain;
     font-style: normal;
     color: $text-color;

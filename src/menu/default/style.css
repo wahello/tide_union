@@ -27,9 +27,9 @@
 		width: calc(100% - 12rem * $zoom);
 		height: 100vh;
 		/*font-weight: 700;*/
-		background: rgba(76,81,101,0.90);	
 		.menu-box {		
 			overflow: hidden;
+			background: rgba(76,81,101,0.90);	
 			.menu-setting {
 				position: absolute;
 				top: calc(4.75rem * 0.5);

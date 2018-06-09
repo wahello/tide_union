@@ -149,14 +149,7 @@ class DeviceAddFlow extends Component {
 				"link": "/device/lightAdd",
 				'gatewayID': this.props.directDevIds.gateway,
 				'noGateWay': '/gateway/noGateWay'
-			},
-			{
-					"flowIcon": "lighting",
-					"flowName": Lang.device.addFlow.BLElightBulb,
-					"link": "/device/BLEDeviceAdd",
-					"gatewayID": "",
-					"noGateWay": "/device/BLEDeviceAdd"
-				}
+			}
 		]
 		}, {
 			type: Lang.device.addFlow.typeSensorsSecurity,
@@ -164,31 +157,31 @@ class DeviceAddFlow extends Component {
 				"flowIcon": "motion1",
 				"flowName": Lang.device.addFlow.motionSensor,
 				"link": "/device/motionAdd1",
-				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:'',
+				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:0,
 				'noGateWay': '/gateway/noGateWay'
 			}, {
 				"flowIcon": "door_lock",
 				"flowName": Lang.device.addFlow.doorSensor,
 				"link": "/device/doorAdd1",
-				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:'',
+				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:0,
 				'noGateWay': '/gateway/noGateWay'
 			},{
 				"flowIcon": "siren",
 				"flowName": Lang.device.addFlow.siren,
 				"link": "/device/sirenAdd1",
-				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:'',
+				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:0,
 				'noGateWay': '/gateway/noGateWay'
 			}, {
 				"flowIcon": "keypad",
 				"flowName": Lang.device.addFlow.keypad,
 				"link": "/device/keypadAdd",
-				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:'',
+				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:0,
 				'noGateWay': '/gateway/noGateWay'
 			}, {
 				"flowIcon": "keyfob",
 				"flowName": Lang.device.addFlow.keyfob,
 				"link": "/device/keyfobAdd",
-				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:'',
+				'gatewayID': this.props.directDevIds.gateway?this.props.directDevIds.gateway.length:0,
 				'noGateWay': '/gateway/noGateWay'
 			}]
 		}, {
@@ -208,19 +201,7 @@ class DeviceAddFlow extends Component {
 				"link": "/device/wifiPlugSLGuide",
 				'gatewayID': this.props.directDevIds.gateway,
 				'noGateWay': '/device/wifiPlugSLGuide'
-			},{
-					"flowIcon": "plug",
-					"flowName": Lang.device.addFlow.BLEPlug,
-					"link": "/device/plugAdd1/BLEplug",
-					"gatewayID": "",
-					"noGateWay": "/device/plugAdd1/BLEplug"
-				},{
-					"flowIcon": "remote",
-					"flowName": Lang.device.addFlow.remote,
-					"link": "/device/remoteAdd1",
-					'gatewayID': "",
-					'noGateWay': '/device/remoteAdd1'
-				}]
+			}]
 		}, {
 			type: Lang.device.addFlow.typeCamera,
 			children: [{
@@ -251,6 +232,38 @@ class DeviceAddFlow extends Component {
 			}]
 		}
 		];
+
+		//临时处理，local模式只显示蓝牙设备
+		if(window.globalState.isLocal == 1){
+			dataListFlow = [
+				{
+					type: Lang.device.addFlow.typeLighting,
+					children: [{
+						"flowIcon": "lighting",
+						"flowName": Lang.device.addFlow.BLElightBulb,
+						"link": "/device/BLEDeviceAdd",
+						"gatewayID": "",
+						"noGateWay": "/device/BLEDeviceAdd"
+					}]
+				},{
+					type: Lang.device.addFlow.typeControl,
+					children: [{
+						"flowIcon": "plug",
+						"flowName": Lang.device.addFlow.BLEPlug,
+						"link": "/device/plugAdd1/BLEplug",
+						"gatewayID": "",
+						"noGateWay": "/device/plugAdd1/BLEplug"
+					},{
+						"flowIcon": "remote",
+						"flowName": Lang.device.addFlow.remote,
+						"link": "/device/remoteAdd1",
+						'gatewayID': "",
+						'noGateWay': '/device/remoteAdd1'
+					}]
+				}
+			];
+		}
+
 		let Component = function (props) {
 			const { children, end, that } = props;
 			let len = children.length;

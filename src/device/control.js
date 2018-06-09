@@ -262,15 +262,17 @@ class DevicePage extends Component {
   	}
     this.setState({ Color: color });
     console.log("RGBW传值：", color);
-    //颜色发生改变增加记录
-     this.device.changeDeviceAttr({
-	        deviceTableId:currentDevice.devId,
-	        attrList:[{
-	        	  attrName:'rgbw',
-              attrValue: color
-	        }]
-	      });
+    
       if(communicationMode=="BLE"){
+        //颜色发生改变增加记录
+       this.device.changeDeviceAttr({
+          deviceTableId:currentDevice.devId,
+          attrList:[{
+              attrName:'rgbw',
+              attrValue: color
+          }]
+        });
+       
       	color = color.slice(1,7)
       	this.device.setRgbColor({devId:currentDevice.devId,rgbValue:color});//
       }else{

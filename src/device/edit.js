@@ -12,7 +12,7 @@ import { Lang } from '../public';
 import SystemApi from '../jssdk/system';
 import Device from '../jssdk/device';
 import { showDialog, changeFromPage } from '../action';
-import { saveDeviceItem, setEditingName, shouldUpdateDeviceList } from '../action/device';
+import { saveDeviceItem, setEditingName, shouldUpdateDeviceList, updateDeviceInfo } from '../action/device';
 import './default/edit.css';
 import ScrollView from '../component/scrollView';
 import OTA from '../jssdk/ota';
@@ -272,6 +272,15 @@ class DeviceEdit extends Component {
 				actions.shouldUpdateDeviceList();
 				actions.changeFromPage('list');
 				this.resetData();
+
+				actions.updateDeviceInfo({
+					devId: device.devId,
+					name: name.trim(),
+					icon: device.icon,
+					homeId: device.homeId,
+					roomId: device.roomId,
+				});
+
 				this.props.history.goBack();
 			} else {
 				const msg = res.ack ? res.ack.desc : '';
@@ -424,7 +433,7 @@ class DeviceEdit extends Component {
 
 		const that = this;
 		   console.log("断开网络删除设备提示用户网络断开");
-		actions.showDialog(deviceLang.dialog.tip[1], null, [{
+			actions.showDialog(null, deviceLang.dialog.tip[1], [{
 			text: dialogLang.button[0],
 			handleClick: function cancel() {
 				this.hide();
@@ -603,7 +612,7 @@ class DeviceEdit extends Component {
 		const {
 			device
 		} = this.props;
-		if(device.devType == 'Smartplug_Meter_Wifi' || device.devType == 'Smartplug_Meter'){
+		if(device.devType == 'Smartplug_Meter_Wifi' || device.devType == 'Smartplug_Meter' || device.devType == 'wifi_plug'){
 			let moreAboutView = (
 				<div
 					role="presentation"
@@ -839,6 +848,7 @@ const mapDispatchToProps = dispatch => ({
 			shouldUpdateDeviceList,
 			changeFromPage,
 			showDialog,
+			updateDeviceInfo,
 		},
 		dispatch,
 	),

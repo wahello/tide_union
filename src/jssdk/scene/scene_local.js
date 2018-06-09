@@ -172,19 +172,35 @@ export default class Scene {
 
       console.log('-------------getNextSceneId ------------------------',sceneId);
       scene_id =sceneId;
+      return db.querySQL(`SELECT * FROM ${TB_SCENE} WHERE scene_name='${name}' and space_id='${homeId}'`).then((res) => {
+      	console.log("查询场景列表结果 = ",res)
+	      if(res.code === 200) {
+	      	if(res.data && res.data.length > 0){
+	     			return {
+				      code: -1000,
+				      desc:"The name of the scene has already existed",
+				    };
+	     		}else {
+	     			 return db.insert(TB_SCENE, {
+			        scene_name: name,
+			        icon: icon,
+			        space_id: homeId,
+			        id:scene_id,
+			  
+			      }).then(res => ({
+			        code: res.code,
+			        data: {
+			          sceneId: res.data.id
+			        }
+			      }));
+	     		}
+	      }
+	
+	      return res;
+      
+    	});
 
-      return db.insert(TB_SCENE, {
-        scene_name: name,
-        icon: icon,
-        space_id: homeId,
-        id:scene_id,
-  
-      }).then(res => ({
-        code: res.code,
-        data: {
-          sceneId: res.data.id
-        }
-      }));
+     
 
     })
 
@@ -203,17 +219,33 @@ export default class Scene {
   editScene (data) {
     console.log('editScene data = ', data)
     const { name, icon, homeId, sceneId } = data;
-    return db.update(TB_SCENE, {
-      scene_name: name,
-      icon: icon,
-      space_id: homeId
-    },
-    'id=?',
-    [sceneId],
-  ).then(res => ({
-      code: res.code,
-      data
-    }));;
+    
+    return db.querySQL(`SELECT * FROM ${TB_SCENE} WHERE scene_name='${name}' and space_id='${homeId}' and id!='${sceneId}'`).then((res) => {
+      	console.log("查询场景列表结果 = ",res)
+	      if(res.code === 200) {
+	      	if(res.data && res.data.length > 0){
+	     			return {
+				      code: -1000,
+				      desc:"The name of the scene has already existed",
+				    };
+	     		}else {
+	     			 return db.update(TB_SCENE, {
+					      scene_name: name,
+					      icon: icon,
+					      space_id: homeId
+					    },
+					    'id=?',
+					    [sceneId],
+					  ).then(res => ({
+					      code: res.code,
+					      data
+					    }));;
+	     		}
+	      }
+	
+	      return res;
+      
+    	});
     
   }
 

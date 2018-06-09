@@ -27,7 +27,8 @@ const pageShowList = [
     { type: 'plug',  Navtitle: 'Add Plug'},
     { type: 'sirenhub',  Navtitle: 'Add Siren hub'},
     { type: 'keyfob',  Navtitle: 'Add Keyfob'},
-    { type: 'keypad',  Navtitle: 'Add Keypad'}
+    { type: 'keypad',  Navtitle: 'Add Keypad'},
+    { type: 'wifi_plug',  Navtitle: 'Adding Plug'},
 ];
 const dialogLang = Lang.public.dialog;
 const deviceLang = Lang.device;
@@ -138,6 +139,7 @@ class AddSuccess extends Component {
           multi_gateway: 'gateway',
           smartplug_meter: 'plug',
           remote: 'remote',
+          sirenhub: 'sirenhub',
         };
   
         if (typeObj[key] === undefined) {
@@ -444,7 +446,7 @@ class AddSuccess extends Component {
                             <input ref="deviceName" className={`${this.state.focus ? 'edit_name' : 'gateway_name'}`} type='text' name="editvalue" placeholder={this.state.placename} value={this.state.editvalue}
                                 onChange={(e) => this.stateChange(e)} maxLength='20' onFocus={this.inputOnFocus} onBlur={this.inputOnblur}/>
                             {/* removeText 会受onBlur影响而无效 */}
-                            <i className={this.state.editvalue.length && this.state.focus ? 'del_icon' : 'hid_del_icon'} onClick={(e) => {this.removeText(e)}}></i>
+                            <i className={this.state.editvalue && this.state.focus ? 'del_icon' : 'hid_del_icon'} onClick={(e) => {this.removeText(e)}}></i>
                         </div>
                         <p className='success_tips' style={{ marginTop: "1.3rem" }}>{Lang.gateway.addsuccess.tips[2]}</p>
                         <div className='type_icon'>

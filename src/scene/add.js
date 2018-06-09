@@ -444,24 +444,23 @@ class AddScene extends Component {
 		console.log("after this.state.isModify = ", isModify);
 
 		if(isModify) {
-			this.props.showDialog(Lang.public.dialog.title[0], Lang.scene.createScene.saveChangeDialog, [{
-					text: Lang.public.dialog.button[0],
-					handleClick: function() {
-						this.hide();
-						that.props.clearIsTouchList();
-						that.props.setRefreshSceneList(false);
-						that.props.history.goBack();
-					}
-				},
-				{
-					text: Lang.public.dialog.button[1],
-					className: "btn-split",
-					handleClick: function() {
-						this.hide();
-						that.handleClickSave(event);
-					}
+			this.props.showDialog(Lang.public.dialog.title[0], Lang.automation.create.backTip, [{
+				text: Lang.public.dialog.button[7],
+				handleClick: function () {
+				    //that.handleClickSave();
+					this.hide();
 				}
-			]);
+			},{
+				text: Lang.public.dialog.button[6],
+				handleClick: function () {
+					// console.log('----------------------------------------------goback save ----------------------')
+					that.props.clearIsTouchList();
+					that.props.setRefreshSceneList(false);
+					that.props.history.goBack();
+					this.hide();
+				}
+			}]);
+
 		} else {
 			this.props.setRefreshSceneList(false);
 			this.props.clearIsTouchList();
@@ -1151,7 +1150,7 @@ class AddScene extends Component {
 			let devType = this.props.deviceItem[this.props.deviceList[i]].devType;
 			
 			// deviceType中包含Light的都是灯
-			if(devType != undefined && (devType.indexOf('Light') > -1 || devType.indexOf('wifi_plug') > -1)) {
+			if(devType != undefined && (devType.indexOf('Light') > -1 || devType.indexOf('wifi_plug') > -1 || devType.indexOf('Smartplug_Meter') > -1)) {
 				data.push(this.props.deviceList[i]);
 				console.log('this.props.deviceList[i] = ', this.props.deviceItem[this.props.deviceList[i]]);
 			}
@@ -1483,7 +1482,7 @@ class AddScene extends Component {
 	    	isCheck:isChecked
 	    });
 	    
-	    if(dataDetail.devType.indexOf("wifi_plug") >= 0){
+	    if(dataDetail.devType.indexOf("wifi_plug") >= 0 ||  dataDetail.devType.indexOf('Smartplug_Meter') > -1){
 			this.props.history.push('/device/wifiPlugDetail');
 		} else {
 	    	this.props.history.push('/device/control');
@@ -1571,7 +1570,7 @@ class AddScene extends Component {
 		} = this.props.form;
 		return(
 				<div className="addOrEideScene">
-            <BarTitle onBack={this.onBack} title = {this.props.editSceneId == '' ? Lang.scene.createScene.title:Lang.scene.editScene.title} onDone={this.handleClickSave.bind(this)}></BarTitle>
+            <BarTitle onBack={this.onBack} title = {this.props.editSceneId == '' ? Lang.scene.createScene.title:Lang.scene.editScene.title} onDone={this.handleClickSave.bind(this)} doneTitle={Lang.public.txtSave}></BarTitle>
 
         <div className="hiTitle">Scene Name</div>
         <div className="inputName">

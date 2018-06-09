@@ -25,7 +25,8 @@ class KeyfobAdd extends Component {
   }
 
   handleClickBack(event){
-  	this.props.history.goBack();
+    // this.props.history.goBack();
+    this.props.history.replace('/device/addFlow');  // 未搜索到结果，按try again 会会退到第一步，此时按后台需要直接退回到addFlow
   }
   
   

@@ -274,6 +274,8 @@ class SearchBLEDevice extends Component {
       this.props.history.replace('/device/BLEDeviceAdd');
     }else if(this.props.searchType == "BLEPlug"){
       this.props.history.replace('/device/plugAdd1/BLEplug');
+    }else if(this.props.searchType == "BLERemote"){
+      this.props.history.replace('/device/remoteAdd1');
     }else{
       this.props.history.replace('/device/addFlow');
     }

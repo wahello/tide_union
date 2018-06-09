@@ -335,7 +335,7 @@ class RoomSetting extends Component {
 			console.log("directDevIds  = " , directDevIds);
 			changes.add.map((device) => {
 				this.device.setDevInfoReq({
-					parentId: directDevIds.gateway[0] || device.id,
+					parentId: directDevIds.gateway? directDevIds.gateway[0]:device.id,
 					payload: {
 						devId: device.id,
 						icon: device.icon,

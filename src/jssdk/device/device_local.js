@@ -726,8 +726,9 @@ export default class Device {
             );
 
           }else{
-
+						const uuid = uuidv4();
             db.insert("space_device",{
+            	id:uuid,
               create_time: this.getNowFormatDate(),
               last_update_date: this.getNowFormatDate(),
               device_id: req.devId,
@@ -1977,9 +1978,21 @@ chgTimerByIdReq(options){
 	      enable:enable,
 	      setCountDown:setCountDown,
 	    };
+
+      let returnRes = {
+        devId: devId,
+        type: type,
+        remainCountDown: remainCountDown,
+        enable:enable,
+        setCountDown:setCountDown,
+        ack:{
+          code:200,
+        },
+        payload:countDownData,
+      }
 	
 			if(type == 0x80){
-				return countDownData;
+				return returnRes;
 			}
     }
     return null;

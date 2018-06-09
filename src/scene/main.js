@@ -72,6 +72,22 @@ class SceneStart extends Component {
 		//	this.props.setRefreshSceneList(true);
 		this.fetchList();
 	}
+	
+	checkNetwork(){
+		console.log("window.system.networkStatus = ",window.system.networkStatus);
+		if(window.system.networkStatus == 0){
+			this.props.showDialog("", Lang.system.noNetwork, [{
+					text: Lang.system.noNetworkBtn,
+					handleClick: function() {
+						this.hide();
+					}
+				}
+			]);
+			return true;
+		}
+		
+		return false;
+	}
 
 	handleAddClick(event) {
 //			let i = 0;
@@ -81,6 +97,9 @@ class SceneStart extends Component {
 //					num:i
 //				});
 //			},10);
+		if(this.checkNetwork()){
+			return;
+		}
 			
 		this.props.setIsTouchList();
 		console.log("handleAddClick", this.props.isTouchList);
@@ -103,6 +122,9 @@ class SceneStart extends Component {
 	}
 
 	handleEditClick(event) {
+		if(this.checkNetwork()){
+			return;
+		}
 		// 已是编辑状态，修改为非编辑状态
 		if(this.state.isEdit) {
 			this.setState({
